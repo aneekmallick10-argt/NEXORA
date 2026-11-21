@@ -1,0 +1,2126 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+<title>NEXORA — Discover Your Potential. Design Your Future.</title>
+<meta name="description" content="NEXORA is an AI-powered technology career discovery, learning and development platform: career matching, 10-stage roadmaps, projects and an AI mentor."/>
+<meta property="og:title" content="NEXORA — Discover Your Potential. Design Your Future."/><meta property="og:description" content="Discover your ideal technology career and build a personalized learning roadmap."/><meta property="og:type" content="website"/>
+<meta name="theme-color" content="#070b16"/>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%2322d3ee'/%3E%3Cstop offset='1' stop-color='%238b5cf6'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='16' cy='16' r='14' fill='%23070b16' stroke='url(%23g)' stroke-width='2'/%3E%3Cpath d='M10 22V10l12 12V10' fill='none' stroke='url(%23g)' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<style>
+:root{--bg:#070b16;--p:#0d1424;--p2:#131c32;--l:#1f2b49;--t:#e8edf8;--m:#93a0bb;--a:#3b82f6;--c:#22d3ee;--v:#8b5cf6;--ok:#34d399;--warn:#fbbf24;--err:#f87171;color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+:root[data-theme=light]{--bg:#f5f7fc;--p:#fff;--p2:#eef2fa;--l:#d9e0ef;--t:#0e1730;--m:#4d5b78;--a:#2563eb;--c:#0e7490;--v:#6d28d9;--ok:#047857;--warn:#92400e;--err:#b91c1c;color-scheme:light}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--t);font:15px/1.55 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:60}
+h1{font-size:clamp(30px,5vw,52px);line-height:1.08;margin:.2em 0;letter-spacing:-.02em}h2{font-size:24px;margin:.3em 0}h3{font-size:17px;margin:.3em 0}h4{margin:.9em 0 .2em;font-size:14px}p{margin:.4em 0}a{color:var(--c)}ul,ol{padding-left:20px;margin:.3em 0}
+button,input,select,textarea{font:inherit;color:inherit}button{cursor:pointer}
+:focus-visible{outline:2px solid var(--c);outline-offset:2px;border-radius:6px}
+.mute{color:var(--m)}.sm{font-size:13px}.big{display:block;font-size:30px;font-weight:700;letter-spacing:-.02em}.lead{font-size:18px;color:var(--m);max-width:56ch}
+.row{display:flex;align-items:center;gap:10px}.wrap{flex-wrap:wrap}.between{justify-content:space-between}.stack{display:grid;gap:18px}.full{grid-column:1/-1}.rel{position:relative}
+.grid2,.grid3,.grid4{display:grid;gap:16px}.grid2{grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr))}.grid3{grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr))}.grid4{grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr))}
+.card{background:var(--p);border:1px solid var(--l);border-radius:14px;padding:18px;min-width:0}.card.dim{opacity:.55}
+.btn{background:var(--p2);border:1px solid var(--l);border-radius:10px;padding:8px 14px;transition:.15s;display:inline-flex;align-items:center;gap:6px;font-weight:500}.btn:hover{border-color:var(--a)}.btn:disabled{opacity:.5;cursor:not-allowed}
+.btn.pri{background:linear-gradient(135deg,var(--a),var(--v));border-color:transparent;color:#fff}.btn.pri:hover{filter:brightness(1.1)}.btn.lg{padding:12px 20px}
+.lnk{background:none;border:0;color:var(--m);padding:6px 8px}.lnk:hover{color:var(--t)}
+.chip{background:transparent;border:1px solid var(--l);border-radius:999px;padding:5px 12px;font-size:13px;color:var(--m);transition:.15s}.chip.on{background:color-mix(in srgb,var(--a) 22%,transparent);border-color:var(--a);color:var(--t)}
+.pill{display:inline-block;border:1px solid var(--l);border-radius:999px;padding:2px 10px;font-size:12px;margin:2px;color:var(--m)}.pill.ok{color:var(--ok);border-color:var(--ok)}
+.ico{background:none;border:1px solid transparent;border-radius:8px;padding:6px;display:inline-flex;color:var(--m)}.ico:hover,.ico.on{color:var(--warn);border-color:var(--l)}.av{background:linear-gradient(135deg,var(--a),var(--v));color:#fff;width:32px;height:32px;justify-content:center;align-items:center;font-weight:700;border-radius:50%}
+.brand{display:inline-flex;align-items:center;gap:8px;font-size:17px;letter-spacing:.12em;color:var(--t)}
+input,select,textarea{background:var(--p2);border:1px solid var(--l);border-radius:10px;padding:8px 10px;max-width:100%}input[type=range]{padding:0;accent-color:var(--a)}input[type=checkbox],input[type=radio]{accent-color:var(--a)}textarea{width:100%}
+.form{display:grid;gap:12px}.form label,.card>label{display:grid;gap:4px;font-size:13px;color:var(--m)}.err{color:var(--err);font-size:12px}.warn{color:var(--warn);border:1px solid var(--warn);border-radius:10px;padding:8px 12px}.okbox{color:var(--ok);border:1px solid var(--ok);border-radius:10px;padding:8px 12px}
+.search{width:100%;padding:12px 14px}
+.bar{background:var(--p2);border-radius:99px;overflow:hidden}.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--a),var(--c));border-radius:99px;transition:width .4s}
+table{border-collapse:collapse;width:100%;font-size:14px}td,th{border-bottom:1px solid var(--l);padding:8px;text-align:left;vertical-align:top}.scroll{overflow-x:auto}
+pre{background:var(--bg);border:1px solid var(--l);border-radius:10px;padding:12px;overflow-x:auto;font-size:13px;position:relative}
+/* landing */
+.land{max-width:1120px;margin:0 auto;padding:0 20px 40px;display:grid;gap:56px}.top{display:flex;justify-content:space-between;align-items:center;padding:18px 0;gap:12px;flex-wrap:wrap}.top>a{text-decoration:none}
+.hero{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,360px),1fr));gap:30px;align-items:center}.hero h1{background:linear-gradient(120deg,var(--t),var(--c) 70%,var(--v));-webkit-background-clip:text;background-clip:text;color:transparent}
+.path{width:100%;max-width:460px;justify-self:center}.dash{animation:dash 3s linear infinite}@keyframes dash{to{stroke-dashoffset:-32}}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px}.split{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,360px),1fr));gap:24px;align-items:center}
+footer{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;border-top:1px solid var(--l);padding-top:24px}
+.founder{display:grid;grid-template-columns:200px 1fr;gap:24px;align-items:center}.avatar{aspect-ratio:1;border-radius:20px;background:linear-gradient(135deg,var(--a),var(--v));display:grid;place-items:center;font-size:56px;font-weight:700;color:#fff;position:relative}.avatar span{position:absolute;bottom:10px;font-size:11px;font-weight:400;opacity:.85}
+.soc{gap:10px}.soc a{width:40px;height:40px;border:1px solid var(--l);border-radius:12px;display:grid;place-items:center;color:var(--m);transition:.2s}.soc a:hover{color:#fff;background:linear-gradient(135deg,var(--a),var(--v));transform:translateY(-2px);border-color:transparent}
+@media(max-width:640px){.founder{grid-template-columns:1fr}.avatar{max-width:160px}}
+/* app shell */
+.app{display:grid;grid-template-columns:230px 1fr;min-height:100vh}.app.col{grid-template-columns:68px 1fr}.app.col aside nav span,.app.col aside .brand b{display:none}
+aside{border-right:1px solid var(--l);background:var(--p);padding:16px 12px;display:flex;flex-direction:column;gap:14px;position:sticky;top:0;height:100vh;overflow:auto;z-index:40}
+aside nav{display:grid;gap:2px;flex:1;align-content:start}aside nav button{display:flex;gap:10px;align-items:center;background:none;border:0;border-radius:10px;padding:9px 10px;color:var(--m);text-align:left}aside nav button:hover{background:var(--p2);color:var(--t)}aside nav button.on{background:color-mix(in srgb,var(--a) 20%,transparent);color:var(--t)}
+.main{min-width:0}.tb{display:flex;gap:12px;align-items:center;justify-content:space-between;padding:12px 24px;border-bottom:1px solid var(--l);background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(10px);position:sticky;top:env(safe-area-inset-top,0px);z-index:30}
+main{padding:24px;max-width:1100px}.gs{position:relative;display:flex;align-items:center;gap:8px;background:var(--p2);border:1px solid var(--l);border-radius:10px;padding:0 10px;flex:1;max-width:420px}.gs input{border:0;background:none;flex:1;min-width:0}
+.pop{position:absolute;top:100%;left:0;right:0;background:var(--p);border:1px solid var(--l);border-radius:12px;padding:8px;list-style:none;margin:6px 0 0;z-index:50;min-width:220px}.pop.right{left:auto;right:0;width:270px}.pop li button{width:100%;background:none;border:0;text-align:left;padding:8px;border-radius:8px}.pop li button:hover{background:var(--p2)}
+.show-sm,.hide-lg{display:none}
+@media(max-width:900px){.app,.app.col{grid-template-columns:1fr}aside{position:fixed;left:0;top:0;width:250px;transform:translateX(-100%);transition:.2s}aside.open{transform:none;box-shadow:0 0 0 100vmax rgba(0,0,0,.5)}.show-sm,.hide-lg{display:inline-flex}.hide-sm{display:none}main{padding:16px}.tb{padding:10px 14px}.app.col aside nav span,.app.col aside .brand b{display:inline}}
+.center{min-height:100vh;display:grid;place-items:center;padding:20px}.wide{width:min(100%,560px);display:grid;gap:14px}
+.sk{height:110px;border-radius:14px;background:linear-gradient(90deg,var(--p) 25%,var(--p2) 50%,var(--p) 75%);background-size:200% 100%;animation:sk 1.2s infinite}@keyframes sk{to{background-position:-200% 0}}
+.empty{text-align:center;display:grid;justify-items:center;gap:6px;padding:36px}
+.modal{position:fixed;inset:0;background:rgba(3,6,15,.7);display:grid;place-items:center;z-index:70;padding:16px}.sheet{width:min(100%,860px);max-height:90vh;overflow:auto}
+.stage .sh{display:flex;gap:12px;align-items:center;background:none;border:0;width:100%;text-align:left}.num{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:var(--p2);border:1px solid var(--l);font-weight:700;flex:none}.stage.done .num{background:var(--ok);color:#06210f;border-color:transparent}.stage .body{margin-top:12px;border-top:1px solid var(--l);padding-top:8px}
+.chk{display:flex;gap:8px;align-items:flex-start;margin:6px 0;font-size:14px}.rate{display:grid;grid-template-columns:minmax(120px,1fr) 2fr 40px;gap:10px;align-items:center;margin:8px 0}.task{margin:4px 0}
+/* NEXORA AI Neural Model */
+.ai-shell{display:grid;gap:14px;min-height:76vh;grid-template-rows:auto auto 1fr auto auto;background:radial-gradient(circle at 85% 10%,color-mix(in srgb,var(--v) 14%,transparent),transparent 45%),radial-gradient(circle at 12% 20%,color-mix(in srgb,var(--c) 12%,transparent),transparent 42%),var(--p);border:1px solid color-mix(in srgb,var(--c) 35%,var(--l));box-shadow:0 16px 48px rgba(0,0,0,.35)}
+.ai-head{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;padding-bottom:12px;border-bottom:1px solid var(--l)}
+.ai-orb-wrap{display:flex;align-items:center;gap:14px}
+.ai-orb{width:54px;height:54px;border-radius:50%;position:relative;display:grid;place-items:center;background:radial-gradient(circle at 32% 30%,#fff 0%,var(--c) 28%,var(--v) 72%,#090d1c 100%);box-shadow:0 0 24px color-mix(in srgb,var(--c) 55%,transparent),inset 0 0 12px rgba(255,255,255,.45);animation:orbFloat 4s ease-in-out infinite;flex:none}
+.ai-orb::before,.ai-orb::after{content:"";position:absolute;inset:-6px;border-radius:50%;border:1.5px dashed color-mix(in srgb,var(--c) 65%,transparent);animation:orbSpin 12s linear infinite}
+.ai-orb::after{inset:-11px;border-style:dotted;border-color:color-mix(in srgb,var(--v) 65%,transparent);animation-direction:reverse;animation-duration:18s}
+.ai-orb.busy{animation:orbPulse .9s ease-in-out infinite;box-shadow:0 0 36px var(--c),0 0 54px var(--v)}
+@keyframes orbFloat{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(-3px) scale(1.04)}}
+@keyframes orbSpin{to{transform:rotate(360deg)}}
+@keyframes orbPulse{0%,100%{transform:scale(.96)}50%{transform:scale(1.08)}}
+.ai-badge{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:3px 9px;border-radius:999px;background:color-mix(in srgb,var(--c) 15%,transparent);border:1px solid color-mix(in srgb,var(--c) 45%,transparent);color:var(--c)}
+.ai-dot{width:7px;height:7px;border-radius:50%;background:var(--ok);box-shadow:0 0 8px var(--ok)}
+.ai-modes{display:flex;gap:8px;flex-wrap:wrap}
+.ai-mode{background:var(--p2);border:1px solid var(--l);border-radius:10px;padding:6px 11px;font-size:12px;color:var(--m);display:inline-flex;align-items:center;gap:6px;transition:.15s}
+.ai-mode:hover{border-color:var(--c);color:var(--t)}
+.ai-mode.on{background:linear-gradient(135deg,color-mix(in srgb,var(--a) 28%,var(--p2)),color-mix(in srgb,var(--v) 28%,var(--p2)));border-color:var(--c);color:var(--t);box-shadow:0 0 14px color-mix(in srgb,var(--c) 22%,transparent)}
+.msgs{overflow:auto;display:grid;gap:12px;align-content:start;max-height:54vh;padding-right:4px}
+.bub{background:linear-gradient(180deg,color-mix(in srgb,var(--p2) 92%,var(--c) 8%),var(--p2));border:1px solid color-mix(in srgb,var(--c) 25%,var(--l));border-radius:16px;padding:12px 16px;max-width:90%;position:relative;box-shadow:0 4px 16px rgba(0,0,0,.15)}
+.bub.u{justify-self:end;background:linear-gradient(135deg,color-mix(in srgb,var(--a) 28%,var(--p2)),color-mix(in srgb,var(--v) 24%,var(--p2)));border-color:color-mix(in srgb,var(--v) 45%,var(--l))}
+.bub-meta{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:4px;font-size:11px;color:var(--m)}
+.fmt{margin:.3em 0;white-space:pre-wrap}
+.ai-input-bar{display:flex;gap:10px;background:var(--p2);border:1px solid color-mix(in srgb,var(--c) 35%,var(--l));border-radius:14px;padding:6px 8px 6px 14px;align-items:center}
+.ai-input-bar input{flex:1;border:0;background:transparent;padding:8px 0;outline:none}
+.cert{border:2px solid var(--c);text-align:center}fieldset{border:1px solid var(--l);border-radius:10px;margin:10px 0}
+.toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--t);color:var(--bg);padding:10px 16px;border-radius:10px;z-index:80;font-size:14px}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+@media print{aside,.tb,.btn{display:none}}
+.gs{min-width:0}.gs input{width:100%}.tb>.row{flex-shrink:0;gap:4px}
+@media(max-width:900px){.pop.right{width:min(270px,calc(100vw - 28px))}.gs{max-width:none}}
+main h1{font-size:28px}.card svg[role=img]{width:100%;height:auto;max-height:170px}
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.3.1/umd/react.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.3.1/umd/react-dom.production.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@babel/standalone@7.26.4/babel.min.js"></script>
+</head>
+<body>
+<a href="#main" style="position:absolute;left:-999px" onfocus="this.style.left='8px'" onblur="this.style.left='-999px'">Skip to content</a>
+<div id="root"><div class="center"><div class="sk" style="width:220px;height:24px"></div></div></div>
+<noscript>NEXORA needs JavaScript to run.</noscript>
+<script>
+/* NEXORA reference dataset: careers, languages, projects, future tech, countries */
+const CAREER_CATEGORIES = [
+  "Data & Analytics",
+  "Artificial Intelligence",
+  "Cybersecurity",
+  "Software Development",
+  "Other Technology Fields"
+];
+
+const CAREERS_DB = [
+  {
+    id: "data-analyst",
+    title: "Data Analyst",
+    category: "Data & Analytics",
+    difficulty: "Beginner - Intermediate",
+    duration: "4 - 7 Months",
+    mathReq: "Moderate (Statistics, Probability)",
+    entryAccess: "High",
+    demand: "Very High",
+    remoteScope: "High",
+    intlScope: "High",
+    futureGrowth: "Strong (Augmented by AI BI tools)",
+    intro: "Transforms raw business data into actionable insights through statistical analysis, SQL querying, and interactive dashboards.",
+    responsibilities: [
+      "Clean, validate, and structure raw datasets from multiple sources",
+      "Write complex SQL queries to extract KPIs and business metrics",
+      "Build interactive dashboards in Power BI, Tableau, or Looker",
+      "Present data-backed strategic recommendations to stakeholders"
+    ],
+    skills: ["SQL", "Data Cleaning", "Exploratory Data Analysis", "Statistical Testing", "Data Storytelling", "Excel/Sheets"],
+    languages: ["SQL", "Python", "R"],
+    tools: ["Power BI", "Tableau", "Excel", "Pandas", "Jupyter", "BigQuery"],
+    education: "Bachelor's in any quantitative/business field or strong portfolio with certifications.",
+    salaries: { US: "$72k - $105k", India: "₹5L - ₹12L", Germany: "€52k - €72k", UK: "£38k - £58k" },
+    applications: ["E-commerce conversion optimization", "Financial risk reporting", "Healthcare patient trends", "Marketing attribution"],
+    future: "Shifting from manual reporting to AI-assisted self-service analytics and automated anomaly detection.",
+    pros: ["Fastest entry point into data careers", "High demand across every industry", "Lower barrier to entry than ML"],
+    cons: ["Can involve repetitive ad-hoc reporting", "Requires strong business communication"],
+    projects: ["E-Commerce Cohort & Churn Dashboard", "Global Supply Chain SQL Analysis", "A/B Test Statistical Evaluator"]
+  },
+  {
+    id: "data-scientist",
+    title: "Data Scientist",
+    category: "Data & Analytics",
+    difficulty: "Intermediate - Advanced",
+    duration: "8 - 14 Months",
+    mathReq: "High (Linear Algebra, Calculus, Statistics)",
+    entryAccess: "Moderate",
+    demand: "High",
+    remoteScope: "High",
+    intlScope: "Very High",
+    futureGrowth: "Strong (Converging with Applied AI)",
+    intro: "Uses advanced statistics, machine learning, and scientific experimentation to predict outcomes and solve complex business problems.",
+    responsibilities: [
+      "Formulate hypotheses and design rigorous A/B experiments",
+      "Engineer predictive features and train supervised/unsupervised ML models",
+      "Evaluate model drift, bias, and business ROI",
+      "Communicate probabilistic insights to executive leadership"
+    ],
+    skills: ["Statistical Modeling", "Machine Learning", "Feature Engineering", "Hypothesis Testing", "Data Wrangling"],
+    languages: ["Python", "SQL", "R"],
+    tools: ["Scikit-learn", "Pandas", "NumPy", "XGBoost", "MLflow", "Jupyter"],
+    education: "Bachelor's or Master's in CS, Statistics, Mathematics, Economics, or Physics.",
+    salaries: { US: "$115k - $165k", India: "₹10L - ₹26L", Germany: "€68k - €95k", UK: "£55k - £85k" },
+    applications: ["Dynamic pricing algorithms", "Credit scoring & fraud detection", "Customer lifetime value modeling", "Demand forecasting"],
+    future: "Evolving toward causal inference, decision intelligence, and integrating foundation models into tabular workflows.",
+    pros: ["High intellectual stimulation", "Strong compensation", "Direct impact on core product strategy"],
+    cons: ["High competition for entry-level roles", "Data cleaning often takes 60%+ of time"],
+    projects: ["Telecom Customer Churn Predictor", "Dynamic Ride-Pricing Engine", "Multi-Touch Marketing Attribution Model"]
+  },
+  {
+    id: "data-engineer",
+    title: "Data Engineer",
+    category: "Data & Analytics",
+    difficulty: "Intermediate - Advanced",
+    duration: "8 - 12 Months",
+    mathReq: "Low - Moderate",
+    entryAccess: "Moderate",
+    demand: "Very High",
+    remoteScope: "Very High",
+    intlScope: "Very High",
+    futureGrowth: "Explosive (AI depends on clean data pipelines)",
+    intro: "Architects, builds, and maintains scalable data pipelines, data warehouses, and lakehouses that power analytics and AI systems.",
+    responsibilities: [
+      "Design fault-tolerant ETL/ELT batch and streaming pipelines",
+      "Model dimensional data warehouses and optimize query performance",
+      "Ensure data governance, lineage, and automated quality checks",
+      "Manage cloud storage and distributed compute clusters"
+    ],
+    skills: ["Data Modeling", "ETL/ELT Pipelines", "Distributed Systems", "Data Warehousing", "CI/CD for Data"],
+    languages: ["Python", "SQL", "Scala", "Bash"],
+    tools: ["Apache Spark", "Airflow", "dbt", "Snowflake", "Kafka", "Docker", "AWS/GCP"],
+    education: "Bachelor's in Computer Science or Software Engineering background.",
+    salaries: { US: "$120k - $170k", India: "₹11L - ₹28L", Germany: "€70k - €98k", UK: "£60k - £90k" },
+    applications: ["Real-time clickstream ingestion", "Enterprise lakehouse consolidation", "AI training dataset curation"],
+    future: "Essential backbone of the AI era; growing focus on real-time streaming, vector pipelines, and DataOps.",
+    pros: ["Less saturated than Data Science", "High job security and pay", "Clear engineering deliverables"],
+    cons: ["On-call duty for broken pipelines", "Rapidly changing cloud tooling ecosystem"],
+    projects: ["Real-Time Crypto/Stock Kafka Streaming Pipeline", "Automated dbt + Snowflake Modern Data Stack", "AWS S3 Data Lakehouse with PySpark"]
+  },
+  {
+    id: "bi-analyst",
+    title: "Business Intelligence Analyst",
+    category: "Data & Analytics",
+    difficulty: "Beginner - Intermediate",
+    duration: "4 - 6 Months",
+    mathReq: "Low - Moderate",
+    entryAccess: "High",
+    demand: "High",
+    remoteScope: "High",
+    intlScope: "High",
+    futureGrowth: "Steady",
+    intro: "Bridges business operations and data infrastructure by designing semantic reporting layers and executive KPI suites.",
+    responsibilities: [
+      "Translate executive questions into standardized BI metrics",
+      "Build semantic data models and automated reporting suites",
+      "Audit metric definitions across finance, sales, and product teams"
+    ],
+    skills: ["KPI Design", "Dimensional Modeling", "SQL", "Dashboard UX", "Business Acumen"],
+    languages: ["SQL", "DAX", "Python"],
+    tools: ["Power BI", "Tableau", "Looker", "Snowflake", "Excel"],
+    education: "Bachelor's in Business, Finance, MIS, or Analytics.",
+    salaries: { US: "$78k - $112k", India: "₹6L - ₹14L", Germany: "€55k - €75k", UK: "£42k - £62k" },
+    applications: ["Executive revenue scorecards", "Inventory & operations tracking", "SaaS ARR/MRR reporting"],
+    future: "Integrating conversational NLQ (Natural Language Querying) directly inside BI dashboards.",
+    pros: ["High visibility with leadership", "Great bridge from non-tech roles", "Predictable work hours"],
+    cons: ["Less pure coding than Data Engineering", "Heavy stakeholder alignment"],
+    projects: ["SaaS Executive ARR & Retention Cockpit", "Retail Store Performance Star-Schema Warehouse"]
+  },
+  {
+    id: "analytics-engineer",
+    title: "Analytics Engineer",
+    category: "Data & Analytics",
+    difficulty: "Intermediate",
+    duration: "6 - 9 Months",
+    mathReq: "Moderate",
+    entryAccess: "Moderate",
+    demand: "High",
+    remoteScope: "Very High",
+    intlScope: "High",
+    futureGrowth: "High",
+    intro: "Applies software engineering best practices (version control, testing, modularity) to transform raw warehouse data into clean analytics models.",
+    responsibilities: [
+      "Build modular SQL transformation models using dbt",
+      "Implement automated data quality tests and documentation",
+      "Collaborate with Data Engineers and Analysts on metric governance"
+    ],
+    skills: ["Modular SQL", "Data Modeling (Kimball)", "Version Control", "Data Testing", "Documentation"],
+    languages: ["SQL", "Python", "Jinja"],
+    tools: ["dbt", "Snowflake", "BigQuery", "Git", "GitHub Actions", "Looker"],
+    education: "Bachelor's in CS, Analytics, or transition from Data Analyst.",
+    salaries: { US: "$110k - $150k", India: "₹10L - ₹22L", Germany: "€65k - €88k", UK: "£55k - £78k" },
+    applications: ["Single-source-of-truth metric layers", "Self-service analytics enablement"],
+    future: "Rapidly becoming standard across modern cloud-first organizations.",
+    pros: ["Combines SQL mastery with modern DevOps workflows", "High demand", "Clean engineering culture"],
+    cons: ["Requires understanding both data infra and business logic"],
+    projects: ["End-to-End dbt Transformation Package with CI Tests", "Marketing Funnel Semantic Layer"]
+  },
+  {
+    id: "big-data-engineer",
+    title: "Big Data Engineer",
+    category: "Data & Analytics",
+    difficulty: "Advanced",
+    duration: "10 - 15 Months",
+    mathReq: "Moderate",
+    entryAccess: "Low - Moderate",
+    demand: "High",
+    remoteScope: "High",
+    intlScope: "Very High",
+    futureGrowth: "Strong",
+    intro: "Specializes in processing petabyte-scale distributed datasets with ultra-low latency and high throughput.",
+    responsibilities: [
+      "Tune distributed Spark/Flink clusters for massive throughput",
+      "Architect distributed storage formats (Parquet, Iceberg, Delta Lake)",
+      "Optimize cluster memory, partitioning, and shuffle bottlenecks"
+    ],
+    skills: ["Distributed Computing", "Stream Processing", "Cluster Optimization", "Lakehouse Formats"],
+    languages: ["Python", "Scala", "Java", "SQL"],
+    tools: ["Apache Spark", "Apache Flink", "Kafka", "Apache Iceberg", "Kubernetes", "AWS EMR"],
+    education: "Bachelor's or Master's in Computer Science / Distributed Systems.",
+    salaries: { US: "$130k - $185k", India: "₹14L - ₹34L", Germany: "€75k - €105k", UK: "£65k - £95k" },
+    applications: ["Telecom call-detail processing", "Ad-tech real-time bidding", "IoT telemetry ingestion"],
+    future: "Converging around open table formats (Iceberg/Delta) and real-time AI feature stores.",
+    pros: ["Top-tier engineering compensation", "Deep systems mastery"],
+    cons: ["Steep learning curve", "Complex debugging across distributed nodes"],
+    projects: ["Distributed Log Analytics Engine with Spark & Iceberg", "High-Throughput Fraud Event Stream Processor"]
+  },
+  {
+    id: "ai-engineer",
+    title: "AI Engineer",
+    category: "Artificial Intelligence",
+    difficulty: "Intermediate - Advanced",
+    duration: "8 - 14 Months",
+    mathReq: "Moderate - High",
+    entryAccess: "Moderate",
+    demand: "Explosive",
+    remoteScope: "Very High",
+    intlScope: "Very High",
+    futureGrowth: "Explosive",
+    intro: "Builds production applications powered by foundation models, RAG pipelines, AI agents, and multimodal APIs.",
+    responsibilities: [
+      "Architect Retrieval-Augmented Generation (RAG) and agentic workflows",
+      "Optimize prompt engineering, context caching, and latency/cost tradeoffs",
+      "Build evaluation harnesses to measure hallucination and accuracy",
+      "Deploy scalable AI microservices into production web/mobile apps"
+    ],
+    skills: ["LLM Orchestration", "Vector Databases", "Prompt & Context Engineering", "AI Evaluation", "API Design"],
+    languages: ["Python", "TypeScript", "JavaScript"],
+    tools: ["PyTorch", "LangGraph", "LlamaIndex", "Qdrant/Pinecone", "FastAPI", "Docker", "OpenAI/Gemini APIs"],
+    education: "Bachelor's in CS or strong software engineering + AI portfolio.",
+    salaries: { US: "$135k - $200k+", India: "₹14L - ₹36L", Germany: "€78k - €115k", UK: "£68k - £105k" },
+    applications: ["Enterprise knowledge copilots", "Autonomous customer support agents", "Code generation assistants"],
+    future: "One of the fastest-growing roles in tech as every software company becomes an AI-native company.",
+    pros: ["Massive industry demand", "Blend of software engineering and cutting-edge AI", "Fast prototyping"],
+    cons: ["Best practices evolve monthly", "Requires rigorous evaluation discipline"],
+    projects: ["Multi-Agent Research & Citation Assistant", "Hybrid Vector + Keyword Enterprise RAG Engine", "Voice-Enabled AI Coding Tutor"]
+  },
+  {
+    id: "ml-engineer",
+    title: "Machine Learning Engineer",
+    category: "Artificial Intelligence",
+    difficulty: "Advanced",
+    duration: "10 - 16 Months",
+    mathReq: "High (Linear Algebra, Calculus, Optimization)",
+    entryAccess: "Low - Moderate",
+    demand: "Very High",
+    remoteScope: "High",
+    intlScope: "Very High",
+    futureGrowth: "Very Strong",
+    intro: "Bridges data science and software engineering by training, optimizing, deploying, and monitoring ML models at scale (MLOps).",
+    responsibilities: [
+      "Build automated ML training and feature-store pipelines",
+      "Optimize model inference latency via quantization and ONNX/TensorRT",
+      "Monitor production data drift and trigger automated retraining"
+    ],
+    skills: ["Machine Learning Algorithms", "MLOps", "Model Optimization", "Distributed Training", "Software Engineering"],
+    languages: ["Python", "C++", "SQL"],
+    tools: ["PyTorch", "Scikit-learn", "Kubeflow", "MLflow", "Docker", "Kubernetes", "ONNX"],
+    education: "Bachelor's or Master's in CS, AI, or Applied Math.",
+    salaries: { US: "$140k - $210k", India: "₹15L - ₹38L", Germany: "€80k - €115k", UK: "£70k - £105k" },
+    applications: ["Personalized feed ranking", "Real-time fraud scoring", "Predictive maintenance"],
+    future: "Critical for companies running custom, private, or edge-deployed models.",
+    pros: ["Elite compensation", "Deep blend of math and systems engineering"],
+    cons: ["High bar for both SWE and ML theory"],
+    projects: ["End-to-End MLOps Credit Risk Pipeline with Drift Alerts", "Low-Latency Recommendation API with FastAPI & Redis"]
+  },
+  {
+    id: "dl-engineer",
+    title: "Deep Learning Engineer",
+    category: "Artificial Intelligence",
+    difficulty: "Advanced",
+    duration: "12 - 18 Months",
+    mathReq: "Very High (Multivariable Calculus, Matrix Calculus)",
+    entryAccess: "Low",
+    demand: "High",
+    remoteScope: "High",
+    intlScope: "Very High",
+    futureGrowth: "Very Strong",
+    intro: "Designs, trains, and fine-tunes neural network architectures across vision, audio, multimodal, and sequential domains.",
+    responsibilities: [
+      "Implement custom neural architectures and loss functions in PyTorch",
+      "Run multi-GPU distributed training with mixed precision",
+      "Distill large neural models for resource-constrained hardware"
+    ],
+    skills: ["Neural Architectures", "Backpropagation & Optimization", "GPU Programming", "Model Compression"],
+    languages: ["Python", "C++", "CUDA"],
+    tools: ["PyTorch", "TensorFlow", "JAX", "Hugging Face", "Weights & Biases", "NVIDIA Triton"],
+    education: "Master's or PhD preferred, or exceptional open-source track record.",
+    salaries: { US: "$150k - $225k", India: "₹18L - ₹45L", Germany: "€85k - €125k", UK: "£75k - £115k" },
+    applications: ["Autonomous driving perception", "Medical imaging diagnostics", "Speech synthesis"],
+    future: "Powering foundation model architectures and embodied robotics intelligence.",
+    pros: ["Working at the frontier of AI", "High prestige and pay"],
+    cons: ["Compute-intensive workflows", "Heavy mathematical rigor required"],
+    projects: ["Custom Transformer from Scratch in PyTorch", "Quantized Real-Time Edge Object Detector"]
+  },
+  {
+    id: "genai-engineer",
+    title: "Generative AI Engineer",
+    category: "Artificial Intelligence",
+    difficulty: "Intermediate - Advanced",
+    duration: "8 - 12 Months",
+    mathReq: "Moderate",
+    entryAccess: "Moderate",
+    demand: "Explosive",
+    remoteScope: "Very High",
+    intlScope: "Very High",
+    futureGrowth: "Explosive",
+    intro: "Specializes in fine-tuning, aligning, and orchestrating Large Language Models, diffusion models, and multimodal generative systems.",
+    responsibilities: [
+      "Fine-tune open-weights LLMs using LoRA/QLoRA and DPO",
+      "Design guardrails, structured output parsers, and safety filters",
+      "Build multimodal workflows combining text, image, audio, and video"
+    ],
+    skills: ["LLM Fine-Tuning (PEFT/LoRA)", "RAG Architecture", "AI Safety & Guardrails", "Multimodal Pipelines"],
+    languages: ["Python", "TypeScript"],
+    tools: ["Hugging Face", "vLLM", "PyTorch", "LangChain", "Ollama", "Weights & Biases"],
+    education: "Bachelor's in CS or strong engineering portfolio.",
+    salaries: { US: "$140k - $210k", India: "₹15L - ₹38L", Germany: "€78k - €112k", UK: "£68k - £102k" },
+    applications: ["Domain-specific legal/medical copilots", "Automated media synthesis", "Synthetic data generation"],
+    future: "Expanding rapidly into autonomous multi-agent systems and real-time multimodal interfaces.",
+    pros: ["Highest current hiring momentum", "Creative product possibilities"],
+    cons: ["Fast-moving research landscape requires constant reading"],
+    projects: ["Domain-Adapted LoRA Fine-Tuned Code Reviewer", "Multimodal Document & Chart Q&A System"]
+  },
+  {
+    id: "nlp-engineer",
+    title: "NLP Engineer",
+    category: "Artificial Intelligence",
+    difficulty: "Advanced",
+    duration: "10 - 15 Months",
+    mathReq: "High",
+    entryAccess: "Low - Moderate",
+    demand: "High",
+    remoteScope: "High",
+    intlScope: "Very High",
+    futureGrowth: "Strong (Merged with LLM engineering)",
+    intro: "Focuses on enabling machines to understand, retrieve, translate, and generate human language across global dialects.",
+    responsibilities: [
+      "Build semantic search, entity extraction, and multilingual pipelines",
+      "Optimize tokenization, embeddings, and retrieval ranking",
+      "Evaluate linguistic accuracy and cross-lingual generalization"
+    ],
+    skills: ["Transformers", "Information Retrieval", "Embeddings", "Linguistic Modeling", "Evaluation Metrics"],
+    languages: ["Python"],
+    tools: ["Hugging Face", "spaCy", "PyTorch", "SentenceTransformers", "Elasticsearch"],
+    education: "Bachelor's or Master's in CS, Computational Linguistics, or AI.",
+    salaries: { US: "$135k - $195k", India: "₹14L - ₹34L", Germany: "€75k - €108k", UK: "£65k - £98k" },
+    applications: ["Multilingual customer intelligence", "Legal contract extraction", "Enterprise semantic search"],
+    future: "Deepening into low-resource languages, long-context reasoning, and speech-to-speech systems.",
+    pros: ["Rich linguistic and algorithmic problems", "High relevance globally"],
+    cons: ["Requires careful handling of edge cases and ambiguity"],
+    projects: ["Multilingual Legal Clause Extractor", "Dense + Sparse Hybrid Semantic Search Engine"]
+  },
+  {
+    id: "cv-engineer",
+    title: "Computer Vision Engineer",
+    category: "Artificial Intelligence",
+    difficulty: "Advanced",
+    duration: "10 - 16 Months",
+    mathReq: "High (Linear Algebra, Geometry, Calculus)",
+    entryAccess: "Low - Moderate",
+    demand: "High",
+    remoteScope: "Moderate - High",
+    intlScope: "Very High",
+    futureGrowth: "Very Strong (Robotics & Spatial AI)",
+    intro: "Teaches computers to interpret images, video streams, and 3D spatial environments for robotics, manufacturing, and AR.",
+    responsibilities: [
+      "Train object detection, segmentation, and depth-estimation models",
+      "Optimize vision pipelines for real-time edge cameras",
+      "Calibrate multi-camera 3D reconstruction systems"
+    ],
+    skills: ["Image Processing", "CNNs & Vision Transformers", "3D Geometry/SLAM", "Edge Optimization"],
+    languages: ["Python", "C++"],
+    tools: ["OpenCV", "PyTorch", "YOLO", "TensorRT", "ROS2"],
+    education: "Bachelor's or Master's in CS, Robotics, or Electrical Engineering.",
+    salaries: { US: "$135k - $195k", India: "₹13L - ₹32L", Germany: "€75k - €108k", UK: "£62k - £95k" },
+    applications: ["Automated factory defect inspection", "Autonomous vehicles", "Medical radiology AI"],
+    future: "Surging alongside humanoid robotics, spatial computing, and Vision-Language-Action models.",
+    pros: ["Tangible visual results", "Essential for robotics and hardware AI"],
+    cons: ["Dataset annotation can be expensive", "Hardware deployment constraints"],
+    projects: ["Real-Time PPE Safety Violation Detector", "3D Monocular Depth & Obstacle Mapper"]
+  },
+  {
+    id: "ai-researcher",
+    title: "AI Researcher",
+    category: "Artificial Intelligence",
+    difficulty: "Expert",
+    duration: "24+ Months",
+    mathReq: "Very High",
+    entryAccess: "Very Low",
+    demand: "Selective / Elite",
+    remoteScope: "Moderate",
+    intlScope: "High",
+    futureGrowth: "Transformative",
+    intro: "Invents novel algorithms, model architectures, and alignment methods, publishing findings at top AI conferences.",
+    responsibilities: [
+      "Formulate novel hypotheses on model scaling, reasoning, or efficiency",
+      "Design ablation experiments and publish peer-reviewed papers",
+      "Collaborate with engineering teams to transfer breakthroughs into products"
+    ],
+    skills: ["Mathematical Proof", "Experimental Design", "Deep Learning Theory", "Scientific Writing"],
+    languages: ["Python", "C++", "JAX"],
+    tools: ["PyTorch", "JAX", "Slurm", "LaTeX", "Weights & Biases"],
+    education: "PhD or Master's with top-tier publications (NeurIPS, ICML, ICLR).",
+    salaries: { US: "$180k - $350k+", India: "₹25L - ₹65L+", Germany: "€90k - €140k", UK: "£85k - £150k" },
+    applications: ["Next-generation foundation models", "AI safety & interpretability", "Scientific discovery (AlphaFold-style)"],
+    future: "Shaping the fundamental capabilities of future computing.",
+    pros: ["Highest intellectual freedom and compensation", "Global impact"],
+    cons: ["Requires years of rigorous academic/research dedication"],
+    projects: ["Reproducing & Extending a Recent ICLR Paper", "Novel Attention Efficiency Benchmark"]
+  },
+  {
+    id: "cybersecurity-analyst",
+    title: "Cybersecurity Analyst",
+    category: "Cybersecurity",
+    difficulty: "Beginner - Intermediate",
+    duration: "5 - 8 Months",
+    mathReq: "Low",
+    entryAccess: "High",
+    demand: "Very High",
+    remoteScope: "High",
+    intlScope: "High",
+    futureGrowth: "Very Strong",
+    intro: "Protects organizational networks, endpoints, and data by monitoring threats, enforcing security policies, and investigating incidents.",
+    responsibilities: [
+      "Monitor security alerts and triage suspicious network activity",
+      "Conduct vulnerability scans and coordinate patch remediation",
+      "Maintain compliance documentation and security awareness programs"
+    ],
+    skills: ["Networking (TCP/IP)", "Linux & Windows Admin", "Vulnerability Management", "Incident Response", "SIEM"],
+    languages: ["Python", "Bash", "PowerShell"],
+    tools: ["Splunk", "Wireshark", "Nessus", "Nmap", "Microsoft Sentinel"],
+    education: "Bachelor's in IT/CS or industry certifications (CompTIA Security+).",
+    salaries: { US: "$82k - $120k", India: "₹5.5L - ₹14L", Germany: "€58k - €82k", UK: "£42k - £65k" },
+    applications: ["Banking & fintech defense", "Healthcare HIPAA protection", "Enterprise cloud governance"],
+    future: "Growing reliance on AI-assisted threat triage and zero-trust identity verification.",
+    pros: ["Strong entry-level pathway into security", "Recession-resistant demand"],
+    cons: ["High alert volumes require focus", "Constant need to track new CVEs"],
+    projects: ["Home Lab SIEM Log Monitoring Pipeline", "Automated Vulnerability Scanner & Report Generator"]
+  },
+  {
+    id: "ethical-hacker",
+    title: "Ethical Hacker",
+    category: "Cybersecurity",
+    difficulty: "Intermediate - Advanced",
+    duration: "8 - 14 Months",
+    mathReq: "Low - Moderate",
+    entryAccess: "Moderate",
+    demand: "High",
+    remoteScope: "Very High",
+    intlScope: "High",
+    futureGrowth: "Strong",
+    intro: "Legally simulates cyberattacks against authorized systems to uncover critical vulnerabilities before malicious actors exploit them.",
+    responsibilities: [
+      "Perform authorized web, mobile, API, and network security assessments",
+      "Exploit logic flaws, injection vulnerabilities, and misconfigurations safely",
+      "Deliver actionable remediation reports to engineering teams"
+    ],
+    skills: ["Web App Security (OWASP)", "Network Exploitation", "Privilege Escalation", "Scripting", "Report Writing"],
+    languages: ["Python", "Bash", "JavaScript", "SQL"],
+    tools: ["Burp Suite", "Metasploit", "Nmap", "Kali Linux", "Gobuster", "SQLmap"],
+    education: "Strong hands-on labs (TryHackMe/HackTheBox) + certs (OSCP, PNPT).",
+    salaries: { US: "$105k - $155k", India: "₹8L - ₹22L", Germany: "€65k - €92k", UK: "£52k - £80k" },
+    applications: ["Pre-launch product security audits", "Bug bounty programs", "Red team exercises"],
+    future: "Expanding into AI model red-teaming (prompt injection, data poisoning) and cloud IAM exploitation.",
+    pros: ["Exciting investigative problem-solving", "Bug bounty income opportunities"],
+    cons: ["Strict legal boundaries", "Detailed report writing is mandatory"],
+    projects: ["OWASP Juice Shop Full Exploit & Patch Walkthrough", "Custom Recon & Subdomain Enumeration CLI"]
+  },
+  {
+    id: "penetration-tester",
+    title: "Penetration Tester",
+    category: "Cybersecurity",
+    difficulty: "Intermediate - Advanced",
+    duration: "9 - 14 Months",
+    mathReq: "Low - Moderate",
+    entryAccess: "Moderate",
+    demand: "High",
+    remoteScope: "High",
+    intlScope: "High",
+    futureGrowth: "Strong",
+    intro: "Conducts structured, time-boxed offensive security engagements against enterprise infrastructure, Active Directory, and cloud environments.",
+    responsibilities: [
+      "Execute black-box, gray-box, and white-box penetration tests",
+      "Test Active Directory lateral movement and cloud privilege escalation",
+      "Brief executive and technical teams on risk severity (CVSS)"
+    ],
+    skills: ["Active Directory Security", "Web & API Pentesting", "Network Pivoting", "Exploit Adaptation"],
+    languages: ["Python", "PowerShell", "Bash", "C#"],
+    tools: ["Burp Suite Pro", "BloodHound", "Impacket", "Nmap", "CrackMapExec"],
+    education: "OSCP / CRTO certifications and demonstrated lab proficiency.",
+    salaries: { US: "$110k - $160k", India: "₹9L - ₹24L", Germany: "€68k - €95k", UK: "£55k - £85k" },
+    applications: ["Regulatory PCI-DSS / SOC2 compliance testing", "M&A technical due diligence"],
+    future: "Continuous automated pentesting paired with deep human logic testing.",
+    pros: ["High respect in security teams", "Clear career progression"],
+    cons: ["Tight engagement deadlines", "Travel occasionally required for physical/internal tests"],
+    projects: ["Active Directory Attack & Defense Lab", "Automated API Security Fuzzing Suite"]
+  },
+  {
+    id: "soc-analyst",
+    title: "SOC Analyst",
+    category: "Cybersecurity",
+    difficulty: "Beginner - Intermediate",
+    duration: "4 - 7 Months",
+    mathReq: "Low",
+    entryAccess: "High",
+    demand: "Very High",
+    remoteScope: "High",
+    intlScope: "High",
+    futureGrowth: "Strong",
+    intro: "Serves on the front lines of a Security Operations Center, detecting, analyzing, and containing active cyber threats in real time.",
+    responsibilities: [
+      "Triage Tier 1/2 SIEM and EDR alerts around the clock",
+      "Investigate phishing campaigns, malware execution, and anomalous logins",
+      "Execute incident containment playbooks and escalate major breaches"
+    ],
+    skills: ["Log Analysis", "Threat Detection", "MITRE ATT&CK Framework", "Packet Inspection", "EDR Triage"],
+    languages: ["Python", "PowerShell", "KQL/SPL"],
+    tools: ["Splunk", "CrowdStrike Falcon", "Wireshark", "VirusTotal", "TheHive"],
+    education: "CompTIA Security+, Blue Team Level 1 (BTL1), or CS/IT degree.",
+    salaries: { US: "$75k - $115k", India: "₹4.5L - ₹12L", Germany: "€52k - €78k", UK: "£38k - £60k" },
+    applications: ["24/7 enterprise defense", "Managed Security Service Providers (MSSPs)"],
+    future: "SOAR automation is eliminating repetitive Tier-1 tasks, elevating analysts to threat hunters.",
+    pros: ["Best launchpad for blue-team careers", "Immediate real-world defensive experience"],
+    cons: ["Shift work is common in Tier-1 SOCs", "High-pressure during live incidents"],
+    projects: ["Wazuh Open-Source SIEM Detection Lab", "PCAP Malware Traffic Forensics Report"]
+  },
+  {
+    id: "security-engineer",
+    title: "Security Engineer",
+    category: "Cybersecurity",
+    difficulty: "Advanced",
+    duration: "10 - 15 Months",
+    mathReq: "Low - Moderate",
+    entryAccess: "Moderate",
+    demand: "Very High",
+    remoteScope: "Very High",
+    intlScope: "Very High",
+    futureGrowth: "Very Strong",
+    intro: "Builds and automates defensive security architecture, DevSecOps pipelines, identity controls, and cryptographic protections.",
+    responsibilities: [
+      "Embed SAST, DAST, and secret scanning into CI/CD pipelines",
+      "Architect zero-trust authentication, IAM, and secrets management",
+      "Automate threat detection and response workflows in code"
+    ],
+    skills: ["DevSecOps", "IAM & Zero Trust", "Cryptography Basics", "Secure Coding", "Cloud Hardening"],
+    languages: ["Python", "Go", "Bash", "Terraform"],
+    tools: ["Vault", "Snyk", "SonarQube", "AWS IAM", "Kubernetes", "GitHub Actions"],
+    education: "Bachelor's in CS or transition from Software/Systems Engineering.",
+    salaries: { US: "$130k - $185k", India: "₹12L - ₹30L", Germany: "€75k - €105k", UK: "£65k - £95k" },
+    applications: ["Hardening SaaS platforms", "Securing microservice architectures", "Automated compliance"],
+    future: "High demand as organizations shift security left into developer workflows.",
+    pros: ["Software-engineer-level salaries", "Proactive building rather than reactive firefighting"],
+    cons: ["Requires broad mastery of SWE, cloud, and security"],
+    projects: ["Hardened CI/CD DevSecOps Pipeline", "Zero-Trust Microservice Auth Gateway"]
+  },
+  {
+    id: "digital-forensics",
+    title: "Digital Forensics Analyst",
+    category: "Cybersecurity",
+    difficulty: "Intermediate - Advanced",
+    duration: "8 - 12 Months",
+    mathReq: "Low",
+    entryAccess: "Moderate",
+    demand: "Moderate - High",
+    remoteScope: "Moderate",
+    intlScope: "High",
+    futureGrowth: "Steady",
+    intro: "Investigates cybercrimes and data breaches by recovering, preserving, and analyzing digital evidence from disks, memory, and networks.",
+    responsibilities: [
+      "Acquire forensic disk and volatile RAM images with chain-of-custody",
+      "Reconstruct attacker timelines and reverse-engineer suspicious artifacts",
+      "Produce legally admissible forensic investigation reports"
+    ],
+    skills: ["Memory Forensics", "File System Internals", "Incident Reconstruction", "Malware Triage"],
+    languages: ["Python", "PowerShell", "C"],
+    tools: ["Autopsy", "Volatility", "FTK Imager", "Velociraptor", "Wireshark"],
+    education: "Bachelor's in Cybersecurity/Digital Forensics + GCFA/CHFI.",
+    salaries: { US: "$95k - $140k", India: "₹7L - ₹18L", Germany: "€62k - €88k", UK: "£48k - £75k" },
+    applications: ["Ransomware breach response", "Insider threat investigations", "Law enforcement support"],
+    future: "Expanding into cloud container forensics and mobile device extraction.",
+    pros: ["Deep detective work", "High impact during critical breaches"],
+    cons: ["Strict documentation standards", "Urgent incident response timelines"],
+    projects: ["Volatility RAM Ransomware Artifact Analysis", "Windows Registry & Event Log Timeline Builder"]
+  },
+  {
+    id: "cloud-security-engineer",
+    title: "Cloud Security Engineer",
+    category: "Cybersecurity",
+    difficulty: "Advanced",
+    duration: "10 - 15 Months",
+    mathReq: "Low",
+    entryAccess: "Moderate",
+    demand: "Very High",
+    remoteScope: "Very High",
+    intlScope: "Very High",
+    futureGrowth: "Explosive",
+    intro: "Secures multi-cloud environments (AWS, Azure, GCP) and Kubernetes clusters through Infrastructure-as-Code policies and least-privilege IAM.",
+    responsibilities: [
+      "Audit and harden cloud IAM roles, VPC networks, and storage buckets",
+      "Deploy CSPM (Cloud Security Posture Management) and runtime container security",
+      "Write automated policy-as-code guardrails in Terraform/OPA"
+    ],
+    skills: ["Cloud Architecture (AWS/Azure)", "IAM Least Privilege", "Container/K8s Security", "Infrastructure as Code"],
+    languages: ["Python", "Terraform (HCL)", "Bash", "Go"],
+    tools: ["AWS GuardDuty", "Terraform", "Kubernetes", "Falco", "Prisma Cloud", "Trivy"],
+    education: "Cloud + Security certs (AWS Security Specialty, CKS) + Cloud/Sec background.",
+    salaries: { US: "$135k - $190k", India: "₹14L - ₹32L", Germany: "€78k - €110k", UK: "£68k - £98k" },
+    applications: ["Securing enterprise cloud migrations", "Protecting AI cloud workloads"],
+    future: "Top priority for CISOs globally as misconfigured cloud identities remain the #1 breach vector.",
+    pros: ["Elite pay and remote flexibility", "Massive talent shortage"],
+    cons: ["Cloud provider IAM models are deeply complex"],
+    projects: ["Automated AWS IAM Least-Privilege Auditor", "Hardened Kubernetes Cluster with Falco Runtime Alerts"]
+  },
+  {
+    id: "security-researcher",
+    title: "Security Researcher",
+    category: "Cybersecurity",
+    difficulty: "Expert",
+    duration: "18+ Months",
+    mathReq: "Moderate",
+    entryAccess: "Low",
+    demand: "High",
+    remoteScope: "Very High",
+    intlScope: "Very High",
+    futureGrowth: "Strong",
+    intro: "Discovers zero-day vulnerabilities, analyzes advanced malware, and publishes threat intelligence to protect global software ecosystems.",
+    responsibilities: [
+      "Reverse-engineer binaries, firmware, and novel exploit chains",
+      "Develop fuzzing harnesses to uncover memory-safety or logic bugs",
+      "Coordinate responsible disclosure with vendors and publish advisories"
+    ],
+    skills: ["Reverse Engineering", "Binary Exploitation", "Fuzzing", "OS Internals", "Cryptography"],
+    languages: ["C", "C++", "Python", "Assembly", "Rust"],
+    tools: ["Ghidra", "IDA Pro", "GDB", "AFL++", "Frida"],
+    education: "Deep low-level systems mastery and CVE/research track record.",
+    salaries: { US: "$140k - $220k+", India: "₹15L - ₹40L+", Germany: "€80k - €120k", UK: "£70k - £110k" },
+    applications: ["OS & browser security", "Threat intelligence labs", "AI model security research"],
+    future: "Focusing heavily on AI supply chain attacks, firmware, and memory-safe systems.",
+    pros: ["Autonomy and prestige", "Substantial bug bounty rewards"],
+    cons: ["Steepest technical learning curve in security"],
+    projects: ["Custom Binary Fuzzer with AFL++", "Ghidra Malware Reverse-Engineering Case Study"]
+  },
+  {
+    id: "software-engineer",
+    title: "Software Engineer",
+    category: "Software Development",
+    difficulty: "Intermediate",
+    duration: "6 - 12 Months",
+    mathReq: "Moderate (Discrete Math, Logic)",
+    entryAccess: "High",
+    demand: "Very High",
+    remoteScope: "Very High",
+    intlScope: "Very High",
+    futureGrowth: "Strong (AI-augmented engineering)",
+    intro: "Designs, builds, tests, and scales reliable software systems using strong computer science fundamentals and clean architecture.",
+    responsibilities: [
+      "Write modular, maintainable, and well-tested production code",
+      "Design scalable system architectures, APIs, and data models",
+      "Collaborate via code reviews, agile sprints, and CI/CD pipelines"
+    ],
+    skills: ["Data Structures & Algorithms", "System Design", "OOP & Functional Patterns", "Testing", "Git"],
+    languages: ["Python", "Java", "C++", "TypeScript", "Go", "C#"],
+    tools: ["Git", "Docker", "PostgreSQL", "Linux", "GitHub Actions", "AWS"],
+    education: "Bachelor's in Computer Science or equivalent strong engineering portfolio.",
+    salaries: { US: "$115k - $175k", India: "₹8L - ₹28L", Germany: "€65k - €95k", UK: "£55k - £88k" },
+    applications: ["Cloud SaaS platforms", "Financial trading systems", "Consumer apps", "Developer tools"],
+    future: "Engineers who leverage AI coding assistants to ship verified, high-architecture systems are 3x more productive.",
+    pros: ["Broadest career flexibility across all tech", "High compensation and global mobility"],
+    cons: ["Technical interviews emphasize DSA and System Design"],
+    projects: ["Distributed Rate-Limiter & Cache Service", "Collaborative Real-Time Task & Docs Engine"]
+  },
+  {
+    id: "frontend-developer",
+    title: "Frontend Developer",
+    category: "Software Development",
+    difficulty: "Beginner - Intermediate",
+    duration: "4 - 8 Months",
+    mathReq: "Low",
+    entryAccess: "Very High",
+    demand: "High",
+    remoteScope: "Very High",
+    intlScope: "High",
+    futureGrowth: "Steady (Shifting toward full-stack & AI UI)",
+    intro: "Crafts fast, accessible, and visually compelling user interfaces that bring digital products to life in the browser.",
+    responsibilities: [
+      "Build responsive component architectures in React, Next.js, or Vue",
+      "Optimize Core Web Vitals, accessibility (WCAG), and state management",
+      "Integrate REST/GraphQL APIs and real-time streaming UIs"
+    ],
+    skills: ["Semantic HTML/CSS", "Modern JavaScript/TypeScript", "Component Architecture", "Performance & Accessibility"],
+    languages: ["JavaScript", "TypeScript", "HTML/CSS"],
+    tools: ["React", "Next.js", "Tailwind CSS", "Vite", "Playwright", "Figma"],
+    education: "Self-taught portfolio, bootcamp, or CS degree.",
+    salaries: { US: "$95k - $145k", India: "₹6L - ₹18L", Germany: "€58k - €82k", UK: "£45k - £72k" },
+    applications: ["SaaS dashboards", "E-commerce storefronts", "Interactive AI web apps"],
+    future: "Growing demand for interactive data visualizations, WebGL/3D interfaces, and streaming AI UX.",
+    pros: ["Visual, immediate feedback while learning", "Great entry point into software"],
+    cons: ["High competition at junior level; TypeScript + Full-Stack skills give huge edge"],
+    projects: ["Interactive Financial Analytics Dashboard", "Accessible Design System Component Library"]
+  },
+  {
+    id: "backend-developer",
+    title: "Backend Developer",
+    category: "Software Development",
+    difficulty: "Intermediate",
+    duration: "6 - 10 Months",
+    mathReq: "Low - Moderate",
+    entryAccess: "High",
+    demand: "Very High",
+    remoteScope: "Very High",
+    intlScope: "Very High",
+    futureGrowth: "Very Strong",
+    intro: "Builds the server-side logic, databases, authentication systems, and high-throughput APIs powering applications behind the scenes.",
+    responsibilities: [
+      "Design RESTful and GraphQL APIs with strict validation and security",
+      "Architect relational and NoSQL database schemas and optimize queries",
+      "Implement caching, background job queues, and horizontal scaling"
+    ],
+    skills: ["API Architecture", "Database Design & Indexing", "Authentication/OAuth", "Caching & Queues", "Containerization"],
+    languages: ["Python", "Java", "Node.js (TS)", "Go", "C#", "SQL"],
+    tools: ["FastAPI", "Spring Boot", "Express/NestJS", "PostgreSQL", "Redis", "Docker"],
+    education: "Bachelor's in CS or strong backend project portfolio.",
+    salaries: { US: "$115k - $165k", India: "₹8L - ₹25L", Germany: "€65k - €92k", UK: "£52k - £85k" },
+    applications: ["Payment gateways", "AI inference backends", "Enterprise ERP systems"],
+    future: "Essential for orchestrating AI agents, real-time events, and secure data access.",
+    pros: ["Less UI churn than frontend", "Strong demand and high pay"],
+    cons: ["Requires deep understanding of concurrency, security, and failure modes"],
+    projects: ["Multi-Tenant SaaS Billing & Auth API", "High-Concurrency URL Shortener with Redis & Postgres"]
+  },
+  {
+    id: "fullstack-developer",
+    title: "Full-Stack Developer",
+    category: "Software Development",
+    difficulty: "Intermediate",
+    duration: "7 - 12 Months",
+    mathReq: "Low - Moderate",
+    entryAccess: "High",
+    demand: "Very High",
+    remoteScope: "Very High",
+    intlScope: "Very High",
+    futureGrowth: "Very Strong",
+    intro: "End-to-end product builder capable of designing databases, writing backend APIs, crafting reactive UIs, and deploying to the cloud.",
+    responsibilities: [
+      "Ship complete product features from database schema to polished UI",
+      "Manage authentication, API integration, and cloud deployments",
+      "Iterate rapidly on user feedback and product telemetry"
+    ],
+    skills: ["Frontend Frameworks", "Backend APIs", "Relational Databases", "Auth & Security", "Cloud Deployment"],
+    languages: ["TypeScript", "JavaScript", "Python", "SQL"],
+    tools: ["React", "Next.js", "Node.js", "FastAPI", "PostgreSQL", "Docker", "Vercel/AWS"],
+    education: "CS degree, bootcamp, or demonstrable shipped full-stack apps.",
+    salaries: { US: "$110k - $165k", India: "₹7L - ₹24L", Germany: "€62k - €90k", UK: "£50k - £82k" },
+    applications: ["Startups & MVP launches", "Internal enterprise tools", "AI-powered SaaS products"],
+    future: "Most versatile developer profile, especially valued in startups and AI product teams.",
+    pros: ["Can build entire products independently", "Abundant job openings"],
+    cons: ["Broad surface area requires disciplined prioritization"],
+    projects: ["AI-Powered Project Management SaaS", "Full-Stack E-Commerce Store with Stripe & Admin Analytics"]
+  },
+  {
+    id: "mobile-developer",
+    title: "Mobile App Developer",
+    category: "Software Development",
+    difficulty: "Intermediate",
+    duration: "6 - 10 Months",
+    mathReq: "Low",
+    entryAccess: "High",
+    demand: "High",
+    remoteScope: "High",
+    intlScope: "High",
+    futureGrowth: "Strong",
+    intro: "Builds native and cross-platform iOS and Android applications optimized for touch UX, offline sync, and device hardware.",
+    responsibilities: [
+      "Develop responsive mobile interfaces with smooth 60/120fps animations",
+      "Integrate push notifications, biometrics, camera, and local storage",
+      "Manage App Store and Google Play release pipelines"
+    ],
+    skills: ["Mobile UI/UX", "State & Offline Sync", "Native APIs", "App Performance", "Store Deployment"],
+    languages: ["Swift", "Kotlin", "Dart", "TypeScript"],
+    tools: ["Flutter", "React Native", "SwiftUI", "Jetpack Compose", "Firebase"],
+    education: "CS degree or published apps on Play Store / App Store.",
+    salaries: { US: "$110k - $160k", India: "₹7L - ₹22L", Germany: "€62k - €88k", UK: "£50k - £80k" },
+    applications: ["Fintech & mobile banking", "Health & fitness trackers", "On-demand delivery apps"],
+    future: "On-device AI inference (CoreML/Gemini Nano) is unlocking smart offline mobile apps.",
+    pros: ["Tangible apps you can show on your phone", "Strong consumer & enterprise demand"],
+    cons: ["Device fragmentation and app store review cycles"],
+    projects: ["Offline-First Personal Finance & Habit App", "AI Voice Note & Task Organizer Mobile App"]
+  },
+  {
+    id: "game-developer",
+    title: "Game Developer",
+    category: "Software Development",
+    difficulty: "Intermediate - Advanced",
+    duration: "9 - 15 Months",
+    mathReq: "High (Linear Algebra, Trigonometry, Physics)",
+    entryAccess: "Moderate",
+    demand: "Moderate",
+    remoteScope: "Moderate - High",
+    intlScope: "High",
+    futureGrowth: "Steady (AI NPCs & procedural worlds)",
+    intro: "Combines real-time graphics programming, physics simulation, and interactive design to build engaging video games and simulations.",
+    responsibilities: [
+      "Implement gameplay mechanics, AI behaviors, and physics interactions",
+      "Optimize frame rates, memory budgets, and shader rendering",
+      "Collaborate with 3D artists, sound designers, and level designers"
+    ],
+    skills: ["Game Loops & Physics", "3D Math & Vectors", "Rendering & Shaders", "Memory Optimization"],
+    languages: ["C#", "C++", "Rust"],
+    tools: ["Unity", "Unreal Engine 5", "Godot", "Blender", "Git LFS"],
+    education: "CS/Game Dev degree or strong playable game portfolio.",
+    salaries: { US: "$90k - $145k", India: "₹5L - ₹16L", Germany: "€52k - €78k", UK: "£40k - £68k" },
+    applications: ["PC/Console/Mobile gaming", "VR training simulations", "Digital twins"],
+    future: "Procedural generation and AI-driven dynamic NPCs are transforming indie and AAA studios.",
+    pros: ["Deeply creative and passionate community", "Strong math/C++ skills transfer well"],
+    cons: ["Competitive industry; watch out for studio crunch culture"],
+    projects: ["3D Physics Puzzle Platformer in Unity", "Multiplayer Arena Survival Prototype in Godot/Unreal"]
+  },
+  {
+    id: "embedded-developer",
+    title: "Embedded Systems Developer",
+    category: "Software Development",
+    difficulty: "Advanced",
+    duration: "10 - 15 Months",
+    mathReq: "Moderate",
+    entryAccess: "Moderate",
+    demand: "High",
+    remoteScope: "Low - Moderate",
+    intlScope: "High",
+    futureGrowth: "Very Strong (Edge AI & EVs)",
+    intro: "Writes deterministic, resource-efficient firmware directly on microcontrollers and hardware devices powering cars, medical gear, and electronics.",
+    responsibilities: [
+      "Write low-level C/C++/Rust firmware for ARM/RISC-V microcontrollers",
+      "Debug hardware protocols (SPI, I2C, UART, CAN) using oscilloscopes",
+      "Optimize power consumption and real-time RTOS task scheduling"
+    ],
+    skills: ["C/C++ Pointers & Memory", "RTOS", "Hardware Protocols (I2C/SPI/UART)", "Datasheet Reading"],
+    languages: ["C", "C++", "Rust", "Python"],
+    tools: ["FreeRTOS", "STM32", "ESP32", "GDB", "Logic Analyzer", "CMake"],
+    education: "Bachelor's in Electrical, Electronics, or Computer Engineering.",
+    salaries: { US: "$110k - $160k", India: "₹7L - ₹20L", Germany: "€65k - €92k", UK: "£50k - £78k" },
+    applications: ["Electric vehicles", "Medical pacemakers & monitors", "Smart home & industrial sensors"],
+    future: "TinyML (on-chip AI) and Rust adoption are modernizing embedded engineering.",
+    pros: ["Less saturated than web development", "Long career longevity"],
+    cons: ["Requires physical hardware boards for testing", "Debugging hardware-software bugs takes patience"],
+    projects: ["ESP32 Real-Time Environmental Telemetry Node", "FreeRTOS Motor Controller with CAN Bus"]
+  },
+  {
+    id: "cloud-computing",
+    title: "Cloud Engineer",
+    category: "Other Technology Fields",
+    difficulty: "Intermediate",
+    duration: "6 - 10 Months",
+    mathReq: "Low",
+    entryAccess: "Moderate",
+    demand: "Very High",
+    remoteScope: "Very High",
+    intlScope: "Very High",
+    futureGrowth: "Very Strong",
+    intro: "Designs, migrates, and manages resilient, cost-optimized cloud infrastructure across AWS, Azure, and Google Cloud.",
+    responsibilities: [
+      "Architect highly available VPC networks, compute clusters, and storage",
+      "Automate cloud provisioning using Infrastructure as Code",
+      "Optimize cloud FinOps spend and disaster recovery posture"
+    ],
+    skills: ["Linux Administration", "Networking & DNS", "AWS/Azure/GCP Services", "Infrastructure as Code"],
+    languages: ["Python", "Bash", "Terraform (HCL)", "Go"],
+    tools: ["AWS", "Terraform", "Docker", "Kubernetes", "CloudWatch", "Linux"],
+    education: "IT/CS degree or cloud certifications (AWS Solutions Architect Associate).",
+    salaries: { US: "$115k - $165k", India: "₹8L - ₹24L", Germany: "€65k - €95k", UK: "£55k - £85k" },
+    applications: ["Global SaaS hosting", "AI GPU cluster orchestration", "Enterprise hybrid cloud"],
+    future: "Cloud infrastructure is the utility grid for all AI and modern software.",
+    pros: ["High compensation", "Strong certification-to-job pathway"],
+    cons: ["Misconfigurations can cause costly outages"],
+    projects: ["Multi-AZ Auto-Scaling Web Architecture in Terraform", "Serverless Event-Driven Image Processing Pipeline"]
+  },
+  {
+    id: "devops-engineering",
+    title: "DevOps / Platform Engineer",
+    category: "Other Technology Fields",
+    difficulty: "Intermediate - Advanced",
+    duration: "8 - 12 Months",
+    mathReq: "Low",
+    entryAccess: "Moderate",
+    demand: "Very High",
+    remoteScope: "Very High",
+    intlScope: "Very High",
+    futureGrowth: "Very Strong",
+    intro: "Automates software delivery, container orchestration, and observability so engineering teams ship reliably dozens of times a day.",
+    responsibilities: [
+      "Build zero-downtime CI/CD deployment pipelines",
+      "Manage Kubernetes clusters, service meshes, and observability stacks",
+      "Improve DORA metrics (deployment frequency, mean time to recovery)"
+    ],
+    skills: ["CI/CD Pipelines", "Containers & Kubernetes", "Linux & Networking", "Observability", "GitOps"],
+    languages: ["Bash", "Python", "Go", "YAML/HCL"],
+    tools: ["Docker", "Kubernetes", "GitHub Actions", "Terraform", "Prometheus", "Grafana", "ArgoCD"],
+    education: "CS/IT background or transition from SysAdmin/Backend Developer.",
+    salaries: { US: "$125k - $175k", India: "₹10L - ₹28L", Germany: "€70k - €98k", UK: "£60k - £90k" },
+    applications: ["High-frequency SaaS deployments", "Internal developer platforms"],
+    future: "Evolving into Internal Developer Platforms (Platform Engineering) and AIOps.",
+    pros: ["High impact across entire engineering org", "Top-tier pay"],
+    cons: ["Requires broad knowledge across dev, ops, networking, and security"],
+    projects: ["GitOps Kubernetes Deployment with ArgoCD & Prometheus", "Automated Multi-Stage Docker CI/CD Pipeline"]
+  },
+  {
+    id: "network-engineering",
+    title: "Network Engineer",
+    category: "Other Technology Fields",
+    difficulty: "Intermediate",
+    duration: "6 - 10 Months",
+    mathReq: "Low",
+    entryAccess: "High",
+    demand: "Steady - High",
+    remoteScope: "Moderate",
+    intlScope: "High",
+    futureGrowth: "Steady (Software-Defined Networking)",
+    intro: "Architects and maintains enterprise routing, switching, firewalls, and hybrid cloud connectivity that keep global communications online.",
+    responsibilities: [
+      "Configure BGP/OSPF routing, VLANs, VPNs, and enterprise firewalls",
+      "Diagnose latency, packet loss, and DNS/TLS issues",
+      "Automate network configurations using Python and Netmiko/Ansible"
+    ],
+    skills: ["TCP/IP & Subnetting", "Routing & Switching", "Firewalls & VPNs", "Network Automation"],
+    languages: ["Python", "Bash"],
+    tools: ["Cisco IOS", "Wireshark", "Ansible", "pfSense", "AWS Transit Gateway"],
+    education: "CCNA / CCNP certifications or Networking/IT degree.",
+    salaries: { US: "$95k - $140k", India: "₹5L - ₹15L", Germany: "€58k - €82k", UK: "£45k - £70k" },
+    applications: ["Data centers", "Telecom backbones", "Enterprise hybrid cloud connectivity"],
+    future: "Shifting toward Network Automation, SD-WAN, and high-speed AI data-center fabrics.",
+    pros: ["Foundational knowledge applicable everywhere", "Clear certification ladder (CCNA)"],
+    cons: ["Occasional maintenance windows outside business hours"],
+    projects: ["Automated Multi-Router BGP Topology in GNS3/Containerlab", "Python Network Health & Config Drift Auditor"]
+  },
+  {
+    id: "blockchain-development",
+    title: "Blockchain / Web3 Developer",
+    category: "Other Technology Fields",
+    difficulty: "Intermediate - Advanced",
+    duration: "8 - 12 Months",
+    mathReq: "Moderate (Cryptography basics)",
+    entryAccess: "Moderate",
+    demand: "Cyclical / Specialized",
+    remoteScope: "Very High",
+    intlScope: "Very High",
+    futureGrowth: "Specialized (Tokenization & DeFi)",
+    intro: "Builds decentralized smart contracts, cryptographic protocols, and verifiable digital asset infrastructure.",
+    responsibilities: [
+      "Write gas-optimized, formally audited Solidity or Rust smart contracts",
+      "Build dApp frontends with wallet authentication and on-chain indexing",
+      "Implement strict security invariants to prevent reentrancy or flash-loan exploits"
+    ],
+    skills: ["Smart Contracts", "Cryptography & Consensus", "Smart Contract Security", "Web3 Integration"],
+    languages: ["Solidity", "Rust", "TypeScript"],
+    tools: ["Foundry", "Hardhat", "Ethers.js/Viem", "OpenZeppelin", "The Graph"],
+    education: "Strong software engineering + security auditing mindset.",
+    salaries: { US: "$120k - $185k", India: "₹10L - ₹30L", Germany: "€70k - €105k", UK: "£60k - £95k" },
+    applications: ["Decentralized finance (DeFi)", "Real-world asset tokenization", "Cross-border stablecoin rails"],
+    future: "Maturing around institutional tokenization, zero-knowledge proofs (ZK), and Layer-2 scaling.",
+    pros: ["Remote-first global ecosystem", "High compensation for security-conscious devs"],
+    cons: ["Market cyclicality", "Zero margin for smart contract bugs"],
+    projects: ["Audited Escrow & Milestone Payment Smart Contract", "Cross-Chain Portfolio & Gas Tracker dApp"]
+  },
+  {
+    id: "database-administration",
+    title: "Database Administrator (DBA)",
+    category: "Other Technology Fields",
+    difficulty: "Intermediate - Advanced",
+    duration: "7 - 11 Months",
+    mathReq: "Low",
+    entryAccess: "Moderate",
+    demand: "Steady",
+    remoteScope: "High",
+    intlScope: "High",
+    futureGrowth: "Steady (Cloud DB Reliability)",
+    intro: "Ensures mission-critical databases remain ultra-fast, backed up, secure, and available 99.999% of the time.",
+    responsibilities: [
+      "Tune slow SQL queries, execution plans, and B-tree/GIN indexes",
+      "Manage replication, failover clusters, and point-in-time recovery",
+      "Enforce encryption, access auditing, and capacity scaling"
+    ],
+    skills: ["Query Execution Plans", "Indexing & Partitioning", "High Availability & Replication", "Backup/DR"],
+    languages: ["SQL", "Python", "Bash"],
+    tools: ["PostgreSQL", "MySQL", "Oracle", "MongoDB", "pgvector", "AWS RDS"],
+    education: "CS/IT degree + database vendor certifications.",
+    salaries: { US: "$105k - $150k", India: "₹7L - ₹20L", Germany: "€62k - €88k", UK: "£50k - £78k" },
+    applications: ["Core banking ledgers", "High-traffic e-commerce", "Vector + relational AI backends"],
+    future: "Expanding into distributed SQL (CockroachDB/TiDB) and pgvector AI storage tuning.",
+    pros: ["High job stability", "Deep mastery of data storage internals"],
+    cons: ["High responsibility during database incidents"],
+    projects: ["High-Availability PostgreSQL Read-Replica & Failover Lab", "Query Performance Benchmark & Index Optimizer"]
+  },
+  {
+    id: "robotics",
+    title: "Robotics Software Engineer",
+    category: "Other Technology Fields",
+    difficulty: "Advanced",
+    duration: "12 - 18 Months",
+    mathReq: "Very High (Linear Algebra, Kinematics, Control Theory)",
+    entryAccess: "Low - Moderate",
+    demand: "Growing Rapidly",
+    remoteScope: "Low - Moderate",
+    intlScope: "Very High",
+    futureGrowth: "Explosive",
+    intro: "Develops perception, path planning, SLAM, and control software enabling autonomous robots and drones to navigate the physical world.",
+    responsibilities: [
+      "Build ROS2 nodes for sensor fusion (LiDAR, IMU, cameras)",
+      "Implement SLAM localization and obstacle-avoidance path planners",
+      "Validate behaviors in physics simulators before hardware deployment"
+    ],
+    skills: ["ROS2", "Kinematics & Control", "SLAM & Sensor Fusion", "C++/Python Real-Time"],
+    languages: ["C++", "Python"],
+    tools: ["ROS2", "Gazebo", "Isaac Sim", "OpenCV", "Eigen", "Linux"],
+    education: "Bachelor's or Master's in Robotics, Mechatronics, CS, or Mechanical Eng.",
+    salaries: { US: "$120k - $180k", India: "₹9L - ₹25L", Germany: "€68k - €98k", UK: "£52k - £82k" },
+    applications: ["Warehouse automation", "Autonomous drones", "Humanoid & surgical robotics"],
+    future: "Embodied AI and Vision-Language-Action models are sparking a robotics renaissance.",
+    pros: ["Seeing code move physical machines", "Strong long-term secular growth"],
+    cons: ["Hardware testing requires physical lab access"],
+    projects: ["ROS2 Autonomous LiDAR Maze Navigator in Gazebo", "Inverse Kinematics Robotic Arm Simulator"]
+  },
+  {
+    id: "iot",
+    title: "IoT Solutions Architect / Developer",
+    category: "Other Technology Fields",
+    difficulty: "Intermediate",
+    duration: "7 - 11 Months",
+    mathReq: "Low - Moderate",
+    entryAccess: "Moderate",
+    demand: "Steady - High",
+    remoteScope: "Moderate",
+    intlScope: "High",
+    futureGrowth: "Strong",
+    intro: "Connects smart physical sensors and edge gateways to cloud telemetry platforms for real-time monitoring and predictive automation.",
+    responsibilities: [
+      "Implement MQTT/CoAP device-to-cloud messaging pipelines",
+      "Secure device provisioning, OTA firmware updates, and certificates",
+      "Build real-time telemetry dashboards and alert rules"
+    ],
+    skills: ["MQTT & Edge Protocols", "Microcontrollers", "Cloud IoT Ingestion", "Device Security"],
+    languages: ["Python", "C/C++", "JavaScript"],
+    tools: ["ESP32/Raspberry Pi", "Mosquitto MQTT", "AWS IoT Core", "InfluxDB", "Grafana"],
+    education: "CS, Electronics, or self-built hardware+cloud portfolio.",
+    salaries: { US: "$100k - $145k", India: "₹6L - ₹18L", Germany: "€60k - €85k", UK: "£48k - £72k" },
+    applications: ["Smart energy grids", "Precision agriculture", "Industrial predictive maintenance"],
+    future: "Merging with Edge AI to run anomaly detection directly on local gateways.",
+    pros: ["Fun blend of hardware and cloud software", "Accessible via affordable dev boards"],
+    cons: ["Managing fleet connectivity and security at scale"],
+    projects: ["Smart Energy Monitor with ESP32, MQTT & Grafana", "Edge Anomaly Detector on Raspberry Pi"]
+  },
+  {
+    id: "quantum-computing",
+    title: "Quantum Computing Developer",
+    category: "Other Technology Fields",
+    difficulty: "Expert",
+    duration: "18+ Months",
+    mathReq: "Very High (Linear Algebra, Complex Numbers, Quantum Mechanics)",
+    entryAccess: "Low",
+    demand: "Niche / Emerging",
+    remoteScope: "High",
+    intlScope: "High",
+    futureGrowth: "High Long-Term Potential",
+    intro: "Designs quantum circuits and hybrid quantum-classical algorithms for cryptography, materials simulation, and optimization.",
+    responsibilities: [
+      "Implement variational quantum algorithms (VQE, QAOA) using Qiskit",
+      "Optimize quantum circuit depth to mitigate qubit noise and decoherence",
+      "Benchmark quantum subroutines against classical HPC baselines"
+    ],
+    skills: ["Linear Algebra & Hilbert Spaces", "Quantum Gates & Circuits", "Error Mitigation", "Hybrid Algorithms"],
+    languages: ["Python", "C++"],
+    tools: ["Qiskit", "Cirq", "PennyLane", "NumPy"],
+    education: "Master's or PhD in Physics, CS, or Mathematics.",
+    salaries: { US: "$130k - $195k", India: "₹12L - ₹30L", Germany: "€72k - €105k", UK: "£60k - £95k" },
+    applications: ["Molecular drug discovery", "Post-quantum cryptography", "Combinatorial logistics"],
+    future: "Long-term frontier; post-quantum cryptography migration is already urgent today.",
+    pros: ["Cutting-edge scientific frontier", "Strong government and enterprise R&D grants"],
+    cons: ["Commercial fault-tolerant quantum advantage is still maturing"],
+    projects: ["Quantum Portfolio Optimizer using QAOA in Qiskit", "Post-Quantum Cryptography TLS Benchmark"]
+  },
+  {
+    id: "ui-ux-design",
+    title: "Product & UI/UX Designer",
+    category: "Other Technology Fields",
+    difficulty: "Beginner - Intermediate",
+    duration: "4 - 7 Months",
+    mathReq: "Low",
+    entryAccess: "High",
+    demand: "High",
+    remoteScope: "Very High",
+    intlScope: "High",
+    futureGrowth: "Strong (AI-native interface design)",
+    intro: "Researches user needs and designs intuitive, accessible, aesthetically refined digital product experiences and design systems.",
+    responsibilities: [
+      "Conduct user interviews, usability testing, and journey mapping",
+      "Create wireframes, interactive prototypes, and scalable Figma design systems",
+      "Collaborate closely with frontend engineers on design tokens and micro-interactions"
+    ],
+    skills: ["User Research", "Information Architecture", "Visual Hierarchy & Typography", "Prototyping", "Design Systems"],
+    languages: ["HTML/CSS (Helpful)", "Design Tokens (JSON)"],
+    tools: ["Figma", "Framer", "Maze", "Storybook"],
+    education: "Design degree or strong case-study portfolio solving real UX problems.",
+    salaries: { US: "$95k - $145k", India: "₹6L - ₹18L", Germany: "€55k - €80k", UK: "£45k - £72k" },
+    applications: ["Consumer mobile apps", "Enterprise SaaS workflows", "Conversational & spatial AI interfaces"],
+    future: "Designing adaptive, multimodal, human-in-the-loop AI interfaces.",
+    pros: ["High creative impact", "Low barrier to start practicing immediately"],
+    cons: ["Portfolio quality matters far more than certificates"],
+    projects: ["End-to-End Healthcare Telemedicine Redesign Case Study", "Multi-Brand Figma Token Design System"]
+  },
+  {
+    id: "automation-engineering",
+    title: "Automation & QA Engineer (SDET)",
+    category: "Other Technology Fields",
+    difficulty: "Beginner - Intermediate",
+    duration: "4 - 7 Months",
+    mathReq: "Low",
+    entryAccess: "High",
+    demand: "High",
+    remoteScope: "High",
+    intlScope: "High",
+    futureGrowth: "Strong",
+    intro: "Builds automated end-to-end test frameworks, API test suites, and workflow automations that guarantee software reliability.",
+    responsibilities: [
+      "Write automated UI, API, and load tests integrated into CI/CD",
+      "Build internal workflow automations and synthetic monitoring bots",
+      "Identify race conditions and regressions before customer release"
+    ],
+    skills: ["Test Automation Frameworks", "API Testing", "CI/CD Integration", "Debugging"],
+    languages: ["Python", "TypeScript", "Java"],
+    tools: ["Playwright", "Cypress", "Selenium", "Postman", "k6", "GitHub Actions"],
+    education: "CS/IT degree or bootcamp; great entry path into software engineering.",
+    salaries: { US: "$90k - $135k", India: "₹5.5L - ₹16L", Germany: "€55k - €78k", UK: "£42k - £68k" },
+    applications: ["E-commerce checkout reliability", "Banking regression suites", "Enterprise RPA workflows"],
+    future: "AI-assisted self-healing test suites and automated agent evaluation.",
+    pros: ["Accessible entry point into coding careers", "High demand across enterprise software"],
+    cons: ["Maintaining brittle UI selectors requires clean architecture"],
+    projects: ["Full-Stack E-Commerce Playwright + API Test Suite in CI", "k6 Load Testing & Bottleneck Report"]
+  }
+];
+
+const LANGUAGES_DB = [
+  {
+    name: "Python",
+    tagline: "The universal Swiss Army knife of AI, Data Science, Backend, and Automation.",
+    difficulty: "Beginner Friendly",
+    industries: ["Artificial Intelligence", "Data Science", "FinTech", "Web Backend", "Cybersecurity"],
+    concepts: ["Data Structures (Lists/Dicts/Sets)", "OOP & Decorators", "Generators & AsyncIO", "Virtual Environments", "Type Hinting"],
+    sequence: ["Syntax & Control Flow", "Functions & Data Structures", "File I/O & APIs", "OOP & Modules", "Domain Specialization (Pandas/PyTorch/FastAPI)"],
+    frameworks: ["PyTorch", "Pandas", "NumPy", "FastAPI", "Django", "Scikit-learn"],
+    projects: ["CLI Expense Tracker", "Automated Web Scraper & API", "ML Churn Predictor", "RAG AI Assistant"],
+    careers: ["AI Engineer", "Data Scientist", "Data Engineer", "Backend Developer", "Cybersecurity Analyst"],
+    nextSteps: ["SQL (for Data)", "PyTorch/Math (for AI)", "FastAPI + Docker (for Backend)", "Linux + Networking (for Security)"]
+  },
+  {
+    name: "JavaScript",
+    tagline: "The native language of the web browser and full-stack event-driven apps.",
+    difficulty: "Beginner Friendly",
+    industries: ["Web Development", "SaaS", "E-Commerce", "Mobile Apps", "EdTech"],
+    concepts: ["DOM Manipulation", "Closures & Scope", "Promises & Async/Await", "Event Loop", "ES6+ Modules"],
+    sequence: ["Variables & DOM Basics", "Functions & Arrays", "Async JS & Fetch API", "ES6+ Modern Patterns", "React or Node.js"],
+    frameworks: ["React", "Next.js", "Node.js", "Express", "Vue"],
+    projects: ["Interactive Weather App", "Kanban Task Board", "Real-Time Chat App"],
+    careers: ["Frontend Developer", "Full-Stack Developer", "Backend Developer"],
+    nextSteps: ["TypeScript", "React", "Node.js + PostgreSQL"]
+  },
+  {
+    name: "TypeScript",
+    tagline: "JavaScript with static type safety for large-scale production applications.",
+    difficulty: "Intermediate",
+    industries: ["Enterprise SaaS", "FinTech", "Developer Tools", "Full-Stack Web"],
+    concepts: ["Interfaces & Types", "Generics", "Union/Intersection Types", "Type Narrowing", "TSConfig"],
+    sequence: ["Basic Type Annotations", "Interfaces & Objects", "Generics & Utility Types", "Typed React & API Contracts"],
+    frameworks: ["Next.js", "NestJS", "Angular", "tRPC", "Prisma"],
+    projects: ["Type-Safe Full-Stack SaaS Starter", "End-to-End Typed API Client"],
+    careers: ["Full-Stack Developer", "Frontend Developer", "Software Engineer"],
+    nextSteps: ["Next.js", "PostgreSQL + Prisma", "System Design"]
+  },
+  {
+    name: "SQL",
+    tagline: "The indispensable language for querying, modeling, and analyzing structured data.",
+    difficulty: "Beginner Friendly",
+    industries: ["Every Industry (Finance, Tech, Healthcare, Retail, Government)"],
+    concepts: ["SELECT, WHERE, GROUP BY", "INNER/LEFT/FULL JOINs", "CTEs & Window Functions", "Indexing & Normalization", "Transactions (ACID)"],
+    sequence: ["Filtering & Aggregations", "Multi-Table Joins", "Subqueries & CTEs", "Window Functions", "Query Optimization & Schema Design"],
+    frameworks: ["PostgreSQL", "Snowflake", "BigQuery", "dbt", "MySQL"],
+    projects: ["E-Commerce Cohort Retention Query Suite", "Library Management Normalized Schema"],
+    careers: ["Data Analyst", "Data Engineer", "Analytics Engineer", "Backend Developer", "DBA"],
+    nextSteps: ["Python (Pandas)", "dbt + Snowflake", "Power BI / Tableau"]
+  },
+  {
+    name: "C",
+    tagline: "Close-to-the-metal systems language powering OS kernels, compilers, and microcontrollers.",
+    difficulty: "Intermediate - Hard",
+    industries: ["Embedded Systems", "Operating Systems", "Automotive", "Telecom", "IoT"],
+    concepts: ["Pointers & Pointer Arithmetic", "Manual Memory (malloc/free)", "Structs & Bitwise Ops", "Stack vs Heap", "Compilation & Linking"],
+    sequence: ["Syntax & Memory Model", "Pointers & Arrays", "Dynamic Memory Allocation", "Data Structures in C", "POSIX Sockets & Threads"],
+    frameworks: ["FreeRTOS", "POSIX", "CMake", "GCC/Clang"],
+    projects: ["Custom Shell in C", "Memory Allocator", "HTTP Server from Scratch"],
+    careers: ["Embedded Systems Developer", "Security Researcher", "Systems Programmer"],
+    nextSteps: ["C++ or Rust", "Operating Systems", "Computer Architecture"]
+  },
+  {
+    name: "C++",
+    tagline: "High-performance systems, game engines, quantitative finance, and robotics powerhouse.",
+    difficulty: "Hard",
+    industries: ["Game Development", "Robotics", "Quant Trading", "AI Inference Engines", "Systems"],
+    concepts: ["OOP & RAII", "Smart Pointers", "Standard Template Library (STL)", "Templates & Move Semantics", "Multithreading"],
+    sequence: ["Modern C++ Basics", "OOP & RAII", "STL Containers & Algorithms", "Data Structures & Competitive DSA", "Concurrency"],
+    frameworks: ["Unreal Engine", "ROS2", "Qt", "CUDA", "OpenCV"],
+    projects: ["2D Physics Engine", "Multithreaded Order-Book Matcher", "ROS2 Robot Controller"],
+    careers: ["Software Engineer", "Game Developer", "Robotics Software Engineer", "ML Engineer"],
+    nextSteps: ["Data Structures & Algorithms", "System Design", "Unreal/ROS2/CUDA"]
+  },
+  {
+    name: "Java",
+    tagline: "Battle-tested enterprise backend, banking infrastructure, and distributed systems language.",
+    difficulty: "Intermediate",
+    industries: ["Banking & Finance", "Enterprise Cloud", "E-Commerce", "Big Data"],
+    concepts: ["OOP Principles", "JVM & Garbage Collection", "Collections Framework", "Streams & Lambdas", "Multithreading"],
+    sequence: ["Core Syntax & OOP", "Collections & Generics", "Exception Handling & Streams", "DSA in Java", "Spring Boot & REST APIs"],
+    frameworks: ["Spring Boot", "Apache Kafka", "Hibernate", "Maven/Gradle"],
+    projects: ["Banking Ledger REST API", "Distributed Ticket Booking Engine"],
+    careers: ["Backend Developer", "Software Engineer", "Big Data Engineer"],
+    nextSteps: ["Spring Boot", "PostgreSQL", "Docker & Kubernetes"]
+  },
+  {
+    name: "Go",
+    tagline: "Simple, ultra-fast concurrent language built for cloud infrastructure, Docker, and microservices.",
+    difficulty: "Beginner - Intermediate",
+    industries: ["Cloud Infrastructure", "DevOps Tooling", "Distributed Backends", "FinTech"],
+    concepts: ["Goroutines & Channels", "Interfaces & Composition", "Explicit Error Handling", "Standard Library HTTP"],
+    sequence: ["Go Syntax & Structs", "Interfaces & Error Patterns", "Goroutines & Concurrency", "Building Microservices & CLIs"],
+    frameworks: ["Gin", "Fiber", "gRPC", "Kubernetes SDK", "Cobra"],
+    projects: ["Concurrent Web Crawler", "Custom CLI DevOps Tool", "High-Throughput gRPC Microservice"],
+    careers: ["Backend Developer", "Cloud Engineer", "DevOps / Platform Engineer"],
+    nextSteps: ["Docker & Kubernetes", "gRPC", "Distributed Systems"]
+  },
+  {
+    name: "Rust",
+    tagline: "Memory-safe systems language delivering C++ speed without data races or null pointer bugs.",
+    difficulty: "Hard",
+    industries: ["Systems Infrastructure", "Blockchain", "Browser Engines", "Security", "AI Tooling"],
+    concepts: ["Ownership & Borrowing", "Lifetimes", "Traits & Enums", "Pattern Matching", "Fearless Concurrency"],
+    sequence: ["Ownership & Borrowing", "Structs, Enums & Error Handling", "Traits & Generics", "Async Rust (Tokio)"],
+    frameworks: ["Tokio", "Actix-web", "Axum", "Solana/Anchor", "WebAssembly"],
+    projects: ["Fast CLI File Searcher", "WebAssembly Image Filter", "Async Key-Value Store"],
+    careers: ["Software Engineer", "Security Researcher", "Blockchain Developer", "Embedded Systems Developer"],
+    nextSteps: ["Systems Programming", "WebAssembly", "Distributed Storage"]
+  },
+  {
+    name: "C#",
+    tagline: "Versatile Microsoft-backed language for enterprise web APIs, cloud apps, and Unity games.",
+    difficulty: "Intermediate",
+    industries: ["Enterprise Software", "Game Development", "FinTech", "Healthcare"],
+    concepts: ["OOP & LINQ", "Async/Await Tasks", "Dependency Injection", ".NET CLR"],
+    sequence: ["C# Fundamentals & OOP", "LINQ & Collections", "Async Programming", "ASP.NET Core or Unity"],
+    frameworks: ["ASP.NET Core", "Unity", "Entity Framework", "Blazor"],
+    projects: ["Enterprise Inventory API", "3D Unity Puzzle Game"],
+    careers: ["Backend Developer", "Full-Stack Developer", "Game Developer"],
+    nextSteps: ["ASP.NET Core", "Azure Cloud", "SQL Server / PostgreSQL"]
+  },
+  {
+    name: "PHP",
+    tagline: "Pragmatic web backend language powering massive portions of the web and rapid SaaS MVPs.",
+    difficulty: "Beginner Friendly",
+    industries: ["Web Agencies", "E-Commerce", "Content Platforms", "SMBs"],
+    concepts: ["Request/Response Lifecycle", "OOP PHP 8+", "Composer", "MVC Pattern", "PDO Security"],
+    sequence: ["PHP 8 Syntax & Forms", "MySQL & PDO", "OOP & Composer", "Laravel Framework"],
+    frameworks: ["Laravel", "Symfony", "WordPress"],
+    projects: ["Multi-Vendor E-Commerce Store", "SaaS Subscription Portal in Laravel"],
+    careers: ["Backend Developer", "Full-Stack Developer"],
+    nextSteps: ["Laravel", "MySQL/PostgreSQL", "JavaScript/Vue/React"]
+  },
+  {
+    name: "R",
+    tagline: "Specialized statistical computing and academic data visualization language.",
+    difficulty: "Beginner - Intermediate",
+    industries: ["Bioinformatics", "Pharmaceuticals", "Academia", "Economics", "Data Analytics"],
+    concepts: ["Data Frames & Vectors", "Tidyverse Manipulation", "Statistical Hypothesis Testing", "Grammar of Graphics"],
+    sequence: ["R Basics & Vectors", "dplyr Data Wrangling", "ggplot2 Visualization", "Statistical Modeling"],
+    frameworks: ["Tidyverse", "ggplot2", "Shiny", "caret"],
+    projects: ["Clinical Trial Statistical Report", "Interactive R Shiny Epidemiological Dashboard"],
+    careers: ["Data Scientist", "Data Analyst"],
+    nextSteps: ["SQL", "Python (for ML deployment)", "Advanced Statistics"]
+  },
+  {
+    name: "Kotlin",
+    tagline: "Modern, expressive JVM language and the official standard for Android app development.",
+    difficulty: "Intermediate",
+    industries: ["Mobile Apps", "FinTech", "Consumer Tech", "Backend Services"],
+    concepts: ["Null Safety", "Coroutines", "Data Classes & Extension Functions", "Jetpack Compose"],
+    sequence: ["Kotlin Syntax & Null Safety", "OOP & Functional Collections", "Coroutines", "Android Jetpack Compose"],
+    frameworks: ["Jetpack Compose", "Ktor", "Spring Boot"],
+    projects: ["Offline-First Android Habit Tracker", "Ktor Mobile Backend API"],
+    careers: ["Mobile App Developer", "Backend Developer"],
+    nextSteps: ["Jetpack Compose", "REST APIs & Room DB", "Clean Architecture"]
+  },
+  {
+    name: "Swift",
+    tagline: "Fast, safe, modern language for building iOS, macOS, watchOS, and visionOS apps.",
+    difficulty: "Intermediate",
+    industries: ["iOS Consumer Apps", "Spatial Computing", "HealthTech", "FinTech"],
+    concepts: ["Optionals & Type Safety", "Protocols & Value Types", "Swift Concurrency (Async/Await)", "Declarative UI"],
+    sequence: ["Swift Playgrounds & Optionals", "Structs, Classes & Protocols", "SwiftUI Views & State", "Networking & CoreData"],
+    frameworks: ["SwiftUI", "UIKit", "Combine", "CoreML"],
+    projects: ["iOS Personal Workout & Health App", "On-Device CoreML Document Scanner"],
+    careers: ["Mobile App Developer"],
+    nextSteps: ["SwiftUI", "App Store Deployment", "CoreML"]
+  },
+  {
+    name: "Dart",
+    tagline: "Client-optimized language powering Flutter for single-codebase iOS, Android, and web apps.",
+    difficulty: "Beginner - Intermediate",
+    industries: ["Cross-Platform Mobile", "Startups", "FinTech"],
+    concepts: ["Sound Null Safety", "Futures & Streams", "Widget Tree Composition", "State Management"],
+    sequence: ["Dart Fundamentals", "Async Futures & Streams", "Flutter Widgets & Layouts", "State Management (Riverpod/Bloc)"],
+    frameworks: ["Flutter", "Riverpod", "Firebase"],
+    projects: ["Cross-Platform Expense Splitter App", "Real-Time Delivery Tracker UI"],
+    careers: ["Mobile App Developer", "Frontend Developer"],
+    nextSteps: ["Flutter", "Firebase / REST APIs", "App Store & Play Store Publishing"]
+  },
+  {
+    name: "Ruby",
+    tagline: "Developer-happiness-focused language famous for rapid startup prototyping with Ruby on Rails.",
+    difficulty: "Beginner Friendly",
+    industries: ["Startups", "E-Commerce", "SaaS"],
+    concepts: ["Everything is an Object", "Blocks & Metaprogramming", "Convention over Configuration", "MVC"],
+    sequence: ["Ruby Syntax & Blocks", "OOP in Ruby", "Ruby on Rails MVC", "ActiveRecord & Testing"],
+    frameworks: ["Ruby on Rails", "Sinatra", "RSpec"],
+    projects: ["Job Board SaaS in Rails", "Subscription Newsletter Platform"],
+    careers: ["Full-Stack Developer", "Backend Developer"],
+    nextSteps: ["Ruby on Rails", "PostgreSQL", "Hotwire / React"]
+  },
+  {
+    name: "Bash",
+    tagline: "Essential Unix/Linux command-line scripting language for servers, DevOps, and cybersecurity.",
+    difficulty: "Beginner Friendly",
+    industries: ["Cloud Computing", "DevOps", "Cybersecurity", "Linux Administration"],
+    concepts: ["Pipes & Redirection", "File Permissions", "Grep/Awk/Sed", "Exit Codes & Cron Jobs"],
+    sequence: ["Linux Navigation & Permissions", "Pipes & Text Processing", "Variables, Loops & Conditionals", "Automated Backup/Audit Scripts"],
+    frameworks: ["GNU Coreutils", "Linux CLI", "Cron", "SSH"],
+    projects: ["Automated Server Health & Log Alert Script", "Linux Hardening Audit Script"],
+    careers: ["DevOps / Platform Engineer", "Cloud Engineer", "Cybersecurity Analyst", "SOC Analyst"],
+    nextSteps: ["Python Automation", "Docker", "Linux Internals"]
+  },
+  {
+    name: "PowerShell",
+    tagline: "Object-oriented automation shell critical for Windows enterprise administration, Azure, and Blue/Red security.",
+    difficulty: "Beginner - Intermediate",
+    industries: ["Enterprise IT", "Cybersecurity (SOC/Pentesting)", "Azure Cloud"],
+    concepts: ["Cmdlets & Object Pipelines", "Active Directory Management", "WMI/CIM", "Remote Execution"],
+    sequence: ["Cmdlets & Object Pipeline", "Filtering & Scripting", "Active Directory & Windows Event Logs", "Security Auditing"],
+    frameworks: ["Windows Server", "Active Directory", "Azure CLI"],
+    projects: ["Active Directory Inactive User Audit Script", "Windows Event Log Anomaly Parser"],
+    careers: ["SOC Analyst", "Penetration Tester", "Cybersecurity Analyst", "Cloud Engineer"],
+    nextSteps: ["Active Directory Security", "Python", "Azure Cloud"]
+  }
+];
+const PROJECTS_DB = [
+  {
+    id: "proj-ds-1",
+    title: "Retail Sales & Seasonal Demand Forecaster",
+    category: "Data Science",
+    level: "Beginner",
+    skills: ["Python", "Pandas", "Matplotlib", "Time-Series Basics"],
+    stack: ["Python", "Pandas", "Scikit-learn", "Jupyter"],
+    desc: "Clean multi-year retail store data, uncover holiday seasonality, and build a baseline regression model to forecast weekly inventory demand.",
+    steps: [
+      "Load historical retail CSV data and handle missing values and outliers.",
+      "Engineer date features (day of week, month, holiday flags, rolling 7-day averages).",
+      "Visualize trends with Matplotlib/Seaborn and train a Random Forest Regressor.",
+      "Evaluate predictions using RMSE and MAPE metrics in a clean summary notebook."
+    ],
+    result: "Interactive forecast charts and error analysis reducing stockout estimates by ~18%.",
+    portfolioValue: "Demonstrates practical data wrangling, feature engineering, and business KPI translation."
+  },
+  {
+    id: "proj-ds-2",
+    title: "RFM Customer Segmentation & Churn Engine",
+    category: "Data Science",
+    level: "Intermediate",
+    skills: ["SQL", "Python", "Clustering (K-Means)", "Classification"],
+    stack: ["Python", "SQL", "Scikit-learn", "XGBoost", "Streamlit"],
+    desc: "Segment e-commerce users by Recency, Frequency, and Monetary value, then predict churn probability with an interactive retention dashboard.",
+    steps: [
+      "Write SQL CTE queries to aggregate customer transaction history into RFM metrics.",
+      "Standardize features and apply K-Means clustering (validated with Silhouette score).",
+      "Train an XGBoost churn classifier with SHAP feature importance explanations.",
+      "Deploy a Streamlit app allowing marketers to inspect high-risk customer cohorts."
+    ],
+    result: "Actionable 4-tier customer personas and explainable churn risk scores.",
+    portfolioValue: "Shows end-to-end SQL + ML + stakeholder UI skills highly prized in product analytics."
+  },
+  {
+    id: "proj-ds-3",
+    title: "Real-Time Credit Card Fraud Detection Pipeline",
+    category: "Data Science",
+    level: "Advanced",
+    skills: ["Imbalanced Classification", "Feature Engineering", "FastAPI", "Docker"],
+    stack: ["Python", "LightGBM", "SMOTE", "FastAPI", "Redis", "Docker"],
+    desc: "Handle extreme class imbalance (<0.2% fraud) to score financial transactions in under 30ms via a containerized REST API.",
+    steps: [
+      "Analyze highly imbalanced transaction data using Precision-Recall AUC rather than accuracy.",
+      "Engineer velocity features (transactions per hour, distance from home location).",
+      "Train LightGBM with custom class weights and threshold tuning.",
+      "Serve real-time predictions via FastAPI with Redis velocity caching."
+    ],
+    result: "Sub-30ms inference API catching >88% of fraudulent transactions with minimal false positives.",
+    portfolioValue: "Proves understanding of production ML constraints, imbalanced metrics, and low-latency APIs."
+  },
+  {
+    id: "proj-sec-1",
+    title: "Password Entropy & Breach Exposure Analyzer",
+    category: "Cybersecurity",
+    level: "Beginner",
+    skills: ["Python", "Cryptography Hashing", "REST APIs"],
+    stack: ["Python", "SHA-1 K-Anonymity", "HaveIBeenPwned API"],
+    desc: "Build a privacy-preserving CLI utility that calculates password entropy and safely checks breach databases using k-anonymity (never sending full passwords).",
+    steps: [
+      "Implement Shannon entropy and character-pool strength estimation in Python.",
+      "Hash candidate passwords locally with SHA-1 and send only the first 5 hash characters to the HIBP range API.",
+      "Compare returned hash suffixes locally to detect known breaches without exposing secrets.",
+      "Output actionable passphrase improvement suggestions."
+    ],
+    result: "Zero-knowledge password auditing tool demonstrating applied cryptography and API security.",
+    portfolioValue: "Shows strong security hygiene, hashing concepts, and privacy-by-design thinking."
+  },
+  {
+    id: "proj-sec-2",
+    title: "Controlled Home-Lab Network Traffic & PCAP Analyzer",
+    category: "Cybersecurity",
+    level: "Intermediate",
+    skills: ["Networking (TCP/IP)", "Python", "Packet Inspection"],
+    stack: ["Python", "Scapy", "Wireshark", "Isolated VirtualBox/Docker Lab"],
+    desc: "Inside an isolated virtual lab network, capture and parse PCAP traffic to detect port scans, ARP spoofing, and anomalous DNS queries.",
+    steps: [
+      "Set up an isolated host-only virtual network between two local VMs/containers.",
+      "Generate benign traffic alongside controlled Nmap scan simulations.",
+      "Write a Python Scapy parser to flag SYN floods, port sweeps, and high-entropy DNS tunneling.",
+      "Export structured JSON alerts compatible with SIEM ingestion."
+    ],
+    result: "Automated packet anomaly detector with clear forensic alert summaries.",
+    portfolioValue: "Demonstrates deep protocol-level fluency for SOC Analyst and Network Security roles."
+  },
+  {
+    id: "proj-sec-3",
+    title: "SIEM Security Log Monitoring & Threat Detection Lab",
+    category: "Cybersecurity",
+    level: "Advanced",
+    skills: ["Linux/Windows Logs", "SIEM Rules", "MITRE ATT&CK"],
+    stack: ["Wazuh / ELK Stack", "Docker", "Python", "Atomic Red Team (Controlled Lab)"],
+    desc: "Deploy a containerized SIEM stack in a controlled sandbox to ingest Linux auth logs and Windows Sysmon telemetry, writing custom MITRE ATT&CK detection rules.",
+    steps: [
+      "Deploy Wazuh or ELK Stack locally using Docker Compose.",
+      "Configure log forwarding from an isolated sandbox VM.",
+      "Run authorized, safe Atomic Red Team simulation tests in the isolated VM.",
+      "Author custom correlation rules and an automated incident triage playbook."
+    ],
+    result: "Working Blue Team detection lab mapping simulated attacker TTPs to live SIEM dashboards.",
+    portfolioValue: "Directly mirrors daily SOC Tier-2 and Detection Engineering workflows."
+  },
+  {
+    id: "proj-ai-1",
+    title: "Context-Aware AI Study & Code Explainer Bot",
+    category: "Artificial Intelligence",
+    level: "Beginner",
+    skills: ["Python or TypeScript", "LLM APIs", "Prompt Engineering"],
+    stack: ["React or Streamlit", "Gemini API", "Markdown"],
+    desc: "Create an adaptive AI tutor that adjusts explanations based on user skill level (Beginner vs Advanced) and generates interactive quizzes.",
+    steps: [
+      "Design structured system prompts with strict persona and difficulty constraints.",
+      "Implement multi-turn conversation history state.",
+      "Add a 'Test My Knowledge' mode returning structured JSON quiz questions.",
+      "Render syntax-highlighted code blocks and explanations cleanly."
+    ],
+    result: "Responsive AI learning companion with adaptive difficulty and structured self-testing.",
+    portfolioValue: "Great first AI engineering build proving prompt control and structured outputs."
+  },
+  {
+    id: "proj-ai-2",
+    title: "Hybrid Vector + Keyword Enterprise RAG Engine",
+    category: "Artificial Intelligence",
+    level: "Intermediate",
+    skills: ["Embeddings", "Vector Databases", "Chunking", "Python"],
+    stack: ["Python", "FastAPI", "Qdrant / ChromaDB", "Gemini API"],
+    desc: "Build a Retrieval-Augmented Generation pipeline over technical PDFs with semantic chunking, reranking, and inline source citations.",
+    steps: [
+      "Parse PDF/Markdown documents preserving section headers and metadata.",
+      "Generate dense embeddings and index them alongside BM25 keyword search.",
+      "Implement reciprocal rank fusion (RRF) to retrieve the top 5 relevant chunks.",
+      "Force the LLM to cite exact document page numbers and refuse unsupported claims."
+    ],
+    result: "High-accuracy document Q&A system with verifiable citations and zero hallucinated sources.",
+    portfolioValue: "Most requested practical skill in enterprise AI Engineer interviews."
+  },
+  {
+    id: "proj-ai-3",
+    title: "Multi-Agent Research & Code Verification Workflow",
+    category: "Artificial Intelligence",
+    level: "Professional",
+    skills: ["Agentic Orchestration", "Tool Calling", "Evaluation Harnesses"],
+    stack: ["Python", "LangGraph", "Docker Sandbox", "FastAPI", "React"],
+    desc: "Orchestrate specialized Planner, Researcher, Coder, and Critic agents that collaborate to solve tasks and verify code execution in a sandbox.",
+    steps: [
+      "Define stateful graph transitions between Planner, Executor, and Reviewer agents.",
+      "Equip agents with structured tool definitions (search, file read, sandboxed test runner).",
+      "Implement loop guards, token budgets, and human-in-the-loop approval checkpoints.",
+      "Build an evaluation suite measuring task completion rate and latency."
+    ],
+    result: "Autonomous, auditable multi-agent system with deterministic guardrails.",
+    portfolioValue: "Positions you at the cutting edge of production Agentic AI systems."
+  },
+  {
+    id: "proj-swe-1",
+    title: "Developer Portfolio & Interactive Project Hub",
+    category: "Software Development",
+    level: "Beginner",
+    skills: ["HTML/CSS", "JavaScript", "Responsive Design", "Git"],
+    stack: ["HTML5", "Tailwind CSS", "JavaScript", "GitHub Pages / Vercel"],
+    desc: "Design and deploy a fast, accessible, responsive portfolio showcasing your technical projects, skills, and engineering write-ups.",
+    steps: [
+      "Architect semantic HTML sections with mobile-first responsive grids.",
+      "Add interactive project filtering, dark/light theme toggle, and smooth transitions.",
+      "Optimize Lighthouse performance, accessibility, and SEO scores above 95.",
+      "Deploy with custom domain and CI/CD auto-deploy on git push."
+    ],
+    result: "Polished personal engineering home base ready for job applications.",
+    portfolioValue: "Essential storefront for every developer, analyst, and designer."
+  },
+  {
+    id: "proj-swe-2",
+    title: "Full-Stack Student & Course Management System",
+    category: "Software Development",
+    level: "Intermediate",
+    skills: ["React/TypeScript", "REST APIs", "Relational Databases", "Auth"],
+    stack: ["React", "TypeScript", "FastAPI or Node.js", "PostgreSQL"],
+    desc: "Build a role-based academic platform supporting students, instructors, attendance tracking, grade calculations, and announcements.",
+    steps: [
+      "Design normalized PostgreSQL tables for Users, Courses, Enrollments, and Grades.",
+      "Implement JWT authentication with Role-Based Access Control (Admin, Teacher, Student).",
+      "Build clean REST endpoints with input validation and pagination.",
+      "Create an intuitive React + TypeScript dashboard for each role."
+    ],
+    result: "Complete CRUD + RBAC multi-user web application.",
+    portfolioValue: "Proves full-stack database modeling, auth security, and state management."
+  },
+  {
+    id: "proj-swe-3",
+    title: "Multi-Tenant SaaS Platform with Billing & Analytics",
+    category: "Software Development",
+    level: "Professional",
+    skills: ["System Design", "Caching", "Background Workers", "CI/CD"],
+    stack: ["Next.js / React", "FastAPI", "PostgreSQL", "Redis", "Docker"],
+    desc: "Architect a production-grade B2B SaaS application with organization workspaces, role invites, rate-limited APIs, and usage telemetry.",
+    steps: [
+      "Implement multi-tenant row-level data isolation per organization workspace.",
+      "Add Redis-backed rate limiting and background email/report queues.",
+      "Build real-time workspace usage charts and audit logs.",
+      "Configure automated GitHub Actions testing and Docker deployment."
+    ],
+    result: "Startup-ready SaaS architecture capable of scaling to thousands of workspaces.",
+    portfolioValue: "Demonstrates senior-level full-stack product engineering readiness."
+  }
+];
+
+const FUTURE_TECH_DB = [
+  {
+    name: "Artificial Intelligence & Agentic Systems",
+    status: "Verified Rapid Adoption",
+    verified: "Foundation models, RAG architectures, and coding copilots are actively deployed across Fortune 500 enterprises and developer workflows today.",
+    predictions: "Autonomous multi-agent workflows handling end-to-end software QA, customer operations, and scientific hypothesis testing over the next 3-5 years.",
+    valuableSkills: ["LLM Orchestration & Evaluation", "Vector Retrieval", "System Architecture", "AI Safety & Guardrails"],
+    learnToday: "Python, API integration, SQL/Vector search, and building verifiable evaluation suites."
+  },
+  {
+    name: "Cybersecurity & AI Defense",
+    status: "Verified Critical Demand",
+    verified: "Global cybercrime costs and cloud identity breaches continue rising; Zero-Trust architecture and DevSecOps are mandatory enterprise standards.",
+    predictions: "AI-driven autonomous defense systems battling AI-generated phishing, deepfake identity fraud, and automated vulnerability discovery.",
+    valuableSkills: ["Cloud IAM Security", "Threat Hunting", "AI Model Red-Teaming", "Post-Quantum Cryptography"],
+    learnToday: "Networking (TCP/IP), Linux, Python scripting, and OWASP security fundamentals."
+  },
+  {
+    name: "Robotics & Embodied AI",
+    status: "Verified Commercial Acceleration",
+    verified: "Autonomous warehouse logistics, surgical robotics, and drone inspection are commercially deployed at scale.",
+    predictions: "General-purpose humanoid and dexterous robots trained via Vision-Language-Action (VLA) simulation models entering manufacturing and eldercare.",
+    valuableSkills: ["ROS2", "C++ & Python", "Computer Vision & SLAM", "Physics Simulation (Isaac Sim/Gazebo)"],
+    learnToday: "C++, Python, Linear Algebra, Linux, and ROS2 simulation tutorials."
+  },
+  {
+    name: "Quantum Computing & Post-Quantum Security",
+    status: "Verified R&D / Early Hybrid Utility",
+    verified: "Cloud-accessible QPUs (IBM, Google, IonQ) exist today, and NIST has standardized post-quantum cryptographic algorithms.",
+    predictions: "Fault-tolerant quantum breakthroughs accelerating battery chemistry, catalyst discovery, and optimization in the late 2020s/2030s.",
+    valuableSkills: ["Linear Algebra", "Qiskit / PennyLane", "Post-Quantum Cryptography Migration"],
+    learnToday: "Python, Linear Algebra, and classical cryptography/TLS fundamentals."
+  },
+  {
+    name: "Cloud Computing & Edge AI",
+    status: "Verified Core Infrastructure",
+    verified: "Multi-cloud Kubernetes orchestration and specialized GPU clusters power nearly all modern digital services.",
+    predictions: "Decentralized Edge AI inference running small language and vision models locally on phones, cars, and industrial sensors for zero-latency privacy.",
+    valuableSkills: ["Kubernetes & Terraform", "Model Quantization (ONNX)", "Distributed Systems", "FinOps"],
+    learnToday: "Linux, Docker, Python/Go, and AWS/GCP core services."
+  },
+  {
+    name: "Data Engineering & Real-Time Lakehouses",
+    status: "Verified High Growth",
+    verified: "Open table formats (Apache Iceberg, Delta Lake) and streaming engines (Kafka/Flink) are replacing legacy rigid warehouses.",
+    predictions: "Unified multimodal data platforms feeding structured, unstructured, and vector data simultaneously into real-time AI agents.",
+    valuableSkills: ["SQL & Data Modeling", "Apache Spark / Flink", "dbt", "Streaming Architectures"],
+    learnToday: "Advanced SQL, Python, PostgreSQL, and Docker."
+  },
+  {
+    name: "Blockchain & Verifiable Computing",
+    status: "Verified Niche / Institutional Rails",
+    verified: "Stablecoin settlement rails, Layer-2 rollups, and zero-knowledge (ZK) cryptographic proofs are live in production.",
+    predictions: "Cryptographic content provenance (proving human vs AI media) and tokenized financial assets.",
+    valuableSkills: ["Rust & Solidity", "Zero-Knowledge Cryptography", "Smart Contract Auditing"],
+    learnToday: "TypeScript, Rust, and cryptographic hashing/signatures."
+  },
+  {
+    name: "Spatial Computing (AR/VR) & Autonomous Systems",
+    status: "Verified Specialized Deployment",
+    verified: "Autonomous robotaxis operate commercially in select cities; enterprise AR/VR is used in surgical training and digital twins.",
+    predictions: "Lightweight everyday AR glasses with real-time multimodal AI context awareness.",
+    valuableSkills: ["3D Computer Vision", "C# / C++ (Unity/Unreal)", "Sensor Fusion", "Real-Time Rendering"],
+    learnToday: "C# or C++, 3D Linear Algebra, and OpenCV."
+  }
+];
+
+const COUNTRIES_DB = [
+  {
+    name: "United States",
+    flag: "🇺🇸",
+    demand: "Highest Global Tech Compensation & Startup Ecosystem",
+    salaries: "Entry: $85k–$125k | Mid: $130k–$185k | Senior: $180k–$280k+",
+    education: "BS/MS in Computer Science or Data Science; strong portfolio & DSA interviews weigh heavily.",
+    degreeReq: "Bachelor's standard; MS provides F-1 OPT (3-year STEM work extension).",
+    language: "English",
+    internships: "Summer internships (May–Aug) recruit 6–9 months in advance; high conversion to full-time.",
+    visaNotes: "F-1 STEM OPT (up to 36 months) -> H-1B lottery or O-1 extraordinary ability visa."
+  },
+  {
+    name: "India",
+    flag: "🇮🇳",
+    demand: "Massive Global Capability Centers (GCCs), AI Startups & SaaS Hubs (Bengaluru, Hyderabad, Pune, NCR)",
+    salaries: "Entry: ₹5L–₹14L | Mid: ₹14L–₹30L | Senior: ₹30L–₹65L+",
+    education: "B.Tech/B.E., BCA/MCA, or B.Sc CS; open-source, hackathons, and DSA strongly differentiate candidates.",
+    degreeReq: "Bachelor's degree standard for MNCs; startups prioritize shipped projects and GitHub proof.",
+    language: "English (primary tech workplace language)",
+    internships: "Year-round startup internships + structured summer programs at GCCs and product companies.",
+    visaNotes: "Local citizens need no visa; major hub for remote global roles and internal multinational transfers."
+  },
+  {
+    name: "Germany",
+    flag: "🇩🇪",
+    demand: "Europe's Largest Engineering Economy (Berlin, Munich, Frankfurt, Hamburg)",
+    salaries: "Entry: €52k–€68k | Mid: €68k–€92k | Senior: €90k–€125k+",
+    education: "Public universities offer tuition-free or low-cost English-taught Master's degrees in CS/AI.",
+    degreeReq: "Recognized Bachelor's/Master's degree important for EU Blue Card qualification.",
+    language: "English works in Berlin/Munich tech startups; German (B1/B2) dramatically expands enterprise options.",
+    internships: "Working Student ('Werkstudent') roles let students work 20 hrs/week year-round while studying.",
+    visaNotes: "EU Blue Card & Opportunity Card ('Chancenkarte') offer streamlined residency pathways."
+  },
+  {
+    name: "United Kingdom",
+    flag: "🇬🇧",
+    demand: "Leading European FinTech, AI Research & Cybersecurity Hub (London, Cambridge, Manchester)",
+    salaries: "Entry: £38k–£58k | Mid: £58k–£88k | Senior: £85k–£135k+",
+    education: "3-year BSc or 1-year intensive MSc in CS/AI/Data Science.",
+    degreeReq: "Bachelor's or Master's; strong emphasis on practical coding tests and system design.",
+    language: "English",
+    internships: "Summer analyst/engineer internships and 'Industrial Placement' sandwich years.",
+    visaNotes: "Graduate Route (post-study work visa) & Skilled Worker Visa sponsored by licensed employers."
+  },
+  {
+    name: "Canada",
+    flag: "🇨🇦",
+    demand: "Strong AI Research Ecosystem & Cloud/SaaS Sector (Toronto, Vancouver, Montreal, Waterloo)",
+    salaries: "Entry: CAD 70k–95k | Mid: CAD 100k–140k | Senior: CAD 140k–190k+",
+    education: "Co-op university programs (e.g., Waterloo) and Master's degrees with PGWP eligibility.",
+    degreeReq: "Bachelor's or Master's in CS/Engineering.",
+    language: "English (French valuable in Montreal/Quebec)",
+    internships: "4-month Co-op terms integrated directly into degree programs.",
+    visaNotes: "Post-Graduation Work Permit (PGWP up to 3 years) leading to Express Entry Permanent Residency."
+  },
+  {
+    name: "Netherlands",
+    flag: "🇳🇱",
+    demand: "High-Tech International Hub with High English Proficiency (Amsterdam, Eindhoven, Rotterdam)",
+    salaries: "Entry: €50k–€65k | Mid: €68k–€92k | Senior: €90k–€125k+",
+    education: "Research universities (TU Delft, UvA) and Universities of Applied Sciences.",
+    degreeReq: "Bachelor's or Master's degree.",
+    language: "English is standard across nearly all tech companies; Dutch is a bonus.",
+    internships: "Graduation thesis internships ('Afstudeerstage') commonly convert directly into full-time offers.",
+    visaNotes: "Orientation Year ('Zoekjaar') visa for graduates + Highly Skilled Migrant visa with 30% tax ruling benefits."
+  },
+  {
+    name: "Singapore",
+    flag: "🇸🇬",
+    demand: "Asia-Pacific Headquarters for FinTech, AI, Cloud & Cybersecurity",
+    salaries: "Entry: SGD 60k–85k | Mid: SGD 90k–140k | Senior: SGD 140k–210k+",
+    education: "NUS, NTU, SMU, or recognized international degrees with strong technical assessment scores.",
+    degreeReq: "Recognized Bachelor's degree required for Employment Pass criteria.",
+    language: "English (primary business language)",
+    internships: "Structured summer and semester-long tech internships across banks and tech giants.",
+    visaNotes: "Employment Pass (EP) evaluated via points-based COMPASS framework (salary, qualifications, skills)."
+  },
+  {
+    name: "Australia",
+    flag: "🇦🇺",
+    demand: "Growing Cloud, Cybersecurity & Enterprise SaaS Market (Sydney, Melbourne, Brisbane)",
+    salaries: "Entry: AUD 75k–100k | Mid: AUD 110k–150k | Senior: AUD 150k–200k+",
+    education: "Bachelor's or Master's in IT/CS; industry certifications valued in Cloud & Security.",
+    degreeReq: "Bachelor's/Master's; ACS skills assessment for migration.",
+    language: "English",
+    internships: "Graduate programs (12–24 month rotational schemes) are the primary entry route.",
+    visaNotes: "Temporary Graduate Visa (Subclass 485) & Skilled Independent / Employer Sponsored visas."
+  },
+  {
+    name: "Japan",
+    flag: "🇯🇵",
+    demand: "Robotics, Gaming, Automotive Software & Growing Global SaaS Engineering (Tokyo, Osaka, Fukuoka)",
+    salaries: "Entry: ¥4.5M–¥6.5M | Mid: ¥7M–¥11M | Senior: ¥11M–¥18M+",
+    education: "University degree required for Engineer/Specialist visa; global tech firms hire English-speaking engineers.",
+    degreeReq: "Bachelor's degree (or 10+ years documented experience).",
+    language: "English accepted at modern global tech firms (Mercari, Rakuten, Woven); Japanese (JLPT N2+) unlocks 90% of market.",
+    internships: "Short 2-week paid summer internships and global graduate hiring tracks.",
+    visaNotes: "Engineer/Specialist in Humanities Visa & Highly Skilled Professional (HSP) fast-track PR."
+  }
+];
+</script>
+<script type="text/babel" data-presets="react">
+const {useState,useEffect,useMemo,useRef,useContext,createContext}=React;
+const CFG={apiBase:"http://localhost:3000"}; // Connected to local Node.js + MongoDB (mongodb://localhost:27017) backend
+const F="```";
+const store={get(k,d){try{const v=localStorage.getItem("nexora_"+k);return v?JSON.parse(v):d}catch(e){return d}},set(k,v){try{localStorage.setItem("nexora_"+k,JSON.stringify(v))}catch(e){}}};
+function useStore(k,d){const[v,s]=useState(()=>store.get(k,d));useEffect(()=>store.set(k,v),[k,v]);return[v,s]}
+const Ctx=createContext();const useS=()=>useContext(Ctx);
+const P={home:"M3 11l9-8 9 8M5 10v10h14V10",compass:"M12 2a10 10 0 100 20 10 10 0 000-20zM16 8l-2 6-6 2 2-6z",target:"M12 3a9 9 0 100 18 9 9 0 000-18zM12 8a4 4 0 100 8 4 4 0 000-8z",map:"M3 6l6-2 6 2 6-2v14l-6 2-6-2-6 2zM9 4v14M15 6v14",chat:"M4 5h16v11H9l-5 4z",folder:"M3 6h7l2 2h9v11H3z",code:"M8 7l-5 5 5 5M16 7l5 5-5 5",scale:"M12 3v18M5 7h14M5 7l-3 7a3 3 0 006 0zM19 7l-3 7a3 3 0 006 0z",rocket:"M12 2c3 2 5 6 5 10l-2 3H9l-2-3c0-4 2-8 5-10zM9 15l-2 5 3-2M15 15l2 5-3-2M12 8a1.5 1.5 0 100 3 1.5 1.5 0 000-3z",tool:"M4 8h16v11H4zM9 8V5h6v3M4 13h16",gear:"M12 9a3 3 0 100 6 3 3 0 000-6zM12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M5 19l2-2M17 7l2-2",bell:"M6 9a6 6 0 0112 0c0 6 3 7 3 7H3s3-1 3-7zM10 20a2 2 0 004 0",search:"M11 4a7 7 0 100 14 7 7 0 000-14zM21 21l-5-5",sun:"M12 8a4 4 0 100 8 4 4 0 000-8zM12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5L19 19M5 19l1.5-1.5M17.5 6.5L19 5",moon:"M20 14A8 8 0 019 3a8 8 0 1011 11z",menu:"M4 6h16M4 12h16M4 18h16",x:"M6 6l12 12M18 6L6 18",check:"M5 12l5 5 9-10",star:"M12 3l3 6 6 1-4.5 4.5 1 6.5-5.5-3-5.5 3 1-6.5L3 10l6-1z",copy:"M9 9h11v11H9zM5 15V4h11",send:"M3 11l18-8-8 18-2-8z",chev:"M9 6l6 6-6 6",arrow:"M5 12h14M13 6l6 6-6 6",user:"M12 4a4 4 0 100 8 4 4 0 000-8zM4 21c0-4 4-6 8-6s8 2 8 6",flame:"M12 3c1 4 5 5 5 10a5 5 0 01-10 0c0-2 1-3 2-4 0 2 1 3 2 3 0-4-1-6 1-9z",plus:"M12 5v14M5 12h14",trash:"M4 7h16M9 7V4h6v3M6 7l1 13h10l1-13",spark:"M12 2l2.4 7.2L22 12l-7.6 2.8L12 22l-2.4-7.2L2 12l7.6-2.8z"};
+const I=({n,s=18})=><svg width={s} height={s} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d={P[n]}/></svg>;
+const Logo=({s=28})=><svg width={s} height={s} viewBox="0 0 32 32" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stopColor="#22d3ee"/><stop offset="1" stopColor="#8b5cf6"/></linearGradient></defs><circle cx="16" cy="16" r="14" fill="none" stroke="url(#lg)" strokeWidth="2"/><path d="M10 22V10l12 12V10" fill="none" stroke="url(#lg)" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round"/><circle cx="22" cy="10" r="2.2" fill="#22d3ee"/></svg>;
+const Brand=({s})=><span className="brand"><Logo s={s||26}/><b>NEXORA</b></span>;
+
+const GEN_AI={name:"Generative AI",status:"Verified Rapid Adoption",verified:"LLM-based assistants, RAG and tool-calling agents are in production at many companies today.",predictions:"Expect more autonomous, auditable multi-step agents and on-device models over the next 3–5 years. This is a projection, not a certainty.",valuableSkills:["Prompt & context design","Evaluation","Vector search","Guardrails"],learnToday:"Python, APIs, JSON, SQL and building small evaluated LLM apps."};
+const levelOf=c=>c.difficulty.startsWith("Beginner")?"Beginner":c.difficulty.startsWith("Intermediate")?"Intermediate":"Advanced";
+const num=s=>{const m=String(s).replace(/,/g,"").match(/[\d.]+/);return m?parseFloat(m[0]):0};
+const DEF={name:"",edu:"",know:"None",langs:[],interests:[],goal:"",level:"Complete Beginner",hours:2,style:"Projects",country:"United States",onboarded:false};
+const ALLLANGS=["Python","JavaScript","TypeScript","HTML/CSS","SQL","C","C++","Java","Go","Rust","C#","PHP","R","Kotlin","Swift","Dart","Ruby","Bash","PowerShell"];
+function match(c,p){let s=40;const why=[],L=p.langs.map(x=>x.toLowerCase()),ov=c.languages.filter(l=>L.includes(l.toLowerCase()));
+ s+=Math.min(30,ov.length*12);if(ov.length)why.push("You already know "+ov.join(", "));
+ if(p.interests.includes(c.category)){s+=20;why.push("Matches your interest in "+c.category)}
+ const lv=levelOf(c),beg=/Beginner/.test(p.level);
+ if(beg&&lv==="Beginner"){s+=10;why.push("Has a beginner-friendly entry path")}else if(beg&&lv==="Advanced")s-=12;else if(!beg&&lv!=="Beginner"){s+=6;why.push("Fits your experience level")}
+ const txt=(c.title+" "+c.intro+" "+c.skills.join(" ")).toLowerCase(),kw=(p.goal||"").toLowerCase().split(/\W+/).filter(w=>w.length>3&&txt.includes(w));
+ if(kw.length){s+=8;why.push("Related to your goal: “"+kw[0]+"”")}
+ return{c,score:Math.max(20,Math.min(95,s)),why:why.length?why:["Broad, well-documented career with a clear learning path"],missing:[...c.languages.filter(l=>!L.includes(l.toLowerCase())),...c.skills.slice(0,3)]}}
+const RES=[[["CS50 (Harvard)","https://cs50.harvard.edu/x/"],["Pro Git book","https://git-scm.com/book"]],[["Python tutorial","https://docs.python.org/3/tutorial/"],["MDN JavaScript Guide","https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide"]],[["roadmap.sh: CS","https://roadmap.sh/computer-science"],["CS50 lectures","https://cs50.harvard.edu/x/"]],[["roadmap.sh","https://roadmap.sh"],["Kaggle Learn","https://www.kaggle.com/learn"]],[["Docker get started","https://docs.docker.com/get-started/"],["Official docs of your tools","https://roadmap.sh"]],[["freeCodeCamp","https://www.freecodecamp.org/learn"],["GitHub Skills","https://skills.github.com/"]],[["OWASP Top 10","https://owasp.org/www-project-top-ten/"],["roadmap.sh: System Design","https://roadmap.sh/system-design"]],[["GitHub Skills","https://skills.github.com/"],["Open source: first issues","https://goodfirstissue.dev/"]],[["GitHub profile README guide","https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-github-profile/customizing-your-profile/managing-your-profile-readme"],["Pramp mock interviews","https://www.pramp.com/"]],[["roadmap.sh","https://roadmap.sh"],["LinkedIn Learning paths","https://www.linkedin.com/learning/"]]];
+const STAGES=["Fundamentals","Core Programming","Computer Science Fundamentals","Technical Skills","Frameworks and Tools","Intermediate Projects","Advanced Concepts","Professional Projects","Portfolio and Interview Preparation","Career Readiness"];
+function genRoadmap(c,p){const L=c.languages[0]||"Python",s=c.skills,t=c.tools,pj=c.projects,exp=!/Beginner/.test(p.level);
+ const T=[["How computers and the internet work","Command line and Git basics","Problem decomposition","How to learn effectively"],[L+" syntax, variables and control flow","Functions and data structures in "+L,"File I/O and error handling","Reading documentation"],["Data structures and Big-O","Operating system basics","Networking basics (HTTP, DNS)","Databases and SQL basics"],s.slice(0,4).concat(["Applying skills to a small dataset or app"]),t.slice(0,5),["Plan and build: "+(pj[0]||"a guided project"),"Write tests and a README","Deploy or demo it"],s.slice(4).concat(["Performance, security and reliability","Reading real-world codebases","Trade-offs in design"]).slice(0,5),["Plan and build: "+(pj[1]||pj[0]||"a capstone"),"Code review and refactoring","Document architecture decisions"],["Portfolio site and polished READMEs","ATS-friendly resume","Technical mock interviews","Behavioral STAR stories"],["Target roles in "+c.category,"Application and networking routine","Offer evaluation basics","First 90 days plan"]];
+ const W=[2,4,4,5,5,4,5,5,3,2],f=Math.max(.6,Math.min(2,2/(p.hours||2)));
+ return STAGES.map((n,i)=>{const topics=T[i].filter(Boolean),w=Math.max(1,Math.round(W[i]*f*(i===0&&exp?.5:1)));
+  return{id:i,name:n,weeks:w,topics,obj:["Understand and explain: "+topics[0],"Apply it in a small exercise","Be able to teach it to a peer"],res:RES[i],ex:["Complete 5–10 practice exercises on "+topics[0],"Write a short note explaining what you learned"],mini:i===5?(pj[0]||"Mini-project"):i===7?(pj[1]||pj[0]||"Capstone"):"Mini-project: build a small demo using "+topics[0],q:["Explain “"+topics[0]+"” in your own words.","Which part of this stage was hardest, and why?","How would you use this in a "+c.title+" role?"]}})}
+
+/* Upgraded Multi-Mode Dataset-Aware NEXORA AI Synthesis Engine */
+function localReply(q,p,c,mode="Architect"){
+  const t=q.toLowerCase(),g=c?c.title:"Software Engineer";
+  const matchedCareer=CAREERS_DB.find(x=>t.includes(x.title.toLowerCase())||t.includes(x.id.replace(/-/g," ")))||c;
+  const matchedLang=LANGUAGES_DB.find(x=>new RegExp("\\b"+x.name.replace(/[+#]/g,"\\$&")+"\\b","i").test(q));
+  const mInfo=match(matchedCareer,p);
+
+  if(/salary|pay|compensation|earn|money|market/.test(t)){
+    const sal=Object.entries(matchedCareer.salaries).map(([k,v])=>"• **"+k+":** "+v).join("\n");
+    return "**["+mode+" Analysis — "+matchedCareer.title+" Market & Compensation]**\n\n"+sal+"\n\n• **Global Demand:** "+matchedCareer.demand+" ("+matchedCareer.futureGrowth+")\n• **Remote Scope:** "+matchedCareer.remoteScope+"\n• **Key Edge:** Combine **"+matchedCareer.languages.slice(0,2).join(" + ")+"** with shipped portfolio proof ("+matchedCareer.projects[0]+").";
+  }
+  if(/gap|missing|ready|fit|score|assess/.test(t)){
+    return "**["+mode+" — Skill Gap & Readiness Audit for "+matchedCareer.title+"]**\n\n• **Current Alignment Score:** **"+mInfo.score+"%**\n• **Strengths:** "+mInfo.why.join("; ")+"\n• **Priority Gaps to Close:** "+(mInfo.missing.slice(0,5).join(", ")||"Core stack covered — focus on system design & capstone projects")+"\n• **Recommended Toolchain:** "+matchedCareer.tools.join(" · ")+"\n\nAsk me for a **7-day sprint** on any of those missing skills to start closing the gap immediately.";
+  }
+  if(/error|bug|debug|traceback|exception|fix/.test(t)){
+    const lang=matchedLang?matchedLang.name:(matchedCareer.languages[0]||"Python");
+    return "**["+mode+" — Precision Root-Cause Debugging Protocol ("+lang+")]**\n\n1. **Isolate the Signal:** Read the **final exception line** first, then locate the highest stack frame inside *your* source files.\n2. **Verify State & Types:** Log variable shapes, null/undefined boundaries, and async resolution order.\n3. **Minimal Reproduction:** Strip external dependencies until a 10-line snippet reproduces the fault.\n\n"+F+(lang.toLowerCase().includes("script")?"javascript":"python")+"\n# Diagnostic wrapper for isolating unexpected state\ndef inspect_state(label, payload):\n    print(f'[{label}] type={type(payload).__name__} len={len(payload) if hasattr(payload, \"__len__\") else \"n/a\"}')\n    return payload\n"+F+"\nPaste your code snippet and full stack trace here—I will trace the exact fault line and provide a clean patch.";
+  }
+  if(/interview|mock|question|hire|recruiter/.test(t)||mode==="Interview Coach"){
+    const r0=matchedCareer.responsibilities[0],r1=matchedCareer.responsibilities[1]||matchedCareer.responsibilities[0];
+    return "**[Interview Coach — "+matchedCareer.title+" Simulation]**\n\nLet’s run a realistic 3-part technical & behavioral screen:\n\n1. **Architecture & Execution:** *“"+r0+"”* — Walk me through your exact tool choices (**"+matchedCareer.tools.slice(0,3).join(", ")+"**), edge cases, and how you verify correctness.\n2. **Deep-Dive Scenario:** *“"+r1+"”* — What bottlenecks do you anticipate at 10x scale?\n3. **Behavioral (STAR):** Tell me about a technical trade-off where you had to balance speed against reliability.\n\nReply with your answer to **Question 1** and I’ll score your clarity, depth, and missing keywords.";
+  }
+  if(/exercise|practice|quiz|challenge|problem/.test(t)||mode==="Code Lab"){
+    const lang=matchedLang?matchedLang.name:(matchedCareer.languages[0]||"Python");
+    const isJS=/javascript|typescript/i.test(lang);
+    return "**[Code Lab — Applied "+lang+" Challenge for "+matchedCareer.title+"]**\n\n**Problem:** Build a resilient, zero-dependency rate-window aggregator that processes incoming event timestamps and flags bursts exceeding `limit` events within `window_sec`.\n\n"+F+(isJS?"javascript":"python")+"\n"+(isJS
+      ?"function detectBursts(timestamps, windowSec, limit) {\n  // timestamps: sorted array of epoch seconds\n  // Return array of timestamps where the sliding window exceeds limit\n  const alerts = [];\n  let left = 0;\n  for (let right = 0; right < timestamps.length; right++) {\n    while (timestamps[right] - timestamps[left] > windowSec) left++;\n    if (right - left + 1 > limit) alerts.push(timestamps[right]);\n  }\n  return alerts;\n}\nconsole.log(detectBursts([1, 2, 3, 4, 12], 5, 3)); // [4]"
+      :"from collections import deque\n\ndef detect_bursts(timestamps: list[int], window_sec: int, limit: int) -> list[int]:\n    window, alerts = deque(), []\n    for ts in timestamps:\n        window.append(ts)\n        while window and ts - window[0] > window_sec:\n            window.popleft()\n        if len(window) > limit:\n            alerts.append(ts)\n    return alerts\n\nprint(detect_bursts([1, 2, 3, 4, 12], 5, 3))  # [4]")+"\n"+F+"\n**Upgrade Challenge:** Modify this to track bursts *per user ID* in $O(1)$ amortized time. Paste your version for review!";
+  }
+  if(/project|build|portfolio|capstone|idea/.test(t)){
+    const relProj=PROJECTS_DB.filter(x=>x.category.toLowerCase().includes(matchedCareer.category.split(" ")[0].toLowerCase())).slice(0,2);
+    return "**["+mode+" — High-Impact Portfolio Blueprints for "+matchedCareer.title+"]**\n\n"+matchedCareer.projects.map((x,i)=>"**"+(i+1)+". "+x+"** — Stack: `"+matchedCareer.tools.slice(0,4).join(" · ")+"`").join("\n")+(relProj.length?"\n\n**Guided Lab Specs Available in Project Center:**\n"+relProj.map(x=>"• **"+x.title+"** ("+x.level+"): "+x.desc).join("\n"):"")+"\n\nTell me which project you want to build, and I’ll generate the folder structure, schema, and MVP milestones.";
+  }
+  if(/plan|week|schedule|roadmap|study/.test(t)||mode==="Roadmap Strategist"){
+    const rd=genRoadmap(matchedCareer,p);
+    return "**[Roadmap Strategist — "+matchedCareer.title+" Execution Plan ("+p.hours+" h/day)]**\n\n"+rd.slice(0,4).map(s=>"**Stage "+String(s.id+1).padStart(2,"0")+": "+s.name+"** ("+s.weeks+" wks) → Focus: *"+s.topics[0]+"*").join("\n")+"\n\n**Weekly Cadence ("+(p.hours*6)+" hrs/wk):**\n• **Mon–Wed (50%):** Core concepts + active coding drills in **"+matchedCareer.languages[0]+"**\n• **Thu–Fri (35%):** Build "+matchedCareer.projects[0]+"\n• **Sat (15%):** Write technical notes, push to GitHub, and run a self-quiz.";
+  }
+  if(matchedLang){
+    return "**["+mode+" — "+matchedLang.name+" Mastery Blueprint]**\n\n"+matchedLang.tagline+"\n\n• **Difficulty:** "+matchedLang.difficulty+"\n• **Core Concepts:** "+matchedLang.concepts.join(" · ")+"\n• **Optimal Learning Order:** "+matchedLang.sequence.join(" → ")+"\n• **Top Frameworks:** "+matchedLang.frameworks.join(", ")+"\n• **Target Careers:** "+matchedLang.careers.join(", ")+"\n\nWant a hands-on coding exercise or starter project in **"+matchedLang.name+"**?";
+  }
+  return "**[NEXORA Neural Mentor · "+mode+" Mode]**\n\nTailored for your **"+g+"** path (**"+p.level+"** · **"+p.hours+" h/day**):\n\n1. **Core Focus:** Master **"+matchedCareer.languages.slice(0,2).join(" & ")+"** alongside **"+matchedCareer.skills.slice(0,3).join(", ")+"**.\n2. **Architecture Mindset:** Don’t just memorize syntax—build **"+matchedCareer.projects[0]+"** and document every design decision.\n3. **Next Concrete Step:** "+matchedCareer.responsibilities[0]+".\n\nAsk me to **explain any concept**, **review code**, **generate a coding challenge**, **audit your skill gaps**, or **run a mock interview**.";
+}
+
+async function askBackend(msg,ctx,on){if(!CFG.apiBase)throw 0;const r=await fetch(CFG.apiBase+"/api/chat",{method:"POST",headers:{"Content-Type":"application/json"},credentials:"include",body:JSON.stringify({message:msg,context:ctx})});if(!r.ok||!r.body)throw 0;const rd=r.body.getReader(),d=new TextDecoder();let o="";for(;;){const{done,value}=await rd.read();if(done)break;o+=d.decode(value,{stream:true});on(o)}return o}
+
+class Boundary extends React.Component{state={e:null};static getDerivedStateFromError(e){return{e}}render(){return this.state.e?<div className="card" role="alert"><h2>Something went wrong</h2><p className="mute">This view failed to render. Your data is safe. <button className="btn" onClick={()=>this.setState({e:null})}>Try again</button></p></div>:this.props.children}}
+const Empty=({t,d,a})=><div className="card empty"><Logo s={34}/><h3>{t}</h3><p className="mute">{d}</p>{a}</div>;
+const Bar=({v,max=100,h=8})=><div className="bar" style={{height:h}}><i style={{width:Math.min(100,v/max*100)+"%"}}/></div>;
+const Chip=({on,children,...r})=><button className={"chip"+(on?" on":"")} aria-pressed={!!on} {...r}>{children}</button>;
+const Fmt=({t})=>{const parts=t.split(F);return<>{parts.map((x,i)=>i%2?<pre key={i}><code>{x.replace(/^\w*\n/,"")}</code></pre>:<p key={i} className="fmt">{x.split(/(\*\*[^*]+\*\*)/).map((y,j)=>y.startsWith("**")?<b key={j}>{y.slice(2,-2)}</b>:y)}</p>)}</>};
+const copy=(t,S)=>{try{navigator.clipboard.writeText(t);S&&S.toast("Copied to clipboard")}catch(e){S&&S.toast("Copy not available in this browser")}};
+
+const SOC=[["Instagram","https://www.instagram.com/_aneek_18_?cplk=b3d1ZHZwNXJva3kw","0 0 24 24","IG"],["Facebook","https://www.facebook.com/share/1CcF2JAN2H/","0 0 24 24","FB"],["LinkedIn","https://www.linkedin.com/in/aneek-mallick-32740a36a?utm_source=share_via&utm_content=profile&utm_medium=member_android","0 0 448 512","LI"],["X (Twitter)","https://x.com/_andres_aneek_","0 0 24 24","X"]];
+const BP={IG:"M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077",FB:"M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z",LI:"M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z",X:"M14.234 10.162 22.977 0h-2.072l-7.591 8.824L7.251 0H.258l9.168 13.343L.258 24H2.33l8.016-9.318L16.749 24h6.993zm-2.837 3.299-.929-1.329L3.076 1.56h3.182l5.965 8.532.929 1.329 7.754 11.09h-3.182z"};
+const Socials=()=><div className="row soc">{SOC.map(([n,u,vb,k])=><a key={n} href={u} target="_blank" rel="noopener noreferrer" aria-label={"Aneek Mallick (Andres) on "+n} title={n}><svg width="20" height="20" viewBox={vb} fill="currentColor" aria-hidden="true"><path d={BP[k]}/></svg></a>)}</div>;
+const Head=({go})=>{const S=useS();return<header className="top"><a href="#home" onClick={e=>{e.preventDefault();go("home")}}><Brand/></a><nav className="row wrap" aria-label="Main">{[["careers","Careers"],["about","About"],["contact","Contact"]].map(([r,l])=><button key={r} className="lnk" onClick={()=>go(r)}>{l}</button>)}<button className="ico" aria-label="Toggle theme" onClick={()=>S.setTheme(S.theme==="dark"?"light":"dark")}><I n={S.theme==="dark"?"sun":"moon"}/></button>{S.p.onboarded?<button className="btn pri" onClick={()=>go("dashboard")}>Dashboard</button>:<><button className="btn" onClick={()=>go("signin")}>Sign In</button><button className="btn pri" onClick={()=>go("onboarding")}>Start Your Journey</button></>}</nav></header>};
+const Foot=({go})=><footer><div><Brand s={22}/><p className="mute sm">Discover Your Potential. Design Your Future.<br/>Explore. Learn. Build. Evolve.</p></div><div className="row wrap">{[["careers","Careers"],["about","About"],["contact","Contact"]].map(([r,l])=><button key={r} className="lnk" onClick={()=>go(r)}>{l}</button>)}</div><div><Socials/><p className="mute sm">© 2026 NEXORA. Salary figures are illustrative estimates, not guarantees.</p></div></footer>;
+const Founder=()=><section className="card founder" aria-labelledby="fh"><div className="avatar" role="img" aria-label="Founder photo placeholder">AM<span>Photo placeholder</span></div><div><h2 id="fh">Meet the Founder</h2><h3>Aneek Mallick (Andres)</h3><p className="mute sm">Founder & Creator of NEXORA</p><p>Aneek Mallick, professionally known by the alias Andres, is the founder and creator of NEXORA. His vision is to make technology education, career exploration, and personalized learning more accessible through intelligent digital experiences. NEXORA represents his ambition to help students discover their potential, develop practical skills, and prepare for the future of technology.</p><h4>Connect With the Founder</h4><p className="mute sm">Follow Aneek Mallick (Andres) across social platforms to stay connected and follow his latest updates, projects, and ideas.</p><Socials/></div></section>;
+
+function Landing({go}){const[cat,setCat]=useState(CAREER_CATEGORIES[0]),S=useS();
+ const list=CAREERS_DB.filter(c=>c.category===cat).slice(0,3),demo=CAREERS_DB.find(c=>c.id==="ai-engineer")||CAREERS_DB[0];
+ const mt=useMemo(()=>CAREERS_DB.map(c=>match(c,S.p)).sort((a,b)=>b.score-a.score).slice(0,3),[S.p]),rd=genRoadmap(demo,S.p);
+ return<div className="land"><Head go={go}/>
+ <section className="hero"><div><span className="pill">AI career discovery, learning & development</span><h1>Your Future in Technology Starts Here.</h1><p className="lead">Discover your ideal technology career, identify your skill gaps, build personalized learning roadmaps, and develop the skills needed to succeed in the evolving technology industry.</p><div className="row wrap"><button className="btn pri lg" onClick={()=>go("onboarding")}>Start Your Journey <I n="arrow"/></button><button className="btn lg" onClick={()=>go("careers")}>Explore Careers</button></div><p className="mute sm">Discover Your Potential. Design Your Future.</p></div>
+ <svg viewBox="0 0 440 300" className="path" role="img" aria-label="Animated career pathway from learning to career readiness"><path d="M20 260C90 260 80 180 150 180S200 90 270 90 330 40 385 40" fill="none" stroke="url(#lg)" strokeWidth="3" strokeDasharray="8 8" className="dash"/>{[[20,260,"Learn"],[150,180,"Build"],[270,90,"Specialize"],[385,40,"Career-ready"]].map(([x,y,l],i)=><g key={i}><circle cx={x} cy={y} r="9" fill="var(--p)" stroke="#22d3ee" strokeWidth="2"/><text x={x} y={y+26} textAnchor="middle" fill="var(--m)" fontSize="12">{l}</text></g>)}</svg></section>
+ <section className="stats">{[[CAREERS_DB.length,"technology careers"],[CAREER_CATEGORIES.length,"career categories"],[LANGUAGES_DB.length,"programming languages"],[PROJECTS_DB.length,"guided projects"]].map(([n,l])=><div key={l} className="card"><b className="big">{n}</b><span className="mute">{l}</span></div>)}<p className="mute sm full">Counts come directly from NEXORA’s built-in dataset.</p></section>
+ <section><h2>Explore career categories</h2><div className="row wrap" role="tablist">{CAREER_CATEGORIES.map(c=><Chip key={c} on={c===cat} onClick={()=>setCat(c)}>{c}</Chip>)}</div><div className="grid3">{list.map(c=><div key={c.id} className="card"><span className="mute sm">{levelOf(c)} · {c.duration}</span><h3>{c.title}</h3><p className="mute">{c.intro}</p><button className="btn" onClick={()=>{S.setFocus({id:c.id});go("careers")}}>View details</button></div>)}</div></section>
+ <section className="split"><div><h2>AI career recommendations</h2><p className="mute">Answer a few optional questions and NEXORA ranks careers with transparent reasons, missing skills and a starting point. Scores are guidance, not validated probabilities.</p><button className="btn pri" onClick={()=>go("onboarding")}>Get my matches</button></div><div className="card"><p className="mute sm">Preview using the default profile</p>{mt.map(m=><div key={m.c.id}><div className="row between"><b>{m.c.title}</b><span>{m.score}%</span></div><Bar v={m.score}/></div>)}</div></section>
+ <section className="split"><div className="card"><p className="mute sm">Roadmap preview: {demo.title}</p>{rd.slice(0,5).map(s=><p key={s.id} className="task"><b>{String(s.id+1).padStart(2,"0")}</b> {s.name} <span className="mute sm">· {s.weeks} wk</span></p>)}<p className="mute sm">…and 5 more stages</p></div><div><h2>A personalized 10-stage roadmap</h2><p className="mute">From fundamentals to career readiness, each stage has objectives, topics, resources, exercises, a mini-project, a weekly schedule, a checklist and a knowledge check.</p></div></section>
+ <section className="split"><div><div className="row"><div className="ai-orb" style={{width:42,height:42}}><I n="spark" s={18}/></div><h2>Meet NEXORA AI</h2></div><p className="mute">A multi-mode neural mentor with Architect, Code Lab, Interview Coach, and Roadmap Strategist personas—synthesizing real-time career intelligence, code challenges, and debugging guidance tailored to your exact profile.</p><button className="btn pri" onClick={()=>go("onboarding")}>Launch NEXORA AI</button></div><div className="card" style={{borderColor:"color-mix(in srgb,var(--c) 35%,var(--l))"}}><div className="bub u">Give me a coding challenge for AI Engineer</div><div className="bub"><Fmt t={localReply("exercise",S.p,demo,"Code Lab")}/></div></div></section>
+ <section><h2>Everything in one command center</h2><div className="grid3">{[["Skill gap analyzer","Rate yourself against any career."],["Study planner","Daily and weekly schedules."],["Smart quizzes","Generated from career data."],["Interview prep","Technical and behavioral practice."],["Portfolio builder","Projects and skills, exported as Markdown."],["Learning analytics","Study consistency and milestones."]].map(([t,d])=><div className="card" key={t}><h3>{t}</h3><p className="mute">{d}</p></div>)}</div></section>
+ <section><h2>How NEXORA works</h2><div className="grid4">{[["1 Explore","Browse and compare careers."],["2 Assess","Tell us what you know."],["3 Plan","Get a 10-stage roadmap."],["4 Build","Learn, practice, ship projects."]].map(([t,d])=><div className="card" key={t}><h3>{t}</h3><p className="mute">{d}</p></div>)}</div></section>
+ <section><h2>Why choose NEXORA</h2><div className="grid3">{[["Honest by design","Estimates and scores are labelled as guidance. No invented statistics."],["Direct Contact","Contact form wired directly to Formspree for instant inbox delivery."],["Structured learning","Roadmaps, projects and assessments connected to real career data."]].map(([t,d])=><div className="card" key={t}><h3>{t}</h3><p className="mute">{d}</p></div>)}</div></section>
+ <Founder/>
+ <Foot go={go}/></div>}
+
+function About({go}){return<div className="land"><Head go={go}/><section className="stack"><h1>About NEXORA</h1><p className="lead">NEXORA is an AI-powered technology career discovery, learning and development platform: your personal technology career command center.</p>
+ <div className="grid2"><div className="card"><h3>Mission</h3><p>To empower students with intelligent tools, structured learning paths, and career guidance that help them build a successful future in technology.</p></div><div className="card"><h3>Vision</h3><p>To become a trusted digital platform for career discovery, technology education, and personalized skill development.</p></div></div>
+ <div className="card"><h3>Why it exists</h3><p className="mute">Many students don’t know which technology career fits them or what to learn first. NEXORA connects a career database, a 10-stage roadmap, projects, a language explorer, quizzes and an AI mentor into one guided experience.</p></div>
+ <div className="card"><h3>The ecosystem</h3><p className="mute">AI Career Match · Skill Assessment · What To Learn Next · 10-stage Roadmap · Career Comparison · Language Explorer · Project Center · Future Technology Center · NEXORA AI · Dashboard · Toolkit</p></div><Founder/><div className="row"><button className="btn pri" onClick={()=>go("onboarding")}>Start Your Journey</button><button className="btn" onClick={()=>go("contact")}>Contact</button></div></section><Foot go={go}/></div>}
+
+function Contact({go}){const S=useS(),[f,setF]=useState({name:"",email:"",subject:"",message:""}),[err,setErr]=useState({}),[msg,setMsg]=useState(""),[ok,setOk]=useState(""),[sending,setSending]=useState(false);
+ const set=k=>e=>setF({...f,[k]:e.target.value});
+ const sub=async e=>{e.preventDefault();const x={};if(f.name.trim().length<2)x.name="Enter your name.";if(!/^\S+@\S+\.\S+$/.test(f.email))x.email="Enter a valid email address.";if(f.subject.trim().length<3)x.subject="Enter a subject.";if(f.message.trim().length<10)x.message="Message must be at least 10 characters.";setErr(x);setMsg("");setOk("");if(Object.keys(x).length)return;
+  setSending(true);
+  try{
+    const r=await fetch("https://formspree.io/f/maeodrll",{method:"POST",headers:{"Content-Type":"application/json","Accept":"application/json"},body:JSON.stringify({...f,_subject:"[NEXORA Contact] "+f.subject})});
+    const data=await r.json().catch(()=>({}));
+    if(!r.ok)throw new Error((data.errors&&data.errors.map(e=>e.message).join(", "))||data.error||"Submission failed");
+    setOk("Message sent successfully! Thank you for reaching out — we will get back to you soon.");
+    S.toast("Message sent!");
+    setF({name:"",email:"",subject:"",message:""});
+  }catch(err){
+    setMsg(err.message||"Could not submit your message. Please check your connection and try again.");
+  }finally{setSending(false)}};
+ return<div className="land"><Head go={go}/><section className="stack"><h1>Contact</h1><div className="grid2"><form className="card form" action="https://formspree.io/f/maeodrll" method="POST" onSubmit={sub} noValidate><div className="row between wrap"><h3 style={{margin:0}}>Send a Message</h3><span className="pill ok">Direct Inbox Connected</span></div>{[["name","Name","text"],["email","Email","email"],["subject","Subject","text"]].map(([k,l,t])=><label key={k}>{l}<input name={k} type={t} value={f[k]} maxLength={120} onChange={set(k)} aria-invalid={!!err[k]} aria-describedby={err[k]?k+"e":undefined}/>{err[k]&&<span id={k+"e"} className="err">{err[k]}</span>}</label>)}<label>Message<textarea name="message" rows="5" maxLength={2000} value={f.message} onChange={set("message")} aria-invalid={!!err.message}/>{err.message&&<span className="err">{err.message}</span>}</label>{ok&&<p role="status" className="okbox">{ok}</p>}{msg&&<p role="alert" className="warn">{msg}</p>}<button type="submit" className="btn pri" disabled={sending}>{sending?"Sending…":"Send Message"}</button></form>
+ <div className="card"><h3>Connect With the Founder</h3><p className="mute">Follow Aneek Mallick (Andres) across social platforms to stay connected and follow his latest updates, projects, and ideas.</p><Socials/><p className="mute sm" style={{marginTop:14}}>Messages submitted here are delivered directly via Formspree.</p></div></div></section><Foot go={go}/></div>}
+
+function Onboarding({go}){const S=useS(),[st,setSt]=useState(0),[d,setD]=useState({...DEF,...S.p});const set=o=>setD({...d,...o}),tg=(k,v)=>set({[k]:d[k].includes(v)?d[k].filter(x=>x!==v):[...d[k],v]});
+ const steps=[["About you",<><label>Preferred name<input value={d.name} maxLength={40} onChange={e=>set({name:e.target.value})} placeholder="e.g. Alex"/></label><label>Education level (optional)<select value={d.edu} onChange={e=>set({edu:e.target.value})}>{["","High school","Undergraduate","Graduate","Self-taught","Working professional"].map(x=><option key={x}>{x}</option>)}</select></label></>],
+ ["Your skills",<><label>Programming knowledge<select value={d.level} onChange={e=>set({level:e.target.value})}>{["Complete Beginner","Beginner","Intermediate","Advanced"].map(x=><option key={x}>{x}</option>)}</select></label><p className="mute sm">Languages you know (optional)</p><div className="row wrap">{ALLLANGS.map(l=><Chip key={l} on={d.langs.includes(l)} onClick={()=>tg("langs",l)}>{l}</Chip>)}</div></>],
+ ["Interests & goals",<><p className="mute sm">Technical interests</p><div className="row wrap">{CAREER_CATEGORIES.map(l=><Chip key={l} on={d.interests.includes(l)} onClick={()=>tg("interests",l)}>{l}</Chip>)}</div><label>Career goal (optional)<input value={d.goal} maxLength={140} onChange={e=>set({goal:e.target.value})} placeholder="e.g. become a machine learning engineer"/></label></>],
+ ["Learning setup",<><label>Daily time: {d.hours} h<input type="range" min="1" max="6" value={d.hours} onChange={e=>set({hours:+e.target.value})}/></label><label>Preferred learning style<select value={d.style} onChange={e=>set({style:e.target.value})}>{["Projects","Video courses","Reading docs","Interactive exercises"].map(x=><option key={x}>{x}</option>)}</select></label><label>Target country (optional)<select value={d.country} onChange={e=>set({country:e.target.value})}>{COUNTRIES_DB.map(c=><option key={c.name}>{c.name}</option>)}</select></label></>]];
+ const fin=()=>{const np={...d,onboarded:true};S.setP(np);const top=CAREERS_DB.map(c=>match(c,np)).sort((a,b)=>b.score-a.score)[0].c,pre=store.get("rm",null);S.setRm({career:pre?pre.career:top.id,paused:false});go("dashboard")};
+ return<div className="center"><div className="card wide"><Brand/><p className="mute sm">Step {st+1} of {steps.length} · every question can be skipped and edited later</p><Bar v={(st+1)/steps.length*100}/><h2>{steps[st][0]}</h2><div className="form">{steps[st][1]}</div><div className="row between"><button className="btn" disabled={!st} onClick={()=>setSt(st-1)}>Back</button><div className="row"><button className="btn" onClick={st<3?()=>setSt(st+1):fin}>Skip</button><button className="btn pri" onClick={st<3?()=>setSt(st+1):fin}>{st<3?"Next":"Create my profile"}</button></div></div></div></div>}
+
+function SignIn({go}){const S=useS(),[name,setName]=useState(S.p.name||""),[email,setEmail]=useState(S.p.email||""),[submitting,setSubmitting]=useState(false);
+ const handleSignIn=async e=>{e.preventDefault();const cleanName=name.trim()||S.p.name||"Explorer",cleanEmail=email.trim();setSubmitting(true);
+  try{
+   await fetch("https://formspree.io/f/mppdjvbz",{
+    method:"POST",
+    headers:{"Content-Type":"application/json","Accept":"application/json"},
+    body:JSON.stringify({name:cleanName,email:cleanEmail,_subject:"[NEXORA Login] "+cleanName+" ("+cleanEmail+")",loginTime:new Date().toISOString()})
+   });
+  }catch(err){}
+  const updated={...S.p,name:cleanName,email:cleanEmail,onboarded:true};
+  S.setP(updated);setSubmitting(false);S.toast("Signed in to NEXORA");go("home")};
+ return<div className="center"><div className="card wide" style={{maxWidth:460}}>
+  <div className="row between"><Brand/><button className="ico" aria-label="Toggle theme" onClick={()=>S.setTheme(S.theme==="dark"?"light":"dark")}><I n={S.theme==="dark"?"sun":"moon"}/></button></div>
+  <h2>Welcome to NEXORA</h2>
+  <p className="mute">Sign in to access your AI career discovery command center, personalized roadmaps, and neural mentor.</p>
+  <form className="form" action="https://formspree.io/f/mppdjvbz" method="POST" onSubmit={handleSignIn}>
+   <label>Display Name<input name="name" value={name} maxLength={40} onChange={e=>setName(e.target.value)} placeholder="e.g. Elon Musk" required/></label>
+   <label>Email Address<input name="email" type="email" value={email} maxLength={100} onChange={e=>setEmail(e.target.value)} placeholder="you@example.com" required/></label>
+   <button type="submit" className="btn pri lg" disabled={submitting} style={{width:"100%",justifyContent:"center"}}>{submitting?"Signing In…":"Sign In & Enter NEXORA"} {!submitting&&<I n="arrow"/>}</button>
+  </form>
+  <div className="row between wrap" style={{marginTop:14,paddingTop:14,borderTop:"1px solid var(--l)"}}>
+   <button type="button" className="btn" onClick={()=>go("onboarding")}>Full Setup / Onboarding</button>
+   <button type="button" className="lnk" onClick={()=>go("home")}>Explore as Guest →</button>
+  </div>
+  <p className="mute sm" style={{marginTop:10}}>Your profile, progress, and settings are stored locally in your browser.</p>
+ </div></div>}
+
+function Dashboard({go}){const S=useS(),{p,road,prog,log,career,ps}=S,tot=road.reduce((a,s)=>a+s.topics.length+1,0),done=Object.keys(prog).filter(k=>prog[k]&&!k.startsWith("q")).length,pct=Math.round(done/tot*100);
+ const days=[...Array(7)].map((_,i)=>{const d=new Date(Date.now()-(6-i)*864e5),k=d.toISOString().slice(0,10);return{k,l:d.toLocaleDateString("en",{weekday:"short"}),h:log[k]||0}}),wk=days.reduce((a,d)=>a+d.h,0);
+ let streak=0;for(let i=0;i<365;i++){const k=new Date(Date.now()-i*864e5).toISOString().slice(0,10);if(log[k]>0)streak++;else if(i>0)break;else if(i===0)continue}
+ const cur=road.find(s=>!Array.from({length:s.topics.length+1}).every((_,j)=>prog[s.id+":"+j]))||road[9],nxt=cur.topics.findIndex((_,j)=>!prog[cur.id+":"+j]);
+ const ach=S.achievements;const mx=Math.max(2,...days.map(d=>d.h)),add=h=>{const k=new Date().toISOString().slice(0,10);S.setLog({...log,[k]:(log[k]||0)+h});S.note("Logged "+h+" h of study");S.toast("Study time logged")};
+ return<div className="stack"><div><h1>Welcome back{p.name?", "+p.name:""}</h1><p className="mute">Goal: <b>{career.title}</b> · {p.hours} h/day{S.rm.paused&&" · roadmap paused"}</p></div>
+ <div className="grid4">{[["Progress",pct+"%"],["Lessons done",done+"/"+tot],["Streak",streak+" d"],["This week",wk+" h"]].map(([l,v])=><div className="card" key={l}><span className="mute sm">{l}</span><b className="big">{v}</b></div>)}</div>
+ <div className="grid2"><div className="card"><h3>Weekly study hours</h3><svg viewBox="0 0 280 120" role="img" aria-label="Hours studied per day over the last 7 days">{days.map((d,i)=><g key={d.k}><rect x={i*40+8} y={95-d.h/mx*80} width="24" height={d.h/mx*80} rx="4" fill="url(#lg)"/><text x={i*40+20} y="113" textAnchor="middle" fontSize="10" fill="var(--m)">{d.l}</text></g>)}</svg><div className="row"><button className="btn" onClick={()=>add(.5)}>+30 min</button><button className="btn" onClick={()=>add(1)}>+1 h</button><span className="mute sm">Log your own study time</span></div></div>
+ <div className="card"><h3>Recommended next action</h3><p><b>Stage {cur.id+1}: {cur.name}</b></p><p className="mute">{nxt>=0?cur.topics[nxt]:"Complete the mini-project"}</p><button className="btn pri" onClick={()=>go("roadmap")}>Continue roadmap <I n="arrow"/></button></div></div>
+ <div className="grid2"><div className="card"><h3>Upcoming tasks</h3>{cur.topics.map((t,j)=>!prog[cur.id+":"+j]&&<p key={j} className="task">○ {t}</p>).filter(Boolean).slice(0,4)}</div>
+ <div className="card"><h3>Achievements</h3>{ach.filter(a=>a.on).length?ach.filter(a=>a.on).map(a=><span key={a.t} className="pill">★ {a.t}</span>):<p className="mute">Complete a lesson to earn your first badge.</p>}<h3>Recent activity</h3>{S.act.length?S.act.slice(0,4).map((a,i)=><p key={i} className="sm task">{a}</p>):<p className="mute sm">Nothing yet.</p>}<h3>Projects</h3><p className="mute">{Object.values(ps).filter(v=>v==="in-progress").length} in progress · {Object.values(ps).filter(v=>v==="completed").length} completed</p></div></div></div>}
+
+function Careers({go}){const S=useS(),[q,setQ]=useState(""),[cat,setCat]=useState("All"),[lv,setLv]=useState("All"),[sel,setSel]=useState(S.focus||null);useEffect(()=>S.setFocus(null),[]);
+ const list=useMemo(()=>CAREERS_DB.filter(c=>(cat==="All"||c.category===cat)&&(lv==="All"||levelOf(c)===lv)&&(!q||(c.title+c.intro+c.skills.join()+c.languages.join()+c.tools.join()).toLowerCase().includes(q.toLowerCase()))),[q,cat,lv]);
+ const c=CAREERS_DB.find(x=>x.id===sel),tgl=(a,id)=>S[a.s](a.v.includes(id)?a.v.filter(x=>x!==id):[...a.v,id]);
+ return<div className="stack"><h1>Careers</h1><input className="search" aria-label="Search careers" placeholder="Search careers, skills, tools or languages…" value={q} onChange={e=>setQ(e.target.value)}/><div className="row wrap">{["All",...CAREER_CATEGORIES].map(x=><Chip key={x} on={cat===x} onClick={()=>setCat(x)}>{x}</Chip>)}</div><div className="row wrap">{["All","Beginner","Intermediate","Advanced"].map(x=><Chip key={x} on={lv===x} onClick={()=>setLv(x)}>{x}</Chip>)}</div>
+ {!list.length?<Empty t="No careers found" d="Try a different keyword or clear the filters." a={<button className="btn" onClick={()=>{setQ("");setCat("All");setLv("All")}}>Reset filters</button>}/>:<div className="grid3">{list.map(c=><div key={c.id} className="card"><div className="row between"><span className="mute sm">{c.category}</span><button className={"ico"+(S.bm.includes(c.id)?" on":"")} aria-label={"Bookmark "+c.title} aria-pressed={S.bm.includes(c.id)} onClick={()=>{tgl({s:"setBm",v:S.bm},c.id);S.toast(S.bm.includes(c.id)?"Bookmark removed":"Career bookmarked")}}><I n="star"/></button></div><h3>{c.title}</h3><p className="mute">{c.intro}</p><p className="sm">{levelOf(c)} · {c.duration} · Remote: {c.remoteScope}</p><div className="row"><button className="btn" onClick={()=>setSel(c.id)}>Details</button><label className="sm row"><input type="checkbox" checked={S.cmp.includes(c.id)} disabled={!S.cmp.includes(c.id)&&S.cmp.length>=3} onChange={()=>tgl({s:"setCmp",v:S.cmp},c.id)}/>Compare</label></div></div>)}</div>}
+ {c&&<div className="modal" role="dialog" aria-modal="true" aria-label={c.title}><div className="card sheet"><div className="row between"><h2>{c.title}</h2><button className="ico" aria-label="Close" onClick={()=>setSel(null)}><I n="x"/></button></div><p>{c.intro}</p><div className="grid2"><div><h4>Responsibilities</h4><ul>{c.responsibilities.map(x=><li key={x}>{x}</li>)}</ul><h4>Skills</h4><p>{c.skills.join(" · ")}</p><h4>Languages & tools</h4><p>{[...c.languages,...c.tools].join(" · ")}</p><h4>Education</h4><p>{c.education}</p></div><div><h4>Opportunities</h4><p>{c.applications.join(" · ")}</p><p className="sm">Demand: {c.demand} · Remote: {c.remoteScope} · Math: {c.mathReq}</p><h4>Salary estimates</h4><table><tbody>{Object.entries(c.salaries).map(([k,v])=><tr key={k}><td>{k}</td><td>{v}</td></tr>)}</tbody></table><p className="mute sm">Illustrative estimates from NEXORA’s reference dataset (reviewed Nov 2026). Not guarantees; verify on current local job listings.</p><h4>Your target market: {S.p.country}</h4><p className="sm">{(COUNTRIES_DB.find(x=>x.name===S.p.country)||COUNTRIES_DB[0]).salaries}</p><p className="mute sm">General market bands by seniority (not specific to this career), from the reference dataset reviewed Nov 2026. Estimates only.</p><h4>Pros & cons</h4><p className="sm">+ {c.pros.join(" · ")}<br/>− {c.cons.join(" · ")}</p><h4>Future trends</h4><p>{c.future}</p><h4>Recommended projects</h4><p>{c.projects.join(" · ")}</p></div></div><button className="btn pri" onClick={()=>{S.setRm({career:c.id,paused:false});go("roadmap")}}>Build roadmap for this career</button></div></div>}</div>}
+
+function Match({go}){const S=useS(),r=useMemo(()=>CAREERS_DB.map(c=>match(c,S.p)).sort((a,b)=>b.score-a.score),[S.p]);
+ return<div className="stack"><h1>AI Career Match</h1><p className="mute">A transparent heuristic based on your languages, interests, level and goal. Scores are guidance, not scientifically validated probabilities.</p>
+ {r.slice(0,5).map((m,i)=><div className="card" key={m.c.id}><div className="row between"><h3>{i+1}. {m.c.title}</h3><b>{m.score}% fit</b></div><Bar v={m.score}/><p className="mute">{m.why.join(" · ")}</p><p className="sm"><b>Missing:</b> {m.missing.slice(0,5).join(", ")||"nothing major"} · <b>Start with:</b> {m.c.languages[0]} fundamentals</p><button className="btn pri" onClick={()=>{S.setRm({career:m.c.id,paused:false});go("roadmap")}}>Use this roadmap</button></div>)}
+ <div className="card"><h3>Alternatives</h3><div className="row wrap">{r.slice(5,9).map(m=><span className="pill" key={m.c.id}>{m.c.title}</span>)}</div></div></div>}
+
+function Roadmap(){const S=useS(),{road,prog,career,rm}=S,[open,setOpen]=useState(0),tg=k=>{S.setProg({...prog,[k]:!prog[k]});if(!prog[k]&&k[0]!=="q")S.note("Completed a lesson in "+career.title+" roadmap")};
+ const tot=road.reduce((a,s)=>a+s.topics.length+1,0),done=Object.keys(prog).filter(k=>prog[k]&&!k.startsWith("q")).length;
+ return<div className="stack"><div className="row between wrap"><div><h1>{career.title} roadmap</h1><p className="mute">{road.reduce((a,s)=>a+s.weeks,0)} weeks at {S.p.hours} h/day · {Math.round(done/tot*100)}% complete</p></div><div className="row wrap"><select aria-label="Target career" value={career.id} onChange={e=>S.setRm({...rm,career:e.target.value})}>{CAREERS_DB.map(c=><option key={c.id} value={c.id}>{c.title}</option>)}</select><select aria-label="Hours per day" value={S.p.hours} onChange={e=>S.setP({...S.p,hours:+e.target.value})}>{[1,2,3,4,5,6].map(h=><option key={h} value={h}>{h} h/day</option>)}</select><button className="btn" onClick={()=>S.setRm({...rm,paused:!rm.paused})}>{rm.paused?"Resume":"Pause"}</button><button className="btn" onClick={()=>{if(confirm("Regenerate this roadmap from your current profile and goal?")){if(confirm("Also reset your checked progress?\nOK = reset, Cancel = keep it."))S.setProg({});S.setRm({...rm,ver:(rm.ver||0)+1});S.toast("Roadmap regenerated")}}}>Regenerate</button></div></div>
+ {rm.paused&&<p className="warn" role="status">Roadmap paused. Your progress is saved; resume any time.</p>}<Bar v={done/tot*100} h={10}/>
+ {road.map(s=>{const n=s.topics.length+1,d=Array.from({length:n}).filter((_,j)=>prog[s.id+":"+j]).length;return<div key={s.id} className={"card stage"+(d===n?" done":"")}><button className="sh" aria-expanded={open===s.id} onClick={()=>setOpen(open===s.id?-1:s.id)}><span className="num">{d===n?<I n="check"/>:s.id+1}</span><span><b>Stage {s.id+1}: {s.name}</b><br/><span className="mute sm">{s.weeks} weeks · {d}/{n} complete</span></span></button>
+ {open===s.id&&<div className="body"><div className="grid2"><div><h4>Objectives</h4><ul>{s.obj.map(x=><li key={x}>{x}</li>)}</ul><h4>Checklist</h4>{[...s.topics,s.mini].map((t,j)=><label key={j} className="chk"><input type="checkbox" checked={!!prog[s.id+":"+j]} onChange={()=>tg(s.id+":"+j)}/>{t}</label>)}</div><div><h4>Resources</h4><ul>{s.res.map(([t,u])=><li key={u+t}><a href={u} target="_blank" rel="noopener noreferrer">{t}</a> <button className={"ico"+(S.rbm.some(r=>r[1]===u)?" on":"")} aria-label={"Save resource "+t} aria-pressed={S.rbm.some(r=>r[1]===u)} onClick={()=>{S.setRbm(S.rbm.some(r=>r[1]===u)?S.rbm.filter(r=>r[1]!==u):[...S.rbm,[t,u]]);S.toast("Resource list updated")}}><I n="star" s={14}/></button></li>)}</ul><h4>Exercises</h4><ul>{s.ex.map(x=><li key={x}>{x}</li>)}</ul><h4>Weekly schedule</h4><p className="sm">Study days: {S.days.join(", ")||"none selected"} · {S.p.hours} h/day (edit in Toolkit → Study planner)</p></div></div><h4>Knowledge check (self-assessment)</h4>{s.q.map((x,j)=><label key={j} className="chk"><input type="checkbox" checked={!!prog["q"+s.id+":"+j]} onChange={()=>tg("q"+s.id+":"+j)}/>{x}</label>)}</div>}</div>})}</div>}
+
+/* Upgraded NEXORA AI Neural Mentor */
+function Mentor(){const S=useS(),[inp,setInp]=useState(S.pending||""),[busy,setBusy]=useState(false),[live,setLive]=useState(null),[mode,setMode]=useState("Architect"),end=useRef();
+ const MODES=[["Architect","System & Career Design"],["Code Lab","Live Code & Challenges"],["Interview Coach","Mock Tech & STAR Drills"],["Roadmap Strategist","Weekly Execution Plans"]];
+ const cv=S.chat.convs.find(c=>c.id===S.chat.cur)||S.chat.convs[0],upd=f=>S.setChat(ch=>({...ch,convs:ch.convs.map(c=>c.id===cv.id?f(c):c)}));
+ useEffect(()=>{end.current&&end.current.scrollIntoView({block:"end"})},[cv.msgs.length,live]);useEffect(()=>{S.setPending("")},[]);
+ const send=async(text)=>{const q=(text||inp).trim();if(!q||busy)return;setInp("");setBusy(true);upd(c=>({...c,title:c.msgs.length?c.title:q.slice(0,32),msgs:[...c.msgs,{r:"u",t:q}]}));
+  const ctx={career:S.career.title,level:S.p.level,langs:S.p.langs,progress:Object.keys(S.prog).length,mode};let out,src="NEXORA Neural Core";
+  try{out=await askBackend(q,ctx,setLive)}catch(e){src="NEXORA Local Synthesis";out=localReply(q,S.p,S.career,mode);for(let i=0;i<=out.length;i+=8){setLive(out.slice(0,i));await new Promise(r=>setTimeout(r,10))}}
+  setLive(null);upd(c=>({...c,msgs:[...c.msgs,{r:"a",t:out,src,mode}]}));setBusy(false)};
+ const sug=["Audit my skill gaps for "+S.career.title,"Give me a "+S.career.languages[0]+" coding challenge","Run a mock interview","Salary & demand outlook","Build a 7-day study sprint"];
+ return<div className="ai-shell card">
+  <div className="ai-head">
+    <div className="ai-orb-wrap">
+      <div className={"ai-orb"+(busy?" busy":"")} aria-hidden="true"><I n="spark" s={22}/></div>
+      <div>
+        <div className="row wrap"><h2 style={{margin:0}}>NEXORA AI</h2><span className="ai-badge"><i className="ai-dot"/>{busy?"Synthesizing…":"Neural Core v2"}</span></div>
+        <p className="mute sm">Active Context: <b>{S.career.title}</b> · {S.p.level} · {Object.keys(S.prog).filter(k=>S.prog[k]).length} milestones completed</p>
+      </div>
+    </div>
+    <div className="row wrap">
+      <select aria-label="Conversation" value={cv.id} onChange={e=>S.setChat({...S.chat,cur:+e.target.value})}>{S.chat.convs.map(c=><option key={c.id} value={c.id}>{c.title}</option>)}</select>
+      <button className="btn" onClick={()=>{const id=Date.now();S.setChat({cur:id,convs:[...S.chat.convs,{id,title:"New session",msgs:[]}]})}}><I n="plus" s={15}/> New</button>
+      <button className="btn" onClick={()=>upd(c=>({...c,msgs:[]}))}>Clear</button>
+    </div>
+  </div>
+  <div className="ai-modes" role="tablist" aria-label="AI Reasoning Mode">
+    {MODES.map(([m,desc])=><button key={m} className={"ai-mode"+(mode===m?" on":"")} onClick={()=>setMode(m)} title={desc}><I n="spark" s={13}/><b>{m}</b><span className="hide-sm mute">· {desc}</span></button>)}
+  </div>
+  <div className="msgs" aria-live="polite">
+    {!cv.msgs.length&&<div className="card" style={{background:"color-mix(in srgb,var(--p2) 70%,transparent)",borderStyle:"dashed"}}>
+      <b>NEXORA Neural Mentor initialized in {mode} Mode.</b>
+      <p className="mute sm">I have loaded your <b>{S.career.title}</b> telemetry ({S.career.languages.join(", ")}). Pick a prompt below or ask anything about architecture, code debugging, salaries, or interviews.</p>
+    </div>}
+    {cv.msgs.map((m,i)=><div key={i} className={"bub"+(m.r==="u"?" u":"")}>
+      <div className="bub-meta"><span>{m.r==="u"?(S.p.name||"You"):("NEXORA AI · "+(m.mode||mode))}</span>{m.r==="a"&&<button className="ico" style={{padding:2}} aria-label="Copy response" onClick={()=>copy(m.t,S)}><I n="copy" s={14}/></button>}</div>
+      <Fmt t={m.t}/>
+    </div>)}
+    {live!==null&&<div className="bub"><div className="bub-meta"><span>NEXORA AI · {mode}</span></div><Fmt t={live||"…"}/></div>}
+    <div ref={end}/>
+  </div>
+  <div className="row wrap">{sug.map(s=><Chip key={s} onClick={()=>send(s)}>{s}</Chip>)}</div>
+  <form className="ai-input-bar" onSubmit={e=>{e.preventDefault();send()}}>
+    <I n="spark" s={18}/>
+    <input aria-label="Message NEXORA AI" value={inp} maxLength={2000} onChange={e=>setInp(e.target.value)} placeholder={"Ask NEXORA AI ("+mode+" mode)…"}/>
+    <button className="btn pri" disabled={busy}><I n="send" s={16}/> Send</button>
+  </form>
+ </div>}
+
+function Projects(){const S=useS(),[lv,setLv]=useState("All"),[sel,setSel]=useState(null),L=["Beginner","Intermediate","Advanced","Professional"],T={Beginner:"1–2 weeks",Intermediate:"3–4 weeks",Advanced:"5–8 weeks",Professional:"8–12 weeks"},list=PROJECTS_DB.filter(x=>lv==="All"||x.level===lv||(lv==="Bookmarked"&&S.pbm.includes(x.id))),nx={"not-started":"in-progress","in-progress":"completed",completed:"not-started"};
+ return<div className="stack"><h1>Project center</h1><div className="row wrap">{["All",...L,"Bookmarked"].map(x=><Chip key={x} on={lv===x} onClick={()=>setLv(x)}>{x}</Chip>)}</div>{!list.length?<Empty t="Nothing here yet" d="Bookmark projects with the star to see them here."/>:<div className="grid3">{list.map(x=>{const st=S.ps[x.id]||"not-started";return<div key={x.id} className="card"><div className="row between"><span className="mute sm">{x.category} · {x.level}</span><button className={"ico"+(S.pbm.includes(x.id)?" on":"")} aria-label={"Bookmark "+x.title} aria-pressed={S.pbm.includes(x.id)} onClick={()=>S.setPbm(S.pbm.includes(x.id)?S.pbm.filter(i=>i!==x.id):[...S.pbm,x.id])}><I n="star"/></button></div><h3>{x.title}</h3><p className="mute">{x.desc}</p><p className="sm">⏱ {T[x.level]} · {x.stack.join(", ")}</p><div className="row"><button className="btn" onClick={()=>setSel(x)}>Plan</button><button className="btn" onClick={()=>S.setPs({...S.ps,[x.id]:nx[st]})}>{st==="completed"?"✓ Completed":st==="in-progress"?"● In progress":"+ Start"}</button></div></div>})}</div>}
+ {sel&&<div className="modal" role="dialog" aria-modal="true" aria-label={sel.title}><div className="card sheet"><div className="row between"><h2>{sel.title}</h2><button className="ico" aria-label="Close" onClick={()=>setSel(null)}><I n="x"/></button></div>{sel.category==="Cybersecurity"&&<p className="warn">Use only your own isolated lab. Never test systems without written permission.</p>}<p>{sel.desc}</p><p className="sm"><b>Skills:</b> {sel.skills.join(", ")}</p><h4>Implementation plan</h4><ol>{sel.steps.map(x=><li key={x}>{x}</li>)}</ol><p><b>Expected outcome:</b> {sel.result}</p><p><b>Portfolio value:</b> {sel.portfolioValue}</p><p className="sm"><b>Extension ideas:</b> add tests and CI, a short write-up, a live demo, and one measurable improvement.</p></div></div>}</div>}
+
+function Languages(){const S=useS(),[n,setN]=useState("Python"),[n2,setN2]=useState(""),a=LANGUAGES_DB.find(x=>x.name===n),b=LANGUAGES_DB.find(x=>x.name===n2),cols=[a,b].filter(Boolean);
+ return<div className="stack"><h1>Language explorer</h1><div className="row wrap">{LANGUAGES_DB.map(l=><Chip key={l.name} on={n===l.name} onClick={()=>setN(l.name)}>{l.name}</Chip>)}</div><label className="row">Compare with <select value={n2} onChange={e=>setN2(e.target.value)}><option value="">None</option>{LANGUAGES_DB.filter(l=>l.name!==n).map(l=><option key={l.name}>{l.name}</option>)}</select></label>
+ <div className="scroll"><table><thead><tr><th></th>{cols.map(c=><th key={c.name}>{c.name}</th>)}</tr></thead><tbody>{[["Introduction","tagline"],["Difficulty","difficulty"],["Applications","industries"],["Concepts","concepts"],["Frameworks & tools","frameworks"],["Example projects","projects"],["Related careers","careers"],["Learning order","sequence"],["Next steps","nextSteps"]].map(([l,k])=><tr key={k}><th>{l}</th>{cols.map(c=><td key={c.name}>{Array.isArray(c[k])?c[k].join(" → ").replace(/ → /g,k==="sequence"?" → ":" · "):c[k]}</td>)}</tr>)}</tbody></table></div></div>}
+
+function Compare(){const S=useS(),[ids,setIds]=useState(S.cmp.length?S.cmp:["data-scientist","cybersecurity-analyst"]),cs=ids.map(i=>CAREERS_DB.find(c=>c.id===i)).filter(Boolean),mx=k=>Math.max(1,...cs.map(k));
+ const bars=(t,f,u)=><div className="card"><h4>{t}</h4>{cs.map(c=><div key={c.id}><span className="sm">{c.title}: {f(c)}{u}</span><Bar v={f(c)} max={mx(f)}/></div>)}</div>;
+ return<div className="stack"><h1>Compare careers</h1><div className="row wrap">{[0,1,2].map(i=><select key={i} aria-label={"Career "+(i+1)} value={ids[i]||""} onChange={e=>setIds(Object.assign([...ids],{[i]:e.target.value}).filter(Boolean))}><option value="">{i<2?"Choose…":"(optional)"}</option>{CAREERS_DB.map(c=><option key={c.id} value={c.id}>{c.title}</option>)}</select>)}</div>
+ {cs.length<2?<Empty t="Pick at least two careers" d="Choose from the menus above or tick “Compare” in the Careers page."/>:<><div className="scroll"><table><thead><tr><th></th>{cs.map(c=><th key={c.id}>{c.title}</th>)}</tr></thead><tbody>{[["Skills",c=>c.skills.join(", ")],["Difficulty",c=>c.difficulty],["Learning duration",c=>c.duration],["Mathematics",c=>c.mathReq],["Salary (US est.)",c=>c.salaries.US],["Demand",c=>c.demand],["Remote",c=>c.remoteScope],["Growth",c=>c.futureGrowth],["Education",c=>c.education]].map(([l,f])=><tr key={l}><th>{l}</th>{cs.map(c=><td key={c.id}>{f(c)}</td>)}</tr>)}</tbody></table></div><div className="grid2">{bars("Typical learning time (months, lower bound)",c=>num(c.duration)," mo")}{bars("US salary estimate, lower bound (k USD)",c=>num(c.salaries.US)," k")}</div><p className="mute sm">Salary figures are illustrative estimates, not guarantees.</p></>}</div>}
+
+function Future(){return<div className="stack"><h1>Future technology center</h1><p className="mute">Each card separates what is verified today from projections about the future.</p><div className="grid2">{[GEN_AI,...FUTURE_TECH_DB].map(t=><div key={t.name} className="card"><h3>{t.name}</h3><p><span className="pill ok">Verified today</span> {t.verified}</p><p><span className="pill">Prediction</span> {t.predictions}</p><p className="sm"><b>High-value skills:</b> {t.valuableSkills.join(", ")}</p><p className="sm"><b>Start today:</b> {t.learnToday}</p></div>)}</div></div>}
+
+function Toolkit({go}){const S=useS(),[tab,setTab]=useState("gap"),T=[["gap","Skill assessment"],["next","Learn next"],["plan","Study planner"],["quiz","Quiz"],["interview","Interview"],["portfolio","Portfolio"],["resources","Resources"],["goals","Goals"],["ach","Achievements"],["stats","Analytics"]],c=S.career,DAYS=["Mon","Tue","Wed","Thu","Fri","Sat","Sun"];
+ return<div className="stack"><h1>Toolkit</h1><div className="row wrap">{T.map(([k,l])=><Chip key={k} on={tab===k} onClick={()=>setTab(k)}>{l}</Chip>)}</div>{tab==="gap"&&<Gap/>}{tab==="next"&&<Next go={go}/>}
+ {tab==="plan"&&<div className="card"><h3>Weekly plan for {c.title} · {S.p.hours} h/day</h3><p className="sm">Study days (edit your schedule)</p><div className="row wrap">{DAYS.map(d=><Chip key={d} on={S.days.includes(d)} onClick={()=>S.setDays(S.days.includes(d)?S.days.filter(x=>x!==d):[...S.days,d])}>{d}</Chip>)}</div>{!S.days.length?<Empty t="No study days selected" d="Pick at least one day to generate your plan."/>:<table><tbody>{DAYS.filter(d=>S.days.includes(d)).map((d,i,a)=><tr key={d}><td>{d}</td><td>{i===a.length-1?"Review + NEXORA AI check-in":i%2?"Practice exercises":i>=a.length-3&&a.length>3?"Project work":"Learn a new concept"}</td><td>{S.p.hours} h</td></tr>)}</tbody></table>}<p className="mute sm">Total: {S.days.length*S.p.hours} h/week</p></div>}
+ {tab==="quiz"&&<Quiz/>}{tab==="interview"&&<Interview go={go}/>}{tab==="portfolio"&&<Portfolio/>}
+ {tab==="resources"&&<div className="stack">{S.rbm.length>0&&<div className="card"><h3>Saved resources</h3><ul>{S.rbm.map(([t,u])=><li key={u}><a href={u} target="_blank" rel="noopener noreferrer">{t}</a></li>)}</ul></div>}<div className="grid3">{[["Learn the basics",[["CS50","https://cs50.harvard.edu/x/"],["freeCodeCamp","https://www.freecodecamp.org/learn"]]],["Docs & references",[["MDN Web Docs","https://developer.mozilla.org"],["Python docs","https://docs.python.org/3/"]]],["Roadmaps & practice",[["roadmap.sh","https://roadmap.sh"],["Kaggle Learn","https://www.kaggle.com/learn"]]],["Security",[["OWASP","https://owasp.org"]]]].map(([h,l])=><div className="card" key={h}><h3>{h}</h3><ul>{l.map(([t,u])=><li key={t}><a href={u} target="_blank" rel="noopener noreferrer">{t}</a></li>)}</ul></div>)}</div></div>}
+ {tab==="goals"&&<Goals/>}
+ {tab==="ach"&&<div className="stack"><div className="grid3">{S.achievements.map(a=><div key={a.t} className={"card"+(a.on?"":" dim")}><b>{a.on?"★":"☆"} {a.t}</b></div>)}</div><h3>Certificates of completion</h3>{S.road.filter(s=>Array.from({length:s.topics.length+1}).every((_,j)=>S.prog[s.id+":"+j])).map(s=><div key={s.id} className="card cert"><p className="mute sm">NEXORA · Certificate of completion (self-reported)</p><h2>{S.p.name||"Learner"}</h2><p>completed Stage {s.id+1}: {s.name} · {c.title} roadmap</p><button className="btn" onClick={()=>window.print()}>Print</button></div>)}{!S.road.some(s=>Array.from({length:s.topics.length+1}).every((_,j)=>S.prog[s.id+":"+j]))&&<Empty t="No certificates yet" d="Complete every checklist item in a roadmap stage to earn a self-reported certificate."/>}</div>}
+ {tab==="stats"&&<div className="grid3">{[["Study days logged",Object.values(S.log).filter(h=>h>0).length],["Total hours logged",Object.values(S.log).reduce((a,b)=>a+b,0)],["Quizzes taken",S.quiz.length],["Average quiz score",S.quiz.length?Math.round(S.quiz.reduce((a,b)=>a+b,0)/S.quiz.length*20)+"%":"–"],["Milestones done",S.goals.filter(g=>g.d).length],["Knowledge checks ticked",Object.keys(S.prog).filter(k=>k[0]==="q"&&S.prog[k]).length]].map(([l,v])=><div key={l} className="card"><span className="mute sm">{l}</span><b className="big">{v}</b></div>)}</div>}</div>}
+function Gap(){const S=useS(),c=S.career,have=S.p.langs.map(x=>x.toLowerCase()),rate=s=>S.skills[s]||0,gaps=c.skills.filter(s=>rate(s)<3);
+ return<div className="card"><h3>Skill assessment for {c.title}</h3><p className="mute sm">Rate yourself honestly: 0 = no experience, 5 = confident. Ratings are self-reported.</p><div className="row wrap">{c.languages.map(l=><span key={l} className={"pill"+(have.includes(l.toLowerCase())?" ok":"")}>{have.includes(l.toLowerCase())?"✓":"○"} {l}</span>)}</div>{c.skills.map(s=><label key={s} className="rate"><span>{s}</span><input type="range" min="0" max="5" value={rate(s)} aria-label={s+" skill level"} onChange={e=>S.setSkills({...S.skills,[s]:+e.target.value})}/><b>{rate(s)}/5</b></label>)}<h4>Skill gaps ({gaps.length})</h4>{gaps.length?<div className="row wrap">{gaps.map(s=><span key={s} className="pill">{s}</span>)}</div>:<p className="mute">No gaps below level 3. Great, consider the advanced roadmap stages.</p>}</div>}
+function Next({go}){const S=useS(),c=S.career,low=[...c.skills].sort((a,b)=>(S.skills[a]||0)-(S.skills[b]||0))[0],lang=LANGUAGES_DB.find(l=>S.p.langs.includes(l.name)),cur=S.road.find(s=>!Array.from({length:s.topics.length+1}).every((_,j)=>S.prog[s.id+":"+j]))||S.road[9],miss=c.languages.find(l=>!S.p.langs.includes(l));
+ return<div className="grid2"><div className="card"><h3>What to learn next</h3><ol><li>Roadmap: <b>Stage {cur.id+1} · {cur.name}</b></li><li>Weakest skill for {c.title}: <b>{low}</b></li>{miss&&<li>Language to add: <b>{miss}</b></li>}{lang&&<li>After {lang.name}: {lang.nextSteps.slice(0,3).join(", ")}</li>}</ol><button className="btn pri" onClick={()=>go("roadmap")}>Open roadmap</button></div><div className="card"><h3>Suggested projects</h3><ul>{c.projects.map(p=><li key={p}>{p}</li>)}</ul></div></div>}
+function Quiz(){const S=useS(),c=S.career,[qs,setQs]=useState(null),[a,setA]=useState({}),[sub,setSub]=useState(false);
+ const gen=()=>{const pool=CAREERS_DB.filter(x=>x.id!==c.id),sh=a=>[...a].sort(()=>Math.random()-.5),mk=(q,ok,bad)=>({q,o:sh([ok,...sh(bad).slice(0,3)]),ok});
+  setQs([mk("Which is a core language for "+c.title+"?",c.languages[0],[...new Set(pool.flatMap(x=>x.languages))].filter(x=>!c.languages.includes(x))),mk("Which tool is commonly used by a "+c.title+"?",c.tools[0],[...new Set(pool.flatMap(x=>x.tools))].filter(x=>!c.tools.includes(x))),mk("Which skill matters for "+c.title+"?",c.skills[0],[...new Set(pool.flatMap(x=>x.skills))].filter(x=>!c.skills.includes(x))),mk("Which career category does "+c.title+" belong to?",c.category,CAREER_CATEGORIES.filter(x=>x!==c.category)),mk("Which project fits "+c.title+"?",c.projects[0],pool.flatMap(x=>x.projects))]);setA({});setSub(false)};
+ const sc=qs?qs.filter((q,i)=>a[i]===q.ok).length:0;
+ return<div className="card"><h3>Quiz on {c.title}</h3><button className="btn pri" onClick={gen}>{qs?"New quiz":"Generate quiz"}</button>{qs&&qs.map((q,i)=><fieldset key={i}><legend>{i+1}. {q.q}</legend>{q.o.map(o=><label key={o} className="chk"><input type="radio" name={"q"+i} checked={a[i]===o} onChange={()=>setA({...a,[i]:o})}/>{o}{sub&&o===q.ok&&" ✓"}</label>)}</fieldset>)}{qs&&!sub&&<button className="btn" onClick={()=>{setSub(true);S.setQuiz([...S.quiz,sc])}}>Submit</button>}{sub&&<p role="status"><b>Score: {sc}/{qs.length}</b></p>}</div>}
+function Interview({go}){const S=useS(),c=S.career,Q=[...c.responsibilities.map(r=>"Technical: how would you approach this task: “"+r+"”?"),"Behavioral: tell me about a time you overcame a technical obstacle (STAR).","Behavioral: describe a project you are proud of and what you would change.","Behavioral: how do you handle feedback in code review?"],[i,setI]=useState(0);
+ return<div className="card"><h3>{c.title} interview practice</h3><p>{Q[i]}</p><div className="row"><button className="btn" onClick={()=>setI((i+1)%Q.length)}>Next question</button><button className="btn pri" onClick={()=>{S.setPending("Mock interview: "+Q[i]+" Give me feedback on my answer. ");go("mentor")}}>Practice with NEXORA AI</button></div></div>}
+function Portfolio(){const S=useS(),done=PROJECTS_DB.filter(x=>S.ps[x.id]),md="# "+(S.p.name||"My")+" Portfolio\n\n**Goal:** "+S.career.title+"\n\n**Skills:** "+(S.p.langs.join(", ")||"–")+"\n\n## Projects\n"+(done.map(x=>"- "+x.title+" ("+S.ps[x.id]+") – "+x.stack.join(", ")).join("\n")||"- (none yet)");
+ return<div className="card"><h3>Portfolio builder</h3>{done.length?<ul>{done.map(x=><li key={x.id}>{x.title} · {S.ps[x.id]}</li>)}</ul>:<p className="mute">Start a project to add it to your portfolio.</p>}<pre><code>{md}</code></pre><button className="btn" onClick={()=>copy(md,S)}><I n="copy"/> Copy as Markdown</button></div>}
+function Goals(){const S=useS(),[t,setT]=useState(""),[d,setD]=useState("");
+ return<div className="card"><h3>Career goal tracker</h3><form className="row wrap" onSubmit={e=>{e.preventDefault();if(t.trim()){S.setGoals([...S.goals,{id:Date.now(),t:t.trim().slice(0,100),by:d,d:false}]);setT("")}}}><input aria-label="Milestone" value={t} onChange={e=>setT(e.target.value)} placeholder="Milestone, e.g. ship my first API"/><input aria-label="Target date" type="date" value={d} onChange={e=>setD(e.target.value)}/><button className="btn pri">Add</button></form>{!S.goals.length&&<p className="mute">No milestones yet.</p>}{S.goals.map(g=><div key={g.id} className="row between"><label className="chk"><input type="checkbox" checked={g.d} onChange={()=>S.setGoals(S.goals.map(x=>x.id===g.id?{...x,d:!x.d}:x))}/>{g.t} <span className="mute sm">{g.by}</span></label><button className="ico" aria-label="Delete milestone" onClick={()=>S.setGoals(S.goals.filter(x=>x.id!==g.id))}><I n="trash"/></button></div>)}</div>}
+
+function Account({go}){const S=useS(),p=S.p,set=o=>S.setP({...p,...o});
+ return<div className="stack"><h1>Account settings</h1><div className="card form"><label>Display name<input value={p.name} maxLength={40} onChange={e=>set({name:e.target.value})}/></label><label>Experience<select value={p.level} onChange={e=>set({level:e.target.value})}>{["Complete Beginner","Beginner","Intermediate","Advanced"].map(x=><option key={x}>{x}</option>)}</select></label><label>Career goal<input value={p.goal} maxLength={140} onChange={e=>set({goal:e.target.value})}/></label><p className="sm">Languages</p><div className="row wrap">{ALLLANGS.map(l=><Chip key={l} on={p.langs.includes(l)} onClick={()=>set({langs:p.langs.includes(l)?p.langs.filter(x=>x!==l):[...p.langs,l]})}>{l}</Chip>)}</div><p className="sm">Interests</p><div className="row wrap">{CAREER_CATEGORIES.map(l=><Chip key={l} on={p.interests.includes(l)} onClick={()=>set({interests:p.interests.includes(l)?p.interests.filter(x=>x!==l):[...p.interests,l]})}>{l}</Chip>)}</div></div>
+ <div className="card"><h3>Data & session</h3><p className="mute">Profile progress lives in local storage; Contact submissions are routed directly through Formspree.</p><div className="row wrap"><button className="btn" onClick={()=>go("onboarding")}>Redo onboarding</button><button className="btn" onClick={()=>{if(confirm("Delete all NEXORA data in this browser?")){try{Object.keys(localStorage).filter(k=>k.startsWith("nexora_")).forEach(k=>localStorage.removeItem(k))}catch(e){}location.hash="home";location.reload()}}}>Delete local data</button><button className="btn" onClick={()=>{S.setP({...S.p,onboarded:false});go("signin")}}>Sign out of local profile</button></div></div></div>}
+
+const NAV=[["dashboard","Dashboard","home"],["careers","Careers","compass"],["match","AI Match","target"],["roadmap","Roadmap","map"],["mentor","NEXORA AI","spark"],["projects","Projects","folder"],["languages","Languages","code"],["compare","Compare","scale"],["future","Future Tech","rocket"],["toolkit","Toolkit","tool"],["account","Account","gear"],["about","About","compass"],["contact","Contact","chat"]];
+const VIEW={dashboard:Dashboard,careers:Careers,match:Match,roadmap:Roadmap,mentor:Mentor,projects:Projects,languages:Languages,compare:Compare,future:Future,toolkit:Toolkit,account:Account};
+function Shell({route,go}){const S=useS(),[open,setOpen]=useState(false),[col,setCol]=useState(false),[q,setQ]=useState(""),[pop,setPop]=useState(""),[load,setLoad]=useState(true);useEffect(()=>{setLoad(true);setOpen(false);const t=setTimeout(()=>setLoad(false),250);return()=>clearTimeout(t)},[route]);
+ const V=VIEW[route]||Dashboard,k=q.trim().toLowerCase(),res=k.length<2?[]:[...CAREERS_DB.filter(c=>(c.title+c.skills.join()).toLowerCase().includes(k)).slice(0,4).map(c=>({t:c.title,k:"Career",r:"careers",id:c.id})),...PROJECTS_DB.filter(x=>x.title.toLowerCase().includes(k)).slice(0,2).map(x=>({t:x.title,k:"Project",r:"projects"})),...LANGUAGES_DB.filter(x=>x.name.toLowerCase().includes(k)).slice(0,2).map(x=>({t:x.name,k:"Language",r:"languages"}))];
+ const notes=[!S.p.name&&"Add your display name in Account.",S.p.langs.length===0&&"Tell NEXORA which languages you know for better matches.","Next up: "+(S.road.find(s=>!S.prog[s.id+":0"])||S.road[0]).name,S.rm.paused&&"Your roadmap is paused."].filter(Boolean);
+ return<div className={"app"+(col?" col":"")}><aside className={open?"open":""} aria-label="Primary"><div className="row between"><Brand/><button className="ico hide-lg" aria-label="Close menu" onClick={()=>setOpen(false)}><I n="x"/></button></div><nav>{NAV.map(([id,l,ic])=><button key={id} aria-current={route===id?"page":undefined} className={route===id?"on":""} title={l} onClick={()=>go(id)}><I n={ic}/><span>{l}</span></button>)}</nav><button className="btn hide-sm" onClick={()=>setCol(!col)}>{col?"»":"« Collapse"}</button></aside>
+ <div className="main"><header className="tb"><button className="ico show-sm" aria-label="Open menu" onClick={()=>setOpen(true)}><I n="menu"/></button><div className="gs"><I n="search" s={16}/><input aria-label="Global search" placeholder="Search careers, projects, languages…" value={q} onChange={e=>setQ(e.target.value)}/>{res.length>0&&<ul className="pop">{res.map((r,i)=><li key={i}><button onClick={()=>{S.setFocus({id:r.id});setQ("");go(r.r)}}>{r.t} <span className="mute sm">{r.k}</span></button></li>)}</ul>}{k.length>=2&&!res.length&&<div className="pop mute">No results for “{q}”.</div>}</div><div className="row"><button className="ico" aria-label="Toggle theme" onClick={()=>S.setTheme(S.theme==="dark"?"light":"dark")}><I n={S.theme==="dark"?"sun":"moon"}/></button><div className="rel"><button className="ico" aria-label="Notifications" aria-expanded={pop==="n"} onClick={()=>setPop(pop==="n"?"":"n")}><I n="bell"/></button>{pop==="n"&&<div className="pop right card">{notes.map(n=><p key={n} className="sm">{n}</p>)}</div>}</div><div className="rel"><button className="ico av" aria-label="Profile menu" aria-expanded={pop==="u"} onClick={()=>setPop(pop==="u"?"":"u")}>{(S.p.name||"N")[0].toUpperCase()}</button>{pop==="u"&&<div className="pop right card"><button className="btn" onClick={()=>{setPop("");go("account")}}>Account settings</button><button className="btn" onClick={()=>{S.setP({...S.p,onboarded:false});go("signin")}}>Sign out</button></div>}</div></div></header>
+ <main id="main">{load?<div className="stack" aria-busy="true"><div className="sk" style={{height:40,width:"40%"}}/><div className="grid3"><div className="sk"/><div className="sk"/><div className="sk"/></div></div>:<Boundary key={route}><V go={go}/></Boundary>}</main></div></div>}
+
+function App(){const[theme,setTheme]=useStore("theme",matchMedia("(prefers-color-scheme: light)").matches?"light":"dark"),[p,setP]=useStore("profile",DEF),[rm,setRm]=useStore("rm",{career:"data-scientist",paused:false}),[prog,setProg]=useStore("prog",{}),[log,setLog]=useStore("log",{}),[bm,setBm]=useStore("bm",[]),[cmp,setCmp]=useStore("cmp",[]),[pbm,setPbm]=useStore("pbm",[]),[ps,setPs]=useStore("ps",{}),[goals,setGoals]=useStore("goals",[]),[quiz,setQuiz]=useStore("quiz",[]),[skills,setSkills]=useStore("skills",{}),[days,setDays]=useStore("days",["Mon","Tue","Wed","Thu","Fri","Sat"]),[rbm,setRbm]=useStore("rbm",[]),[act,setAct]=useStore("act",[]),[tm,setTm]=useState(null),[chat,setChat]=useStore("chat",{cur:1,convs:[{id:1,title:"New session",msgs:[]}]}),[focus,setFocus]=useState(null),[pending,setPending]=useState(""),[route,setRoute]=useState(()=>location.hash.slice(1)||(store.get("profile",DEF).onboarded?"home":"signin"));
+ useEffect(()=>{document.documentElement.dataset.theme=theme},[theme]);useEffect(()=>{const f=()=>setRoute(location.hash.slice(1)||(store.get("profile",DEF).onboarded?"home":"signin"));addEventListener("hashchange",f);return()=>removeEventListener("hashchange",f)},[]);
+ const go=r=>{if(location.hash.slice(1)===r)setRoute(r);else location.hash=r;scrollTo(0,0)};
+ const career=CAREERS_DB.find(c=>c.id===rm.career)||CAREERS_DB[1],road=useMemo(()=>genRoadmap(career,p),[career,p.hours,p.level,p.langs,rm.ver]);
+ const n=Object.keys(prog).filter(k=>prog[k]&&k[0]!=="q").length,achievements=[{t:"Profile created",on:p.onboarded},{t:"First lesson done",on:n>0},{t:"Ten lessons done",on:n>=10},{t:"Stage 1 complete",on:Array.from({length:road[0].topics.length+1}).every((_,j)=>prog["0:"+j])},{t:"First project started",on:Object.keys(ps).length>0},{t:"First quiz taken",on:quiz.length>0}];
+ const toast=m=>{setTm(m);clearTimeout(window.__tt);window.__tt=setTimeout(()=>setTm(null),2400)},note=m=>setAct(a=>[m,...a].slice(0,8));
+ const S={skills,setSkills,days,setDays,rbm,setRbm,act,toast,note,theme,setTheme,p,setP,rm,setRm,prog,setProg,log,setLog,bm,setBm,cmp,setCmp,pbm,setPbm,ps,setPs,goals,setGoals,quiz,setQuiz,chat,setChat,focus,setFocus,pending,setPending,career,road,achievements};
+ const pub=["home","onboarding","signin","about","contact"].includes(route),prot=!pub&&!p.onboarded;
+ useEffect(()=>{document.title="NEXORA — Discover Your Potential. Design Your Future."},[]);
+ return<Ctx.Provider value={S}><Boundary>{route==="home"?<Landing go={go}/>:route==="about"?<About go={go}/>:route==="contact"?<Contact go={go}/>:route==="onboarding"?<Onboarding go={go}/>:route==="signin"?<SignIn go={go}/>:prot?<div className="center"><Empty t="Create your profile first" d="The dashboard is available once you have a (local) profile. It only takes a minute and every question is optional." a={<button className="btn pri" onClick={()=>go("onboarding")}>Start Your Journey</button>}/></div>:<Shell route={route} go={go}/>}</Boundary><div className="toast" role="status" aria-live="polite" style={{display:tm?"block":"none"}}>{tm}</div></Ctx.Provider>}
+ReactDOM.createRoot(document.getElementById("root")).render(<App/>);
+</script>
+</body>
+</html>
